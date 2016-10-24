@@ -5,7 +5,7 @@ weber
 charbroil
 napoleon
 nexgrill
-greenegg
+greenegg - charcoal only
 dynaglo
 chargriller
 kitchenaid
