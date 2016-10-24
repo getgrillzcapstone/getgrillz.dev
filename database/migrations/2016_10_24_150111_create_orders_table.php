@@ -14,14 +14,16 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('order_id');
-            $table->string('item_id', 45);
-            $table->string('user_id', 30);
+            $table->integer('item_id');
+            $table->integer('user_id');
             $table->date('reservation_start');
             $table->date('reservation_end');
-            $table->string('order_total', 70);
+            $table->string('order_total', 10);
             $table->timestamps();
         });
     }
+
+
 
     /**
      * Reverse the migrations.
