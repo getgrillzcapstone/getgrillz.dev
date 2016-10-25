@@ -14,10 +14,8 @@ class CreateOrderItemsTable extends Migration
     {
        Schema::create('order_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('order_id')->unsigned();
-            $table->foreign('order_id')->references('id')->on('orders');
-            $table->integer('item_id')->unsigned();
-            $table->foreign->('item_id')->references('id')->on('items');
+            $table->integer('order_id')->unsigned()->references('id')->on('orders');
+            $table->integer('item_id')->unsigned()->references('id')->on('items');
             $table->timestamps();
         });
     }

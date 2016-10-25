@@ -48,7 +48,7 @@ class ManufacturersTableSeeder extends Seeder
 
     $manufacturer8 = new App\Manufacturer();
     $manufacturer8->name = 'KitchenAid';
-    $Manufacturer8->image = '/getgrillz_images/kitchenaid-logo.png';
+    $manufacturer8->image = '/getgrillz_images/kitchenaid-logo.png';
     $manufacturer8->save();
 
     $manufacturer9 = new App\Manufacturer();

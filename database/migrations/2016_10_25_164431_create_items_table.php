@@ -14,11 +14,9 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('item_category_id')->unsigned();
-            $table->foreign->('item_category_id')->references('id')->on('item_categories');
-            $table->integer('manufacturer_id')->unsigned();
-            $table->foreign->('manufacturer_id')->references('id')->on('manufacturers');
-            $table->string('model_number', 45);
+            $table->integer('item_category_id')->unsigned()->references('id')->on('item_categories');
+            $table->integer('manufacturer_id')->unsigned()->references('id')->on('manufacturers');
+            $table->string('model', 45);
             $table->string('size', 10);
             $table->string('description', 500);
             $table->decimal('price', 6,2);
