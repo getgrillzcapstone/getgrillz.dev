@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ManufacturersTableSeeder::class);
         $this->command->info('Manufacturers table seeded!');
 
-        $this->call(CategoriesTableSeeder::class);
+        $this->call(ItemCategoriesTableSeeder::class);
         $this->command->info('Categories table seeded!');
 
         $this->call(ItemsTableSeeder::class);
@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call(OrdersTableSeeder::class);
         $this->command->info('Orders Table seeded!');
 
-        $this->call(OrderItemTableSeeder::class);
+        $this->call(OrderItemsTableSeeder::class);
         $this->command->info('Order Item table seeded!');
 
         Model::reguard();

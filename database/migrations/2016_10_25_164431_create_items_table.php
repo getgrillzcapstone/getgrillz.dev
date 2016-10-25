@@ -21,7 +21,7 @@ class CreateItemsTable extends Migration
             $table->string('model_number', 45);
             $table->string('size', 10);
             $table->string('description', 500);
-            $table->string('price');
+            $table->decimal('price', 6,2);
             $table->string('image', 70);
             $table->timestamps();
         });
