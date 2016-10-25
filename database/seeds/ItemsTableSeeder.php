@@ -101,7 +101,7 @@ class ItemsTableSeeder extends Seeder
     $item8->model_number = 'Two Burner';
     $item8->size = 'Small';
     $item8->description = 'Lorem impsum text is for sample.';
-    $item8->price = '18.00';
+    $item8->price = '$18.00';
     $item8->reservation_start = 2016-11-13;
     $item8->reservation_end = 2016-11-20;
     $item8->image = '/propane_grill_images/nexgrill2burner.jpg';
