@@ -48,7 +48,7 @@
                         and before you know it, you'll have your very own high-quality grill!
                     </p>
                     <div class="buyButton">
-                        <a href="#"><h3 class="rent">Buy</h3></a>
+                        <a href="/createOrder"><h3 class="rent">Buy</h3></a>
                     </div>
                 </div>
             </figure>
