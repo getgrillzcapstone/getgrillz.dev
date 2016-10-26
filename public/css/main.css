@@ -1,6 +1,37 @@
+@font-face {
+   font-family: thunder;
+   src: url(/css/a_love_of_thunder.ttf);
+}
+
 body, html {
-    background-color: black;
+    /* background-color: black; */
     height: auto;
+
+}
+
+h1{
+
+  font-family: thunder;
+}
+
+h2{
+
+  font-family: thunder;
+}
+
+h3{
+
+  font-family: thunder;
+}
+
+h4{
+
+  font-family: thunder;
+}
+
+h5{
+
+  font-family: thunder;
 }
 
 /*////////////////////////////////////////////////////////FOR NAVBAR*/
@@ -12,16 +43,19 @@ body, html {
     .navbarLogo {
         height: 65px;
         width: auto;
+
     }
 
     body > div:nth-child(1) > div > div.col-xs-1.col-sm-1.col-md-1.col-lg-5 > a > h2 {
         font-size: 3em;
         padding-left: 5px;
+        font-family: thunder;
     }
 
     .navbarFAQ {
         font-size: 2em;
         padding-top: 8px;
+        font-family: thunder;
     }
 
     .hamburgerIcon {
@@ -82,10 +116,12 @@ body, html {
         margin: 0;
         padding-top: 1rem;
         color: black;
+        font-family: thunder;
     }
 
     a > h2:hover {
         color: #820000;
+        font-family: thunder;
     }
 
     body > div:nth-child(1) > div > div.col-lg-5 > a {
@@ -179,6 +215,7 @@ body, html {
         margin-left: 20%;
         background-color: orange;
         position: absolute;
+        font-family: thunder;
     }
 
     .rentButton:hover {
@@ -192,6 +229,7 @@ body, html {
         margin-left: 20%;
         background-color: orange;
         position: absolute;
+        font-family: thunder;
     }
 
     .buyButton:hover {
@@ -365,6 +403,7 @@ body, html {
         height: 50vh;
         background-color: orange;
         text-align: center;
+        font-family: thunder;
     }
 
     .pickADateButton {
@@ -372,6 +411,7 @@ body, html {
         height: 53px;
         background-color: #3bbad7;
         margin-top: 25%;
+        font-family: thunder;
     }
 
     .justBrowsing {
@@ -379,6 +419,7 @@ body, html {
         height: 50vh;
         background-color: #65D1AE;
         text-align: center;
+        font-family: thunder;
     }
 
     .justBrowsingButton {
@@ -386,6 +427,7 @@ body, html {
         height: 53px;
         background-color: #3bbad7;
         margin-top: 25%;
+        font-family: thunder;
     }
 
 /*/////////////////////////////////////////FOR DROP CALENDER SECTION*/
@@ -398,11 +440,13 @@ body, html {
         height: 70vh;
         /*height: 120vh;*/
         background-color: #ff6961;
+        font-family: thunder;
     }
 
     button {
       font-size: 14px;
       font-weight: 300;
+      font-family: thunder;
     }
 
 
@@ -562,6 +606,7 @@ body, html {
         height: 70px;
         background-color: orange;
         margin-top: 25%;
+        font-family: thunder;
     }
 
     .charcoalText {
@@ -580,6 +625,7 @@ body, html {
         height: 70px;
         background-color: orange;
         margin-top: 25%;
+        font-family: thunder;
     }
 
     .propaneText {
@@ -603,6 +649,7 @@ body, html {
         height: 70px;
         background-color: orange;
         margin-top: 15%;
+        font-family: thunder;
     }
 
     .sizeButtonText {
@@ -613,4 +660,5 @@ body, html {
         width: 800px;
         background-color: orange;
         margin-top: 5%;
+        font-family: thunder;
     }
