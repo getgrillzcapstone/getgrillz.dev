@@ -1,16 +1,6 @@
 @extends('layout.master')
 
 @section('content')
-
-         
- <!-- Bootstrap and Font Awesome css-->
-  
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <!-- Google fonts - Montserrat for headings, Raleway for copy-->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400,700">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
-    
          
        
 <div class="container">
@@ -165,13 +155,14 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
                             <img src="/propane_grill_images/nexgrill4burner.jpg" alt="" class="img-responsive" >
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                            </a></div>
                         </div>
                         <div class="text">
                             <p class="manufacturer">Nexgrill</p>
                             <h4>Large Four Burner</h4>
-                            <p class="price">$350.75</p>
+                            <h5 class="price">$350.75</h5>
                         </div>
                     </div>
                 </div>
@@ -181,13 +172,14 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
-                           <img src="/propane_grill_images/napoleon3burner2.jpg" alt="" class="img-responsive"></a>
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="/propane_grill_images/napoleon3burner.jpg" alt="" class="img-responsive" >
+                            </a></div>
                         </div>
                         <div class="text">
                             <p class="manufacturer">Napoleon</p>
                             <h4>Small Three Burner</h4>
-                            <p class="price">$349.99</p>
+                            <h5 class="price">$349.99</h5>
                         </div>
                     </div>
                 </div>
@@ -196,13 +188,14 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
-                           <img src="/propane_grill_images/weber-bistro.jpg" alt="" class="img-responsive"></a>
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="/propane_grill_images/weber-bistro.jpg" alt="" class="img-responsive" >
+                            </a></div>
                         </div>
                         <div class="text">
                             <p class="manufacturer">Weber</p>
                             <h4>Bistro</h4>
-                            <p class="price">$149.99</p>
+                            <h5 class="price">$149.99</h5>
                         </div>
                     </div>
                 </div>
@@ -214,13 +207,14 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
-                           <img src="/propane_grill_images/weberspirit210.jpg" alt="" class="img-responsive"></a>
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="/propane_grill_images/weberspirit210.jpg" alt="" class="img-responsive" >
+                            </a></div>
                         </div>
                         <div class="text">
                             <p class="manufacturer">Weber</p>
                             <h4>Spirit 210</h4>
-                            <p class="price">$349.99</p>
+                            <h5 class="price">$349.99</h5>
                         </div>
                     </div>
                 </div>
@@ -230,13 +224,14 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
-                           <img src="/propane_grill_images/napoleon4burner.jpg" alt="" class="img-responsive"></a>
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="/propane_grill_images/napoleon4burner.jpg" alt="" class="img-responsive" >
+                            </a></div>
                         </div>
                         <div class="text">
                             <p class="manufacturer">Napoleon</p>
                             <h4>Medium Four Burner</h4>
-                            <p class="price">$525.00</p>
+                            <h5 class="price">$525.50</h5>
                         </div>
                     </div>
                 </div>
@@ -244,14 +239,15 @@
                 <!-- product-->
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
-                        <div class="image">
-                           <img src="/propane_grill_images/webersummitt420.jpg" alt="" class="img-responsive"></a>
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                        <div class="image" >
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="/propane_grill_images/webersummitt420.jpg" alt="" class="img-responsive" >
+                            </a></div>
                         </div>
                         <div class="text">
                             <p class="manufacturer">Weber</p>
                             <h4>Summitt 420</h4>
-                            <p class="price">$1299</p>
+                            <h5 class="price">$1299.00</h5>
                         </div>
                     </div>
                 </div>
@@ -261,14 +257,15 @@
                      <!-- product-->
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
-                        <div class="image">
-                            <img src="/propane_grill_images/nexgrill4burner.jpg" alt="" class="img-responsive">
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                        <div class="image" >
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="/propane_grill_images/webersummitt670.jpg" alt="" class="img-responsive" >
+                            </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Nexgrill</p>
-                            <h4>Large Four Burner</h4>
-                            <p class="price">$350.75</p>
+                            <p class="manufacturer">Weber</p>
+                            <h4>Summitt 670</h4>
+                            <h5 class="price">$2350.75</h5>
                         </div>
                     </div>
                 </div>
@@ -277,14 +274,15 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
-                        <div class="image">
-                           <img src="/propane_grill_images/nexgrill6burner.jpg" alt="" class="img-responsive"></a>
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                        <div class="image" >
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="/propane_grill_images/nexgrill6burner.jpg" alt="" class="img-responsive" >
+                            </a></div>
                         </div>
                         <div class="text">
                             <p class="manufacturer">Nexgrill</p>
                             <h4>Large Six Burner</h4>
-                            <p class="price">$1999</p>
+                            <h5 class="price">$1999.99</h5>
                         </div>
                     </div>
                 </div>
@@ -293,13 +291,14 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
-                           <img src="/propane_grill_images/webergenesis310.jpg" alt="" class="img-responsive"></a>
-                            <div class="quick-view-button text-center"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal" class="btn btn-default btn-sm">Quick view</a></div>
+                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="/propane_grill_images/webergenesis310.jpg" alt="" class="img-responsive" >
+                            </a></div>
                         </div>
                         <div class="text">
                             <p class="manufacturer">Weber</p>
                             <h4>Genesis 310</h4>
-                            <p class="price">$699.00</p>
+                            <h5 class="price">$699.99</h5>
                         </div>
                     </div>
                 </div>
@@ -335,7 +334,7 @@
                             <p class="text-muted text-small">Grill up delicious food this summer with the Weber Genesis E-310 3-Burner Gas Grill. Featuring 3 stainless steel burners, this grill is designed to put out up to 38,000 BTUs of cooking power. Its painted steel shroud incorporates a built-in thermometer, and also features a stainless steel handle.</p>
                             <div class="box">
                                 <form>
-                                    <p class="price">$124.00</p>
+                                   <h5 class="price">$2449.99</h5>
                                     <p class="text-center">
                                         <button type="submit" class="btn btn-default">Add to Order</button>
                                     </p>
