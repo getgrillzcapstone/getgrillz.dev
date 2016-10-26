@@ -4,7 +4,8 @@
 }
 
 body, html {
-    /* background-color: black; */
+    background-color: black;
+    background-image: url("/getgrillz_images/brick-wall.png");
     height: auto;
 
 }
@@ -32,6 +33,10 @@ h4{
 h5{
 
   font-family: thunder;
+}
+
+.coloredText {
+    color: #FFF5EE;
 }
 
 /*////////////////////////////////////////////////////////FOR NAVBAR*/
@@ -103,7 +108,7 @@ h5{
     }
 
     .customNavbar2 {
-        background-color: white;
+        background-color: #FFF5EE;
         height: 65px;
     }
 
@@ -143,7 +148,7 @@ h5{
     }
 
     .footer {
-        background-color: white;
+        background-color: #FFF5EE;
         text-align: center;
         /*width: 100%;
         height: auto;*/
@@ -213,13 +218,13 @@ h5{
         height: 50px;
         margin-top: 18%;
         margin-left: 20%;
-        background-color: orange;
+        background-color: #CA6924;
         position: absolute;
         font-family: thunder;
     }
 
     .rentButton:hover {
-        background-color: #3BBAD7;
+        background-color: #C23B22
     }
 
     .buyButton {
@@ -227,13 +232,13 @@ h5{
         height: 53px;
         margin-top: 8%;
         margin-left: 20%;
-        background-color: orange;
+        background-color: #CA6924;
         position: absolute;
         font-family: thunder;
     }
 
     .buyButton:hover {
-        background-color: #3BBAD7;
+        background-color: #C23B22
     }
 
     /*Positions "Rent" text in the middle of the button*/
@@ -368,7 +373,8 @@ h5{
     .heroDiv {
         width: 100%;
         height: 100%;
-        background-color: #3bbad7;
+        background-color: #7B2D26;
+        background-image: url("/getgrillz_images/brick-wall.png");
     }
 
     .rentA {
@@ -401,7 +407,7 @@ h5{
     .pickADate {
         width: 50%;
         height: 50vh;
-        background-color: orange;
+        background-color: #1C1E1E;
         text-align: center;
         font-family: thunder;
     }
@@ -409,7 +415,9 @@ h5{
     .pickADateButton {
         width: 300px;
         height: 53px;
-        background-color: #3bbad7;
+        background-color: #7B2D26;
+        border-color: #1C1E1E;
+        color: #F7F3E3;
         margin-top: 25%;
         font-family: thunder;
     }
@@ -417,7 +425,7 @@ h5{
     .justBrowsing {
         width: 50%;
         height: 50vh;
-        background-color: #65D1AE;
+        background-color: #262B2F;
         text-align: center;
         font-family: thunder;
     }
@@ -425,7 +433,9 @@ h5{
     .justBrowsingButton {
         width: 300px;
         height: 53px;
-        background-color: #3bbad7;
+        background-color: #7B2D26;
+        border-color: #262B2F;
+        color: #F7F3E3;
         margin-top: 25%;
         font-family: thunder;
     }
@@ -439,8 +449,12 @@ h5{
         width: 50%;
         height: 70vh;
         /*height: 120vh;*/
-        background-color: #ff6961;
+        background-color: #7B2D26;
         font-family: thunder;
+    }
+
+    .calender > h2 {
+        color: #F7F3E3;
     }
 
     button {
@@ -591,20 +605,20 @@ h5{
 /*///////////////////////////////////////////FOR CHARCOAL OR PROPANE*/
     .whatTypeOfGrill {
         text-align: center;
-        background-color: #3bbad7;
+        background-color: #D7C9AA;
     }
 
     .charcoalDiv {
         width: 50%;
         height: 50vh;
-        background-color: #3bbad7;
+        background-color: #D7C9AA;
         text-align: center;
     }
 
     .charcoalButton {
         width: 500px;
         height: 70px;
-        background-color: orange;
+        background-color: #CA6924;
         margin-top: 25%;
         font-family: thunder;
     }
@@ -616,14 +630,14 @@ h5{
     .propaneDiv {
         width: 50%;
         height: 50vh;
-        background-color: #3bbad7;
+        background-color: #D7C9AA;
         text-align: center;
     }
 
     .propaneButton {
         width: 500px;
         height: 70px;
-        background-color: orange;
+        background-color: #CA6924;
         margin-top: 25%;
         font-family: thunder;
     }
@@ -640,14 +654,15 @@ h5{
 
     .sizeButtonDiv {
         height: 50vh;
-        background-color: #ff6961;
+        background-color: #1C1E1E;
+        color: #F7F3E3;
         text-align: center;
     }
 
     .sizeButton {
         width: 300px;
         height: 70px;
-        background-color: orange;
+        background-color: #CA6924;
         margin-top: 15%;
         font-family: thunder;
     }
@@ -656,9 +671,18 @@ h5{
         margin-top: 8%;
     }
 
+    .sizeAnchor {
+        color: black;
+    }
+
+    .sizeAnchor:hover {
+        text-decoration: none;
+        color: black;
+    }
+
     .imNotSureButton {
         width: 800px;
-        background-color: orange;
+        background-color: #CA6924;
         margin-top: 5%;
         font-family: thunder;
     }
@@ -666,7 +690,8 @@ h5{
 /*/////////////////////////////////////////////////FOR CHECKOUT PAGE*/
     .forgettingSomething {
         text-align: center;
-        background-color: #65D1AE;
+        background-color: #1C1E1E;
+        color: #fff5ee;
     }
 
     .quantityField {
@@ -678,7 +703,7 @@ h5{
         .grillSupplies {
             width: 50%;
             height: 30vh;
-            background-color: #65D1AE;
+            background-color: #1C1E1E;
             text-align: center;
         }
 
@@ -689,21 +714,15 @@ h5{
         .grillSuppliesButton {
             width: 500px;
             height: 70px;
-            background-color: orange;
+            background-color: #CA6924;
             margin-top: 10%;
-        }
-
-        .partySupplies {
-            width: 50%;
-            height: 30vh;
-            background-color: #65D1AE;
-            text-align: center;
         }
 
         .grillSuppliesChecklist {
             width: 100%;
-            height: 68vh;
-            background-color: #fff5ee;
+            height: 72vh;
+            background-color: #7B2D26;
+            color: #F7F3E3;
             display: none;
         }
 
@@ -712,6 +731,13 @@ h5{
         }
 
     /*////////////////////////////////////////////FOR PARTY SUPPLIES*/
+        .partySupplies {
+            width: 50%;
+            height: 30vh;
+            background-color: #1C1E1E;
+            text-align: center;
+        }
+
         .partySuppliesText {
             margin-top: 4%;
         }
@@ -719,14 +745,15 @@ h5{
         .partySuppliesButton {
             width: 500px;
             height: 70px;
-            background-color: orange;
+            background-color: #CA6924;
             margin-top: 10%;
         }
 
         .partySuppliesChecklist {
             width: 100%;
-            height: 68vh;
-            background-color: #fff5ee;
+            height: 72vh;
+            background-color: #7B2D26;
+            color: #F7F3E3;
             display: none;
         }
 
@@ -743,13 +770,14 @@ h5{
 
         .addToOrderButton {
             width: 800px;
-            background-color: orange;
+            background-color: #CA6924;
             margin-top: 2%;
         }
 
         .tableHeader {
             border-top-style: solid;
             border-bottom-style: solid;
+            border-color: black;
         }
 
         .headerPadding {
@@ -762,7 +790,7 @@ h5{
         .yourOrderDiv {
             width: 100%;
             height: 65vh;
-            background-color: #CFCFC4;
+            background-color: #D7C9AA;
         }
 
         .yourOrderCheckboxes {
@@ -780,12 +808,12 @@ h5{
 
         .updateCartButton {
             width: 500px;
-            background-color: orange;
+            background-color: #CA6924;
             margin-top: 2%;
         }
 
         .checkoutButton {
             width: 500px;
-            background-color: orange;
+            background-color: #CA6924;
             margin-top: 2%;
         }

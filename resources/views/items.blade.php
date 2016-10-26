@@ -1,15 +1,15 @@
 @extends('layout.master')
 
 @section('content')
-         
-       
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="row page-top">
                 <div class="col-sm-6 col-sm-offset-3">
-                    <h1 class="text-center">Grills and Grills and Grills</h1>
-                    <p class="text-muted text-center">Propane, charcoal, big, medium, small. Choices for everyone.</p>
+                    <h1 class="text-center coloredText">Grills and Grills and Grills</h1>
+                    <p class="text-muted text-center coloredText">Propane, charcoal, big, medium, small. Choices for everyone.</p>
                     <br>
                 </div>
             </div>
@@ -128,7 +128,7 @@
                     </form>
                 </div>
             </div>
-      
+
         </div>
         <div class="col-md-9">
             <div class="info-bar">
@@ -160,9 +160,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Nexgrill</p>
-                            <h4>Large Four Burner</h4>
-                            <h5 class="price">$350.75</h5>
+                            <p class="manufacturer coloredText">Nexgrill</p>
+                            <h4 class="coloredText">Large Four Burner</h4>
+                            <h5 class="price coloredText">$350.75</h5>
                         </div>
                     </div>
                 </div>
@@ -177,9 +177,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Napoleon</p>
-                            <h4>Small Three Burner</h4>
-                            <h5 class="price">$349.99</h5>
+                            <p class="manufacturer coloredText">Napoleon</p>
+                            <h4 class="coloredText">Small Three Burner</h4>
+                            <h5 class="price coloredText">$349.99</h5>
                         </div>
                     </div>
                 </div>
@@ -193,9 +193,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Weber</p>
-                            <h4>Bistro</h4>
-                            <h5 class="price">$149.99</h5>
+                            <p class="manufacturer coloredText">Weber</p>
+                            <h4 class="coloredText">Bistro</h4>
+                            <h5 class="price coloredText">$149.99</h5>
                         </div>
                     </div>
                 </div>
@@ -212,9 +212,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Weber</p>
-                            <h4>Spirit 210</h4>
-                            <h5 class="price">$349.99</h5>
+                            <p class="manufacturer coloredText">Weber</p>
+                            <h4 class="coloredText">Spirit 210</h4>
+                            <h5 class="price coloredText">$349.99</h5>
                         </div>
                     </div>
                 </div>
@@ -229,9 +229,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Napoleon</p>
-                            <h4>Medium Four Burner</h4>
-                            <h5 class="price">$525.50</h5>
+                            <p class="manufacturer coloredText">Napoleon</p>
+                            <h4 class="coloredText">Medium Four Burner</h4>
+                            <h5 class="price coloredText">$525.50</h5>
                         </div>
                     </div>
                 </div>
@@ -245,9 +245,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Weber</p>
-                            <h4>Summitt 420</h4>
-                            <h5 class="price">$1299.00</h5>
+                            <p class="manufacturer coloredText">Weber</p>
+                            <h4 class="coloredText">Summitt 420</h4>
+                            <h5 class="price coloredText">$1299.00</h5>
                         </div>
                     </div>
                 </div>
@@ -263,9 +263,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Weber</p>
-                            <h4>Summitt 670</h4>
-                            <h5 class="price">$2350.75</h5>
+                            <p class="manufacturer coloredText">Weber</p>
+                            <h4 class="coloredText">Summitt 670</h4>
+                            <h5 class="price coloredText">$2350.75</h5>
                         </div>
                     </div>
                 </div>
@@ -280,9 +280,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Nexgrill</p>
-                            <h4>Large Six Burner</h4>
-                            <h5 class="price">$1999.99</h5>
+                            <p class="manufacturer coloredText">Nexgrill</p>
+                            <h4 class="coloredText">Large Six Burner</h4>
+                            <h5 class="price coloredText">$1999.99</h5>
                         </div>
                     </div>
                 </div>
@@ -296,9 +296,9 @@
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer">Weber</p>
-                            <h4>Genesis 310</h4>
-                            <h5 class="price">$699.99</h5>
+                            <p class="manufacturer coloredText">Weber</p>
+                            <h4 class="coloredText">Genesis 310</h4>
+                            <h5 class="price coloredText">$699.99</h5>
                         </div>
                     </div>
                 </div>
@@ -336,7 +336,8 @@
                                 <form>
                                    <h5 class="price">$2449.99</h5>
                                     <p class="text-center">
-                                        <button type="submit" class="btn btn-default">Add to Order</button>
+                                        {{-- <button type="submit" class="btn btn-default"><a href="/checkout">Add to Order</a></button> --}}
+                                        <a href="/checkout" class="btn btn-default">Add to Order</a>
                                     </p>
                                 </form>
                             </div>
@@ -352,6 +353,6 @@
     <!-- /quick view modal box-->
 </div>
 
-    
-    
+
+
 @stop
