@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateOrderItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,18 +12,13 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+       Schema::create('order_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email', 60)->unique(45);
-            $table->string('password', 60);
-            $table->string('is_admin')->default('false');
-            $table->rememberToken();
+            $table->integer('order_id')->unsigned()->references('id')->on('orders');
+            $table->integer('item_id')->unsigned()->references('id')->on('items');
             $table->timestamps();
         });
     }
-
-
-
 
     /**
      * Reverse the migrations.
@@ -32,6 +27,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('order_items');
     }
 }

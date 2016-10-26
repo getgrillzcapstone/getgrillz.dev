@@ -33,7 +33,7 @@
                         can rent our grills and have a great time!
                     </p>
                     <div class="rentButton">
-                        <a href="#"><h3 class="rent">Rent</h3></a>
+                        <a href="/createOrder"><h3 class="rent">Rent</h3></a>
                     </div>
                 </div>
             </figure>

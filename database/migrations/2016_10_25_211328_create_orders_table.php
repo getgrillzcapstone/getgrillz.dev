@@ -12,18 +12,15 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->increments('order_id');
-            $table->integer('item_id');
-            $table->integer('user_id');
+       Schema::create('orders', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('item_id')->unsigned()->references('id')->on('items');
+            $table->integer('user_id')->unsigned()->references('id')->on('users');
             $table->date('reservation_start');
             $table->date('reservation_end');
-            $table->string('order_total', 10);
             $table->timestamps();
         });
     }
-
-
 
     /**
      * Reverse the migrations.
