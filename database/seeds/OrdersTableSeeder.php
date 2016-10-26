@@ -32,6 +32,12 @@ class OrdersTableSeeder extends Seeder
     $order3->reservation_end = 2017-01-16;
     $order3->save();
 
+    $order3->item_id = 2;
+    $order3->user_id = 8;
+    $order3->reservation_start = 2017-01-12;
+    $order3->reservation_end = 2017-01-16;
+    $order3->save();
+
     
 }
 }

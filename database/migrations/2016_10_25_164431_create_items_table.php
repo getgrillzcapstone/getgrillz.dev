@@ -13,15 +13,13 @@ class CreateItemsTable extends Migration
     public function up()
     {
         Schema::create('items', function (Blueprint $table) {
-            $table->increments('item_id');
-            $table->string('itemcategory', 45);
-            $table->string('itemmanufacturer', 30);
-            $table->string('model_number', 45);
+            $table->increments('id');
+            $table->integer('item_category_id')->unsigned()->references('id')->on('item_categories');
+            $table->integer('manufacturer_id')->unsigned()->references('id')->on('manufacturers');
+            $table->string('model', 45);
             $table->string('size', 10);
-            $table->string('description', 750);
-            $table->string('price');
-            $table->date('reservation_start');
-            $table->date('reservation_end');
+            $table->string('description', 500);
+            $table->decimal('price', 6,2);
             $table->string('image', 70);
             $table->timestamps();
         });

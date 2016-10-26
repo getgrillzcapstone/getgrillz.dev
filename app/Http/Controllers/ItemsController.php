@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class InventoryController extends Controller
+class ItemsController extends Controller
 {
     /**
      * Display a listing of the resource.

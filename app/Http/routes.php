@@ -18,7 +18,10 @@ Route::get('/', function () {
 Route::get('/createOrder', function () {
     return view('createOrder');
 });
-
 Route::get('/checkout', function () {
     return view('checkout');
+});
+
+Route::get('/items', function () {
+    return view('items');
 });
