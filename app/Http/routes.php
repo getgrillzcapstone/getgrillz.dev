@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/createOrder', function () {
+Route::get('/create-order', function () {
     return view('createOrder');
 });
 Route::get('/checkout', function () {
