@@ -5,6 +5,18 @@
         <div class="row">
             <div class="col-lg-12 heroImgContainer">
                 <img src="/getgrillz_images/hero_image2.jpeg" class="heroImg">
+                {{-- <video autoplay muted loop style="width:100%; height: auto;">
+                  <source src="/getgrillz_images/smolderingcharcoal.mp4" type="video/mp4">
+                </video> --}}
+                <h1 class="overlay1">
+                    If you live in a city, you may not have space for a grill or a safe place to lock one up.
+                </h1>
+                <h1 class="overlay2">
+                    Problem solved with GetGrillz
+                </h1>
+                <h1 class="overlay3">
+                    A delivery service for grill rentals!
+                </h1>
             </div>
         </div>
         <div class="row bannerContainer">
