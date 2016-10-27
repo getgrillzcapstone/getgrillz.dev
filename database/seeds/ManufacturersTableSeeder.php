@@ -60,5 +60,20 @@ class ManufacturersTableSeeder extends Seeder
     $manufacturer10->name = 'Smoke Hollow';
     $manufacturer10->image = '/getgrillz_images/smokehollow-logo.jpg';
     $manufacturer10->save();
+
+    $manufacturer11 = new App\Manufacturer();
+    $manufacturer11->name = 'Rivergrille';
+    $manufacturer11->image = '/getgrillz_images/rivergrille-logo.jpg';
+    $manufacturer11->save();
+
+    $manufacturer12 = new App\Manufacturer();
+    $manufacturer12->name = 'Kingsford';
+    $manufacturer12->image = '/getgrillz_images/kingsford-logo.jpg';
+    $manufacturer12->save();
+
+    $manufacturer13 = new App\Manufacturer();
+    $manufacturer13->name = 'Stok';
+    $manufacturer13->image = '/getgrillz_images/stok-logo.jpg';
+    $manufacturer13->save();
 }
 }
