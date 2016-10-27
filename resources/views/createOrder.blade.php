@@ -8,6 +8,9 @@
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rentHeader">
                     <h1 class="rentA">Rent A</h1>
                     <h1 class="grill">Grill</h1>
+                    <div class="btn btn-default getStartedButton" id="getStartedButton">
+                        <h4>Get Started</h4>
+                    </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pull-right rentDescription">
                     <img src="/getgrillz_images/backyard-party.jpg" class=" rentDescriptionPicture img-thumbnail" alt="backyard-partyx">
@@ -20,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="datePickRow">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pickADate">
                 <div class="btn btn-default pickADateButton" id="pickADateButton">
                     <h4>Looking For A Specific Day</h4>
@@ -33,62 +36,24 @@
             </div>
         </div>
         <div class="row calenderDiv" id="calenderDiv">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 calender">
-                <h2>From Date:</h2>
-                <div class="calander noselect">
-                  <div class="cal_head paper-shadow-top-z-2">
-
-                    <button class ="button_left"><<</button>
-
-                    <span id="month_label">Month</span>
-
-                    <button class ="button_right">>></button>
-
-                  </div>
-
-
-                  <div class = "cal_body paper-shadow-bottom-z-1">
-
-                    <table>
-                      <tbody id = "cal">
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div class = "cal_output paper-shadow-top-z-1">
-                    <span id="outputText"></span>
-                  </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 calender selectingADay">
+                <div class="btn btn-default dateButton" id="selectingADayButton">
+                    <h4 class="sizeButtonText smallSizeButtonText">Selecting A Day</h4>
+                </div>
+                <div class="dateInputDiv selectingADayDiv">
+                    <input type="text" name="selectingADay" value="" class="dateInput" id="selectingADay"/>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 calender">
-                <h2>To Date:</h2>
-                <div class="calander noselect">
-                  <div class="cal_head paper-shadow-top-z-2">
-
-                    <button class ="button_left"><<</button>
-
-                    <span id="month_label">Month</span>
-
-                    <button class ="button_right">>></button>
-
-                  </div>
-
-
-                  <div class = "cal_body paper-shadow-bottom-z-1">
-
-                    <table>
-                      <tbody id = "cal">
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div class = "cal_output paper-shadow-top-z-1">
-                    <span id="outputText"></span>
-                  </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 calender selectingMultiple">
+                <div class="btn btn-default dateButton" id="selectingMultipleButton">
+                    <h4 class="sizeButtonText smallSizeButtonText">...Or Mulitple Days?</h4>
+                </div>
+                <div class="dateInputDiv selectingMultipleDiv">
+                    <input type="text" name="selectingMultiple" value="" class="dateInput" id="selectingMultiple"/>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="whatTypeOfGrillRow">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 whatTypeOfGrill">
                 <h1>What Type Of Grill Are You Looking For?</h1>
             </div>
@@ -103,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="row sizeButtonDiv">
+        <div class="row sizeButtonDiv" id="whatSizeGrillRow">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 whatSizeGrill">
                 <h1>What Size Grill Are You Looking For?</h1>
             </div>
