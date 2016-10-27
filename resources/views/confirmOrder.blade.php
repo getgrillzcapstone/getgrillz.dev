@@ -35,7 +35,7 @@
                 </form>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="deliveryRow">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addressDiv">
                 <h1 class="whereDeliver">Where Should We Deliver Your Order?</h1>
             </div>
@@ -163,7 +163,7 @@
                 <h4 class="modal-title">Now Accpeting Galactic Credits!</h4>
                 <h6 class="modal-title">But We'll Accept Your Earthling Money Too...</h6>
               </div>
-              <div class="modal-body">
+              <div class="modal-body modal-body-colored">
                   <div class="demo">
             		<form class="payment-card">
             			<div class="bank-card">
@@ -172,14 +172,14 @@
                 					<i class="bank-card__icon bank-card__icon_visa"></i>
                 					<div class="bank-card__inner">
                 						<label class="bank-card__label bank-card__label_fullwidth">
-                							<span class="bank-card__hint">Name on card</span>
-                							<input type="text" class="bank-card__field" placeholder="Name on card" pattern="[A-Za-z, ]{2,}" name="holder-card" required>
+                							<span class="bank-card__hint">Name On Card</span>
+                							<input type="text" class="bank-card__field" placeholder="Name On Card" pattern="[A-Za-z, ]{2,}" name="holder-card" required>
                 						</label>
                 					</div>
                 					<div class="bank-card__inner">
                 						<label class="bank-card__label bank-card__label_fullwidth">
-                							<span class="bank-card__hint">Number of card</span>
-                							<input type="text" class="bank-card__field" placeholder="Number of card" pattern="[0-9]{16}" name="number-card" required>
+                							<span class="bank-card__hint">Number On Card</span>
+                							<input type="text" class="bank-card__field" placeholder="Number On Card" pattern="[0-9]{16}" name="number-card" required>
                 						</label>
                 					</div>
                 					<div class="bank-card__inner">
