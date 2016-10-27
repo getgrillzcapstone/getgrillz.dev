@@ -108,24 +108,32 @@
                 <h1>What Size Grill Are You Looking For?</h1>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="btn btn-default sizeButton smallSizeButton" id="smallSizeButton">
-                    <a href="/items" class="sizeAnchor"><h4 class="sizeButtonText smallSizeButtonText">Small</h4></a>
-                </div>
+                <a href="/items">
+                    <div class="btn btn-default sizeButton smallSizeButton" id="smallSizeButton">
+                        <h4 class="sizeButtonText smallSizeButtonText">Small</h4>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="btn btn-default sizeButton mediumSizeButton" id="mediumSizeButton">
-                    <a href="/items" class="sizeAnchor"><h4 class="sizeButtonText mediumSizeButtonText">Medium</h4></a>
-                </div>
+                <a href="/items">
+                    <div class="btn btn-default sizeButton mediumSizeButton" id="mediumSizeButton">
+                        <h4 class="sizeButtonText mediumSizeButtonText">Medium</h4>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="btn btn-default sizeButton largeSizeButton" id="largeSizeButton">
-                    <a href="/items" class="sizeAnchor"><h4 class="sizeButtonText largeSizeButtonText">Large</h4></a>
-                </div>
+                <a href="/items">
+                    <div class="btn btn-default sizeButton largeSizeButton" id="largeSizeButton">
+                        <h4 class="sizeButtonText largeSizeButtonText">Large</h4>
+                    </div>
+                </a>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="btn btn-default imNotSureButton" id="imNotSureButton">
-                    <a href="/items" class="sizeAnchor"><h4 class="imNotSureButtonText">I'm Not Sure</h4></a>
-                </div>
+                <a href="/items">
+                    <div class="btn btn-default imNotSureButton" id="imNotSureButton">
+                        <h4 class="imNotSureButtonText">I'm Not Sure</h4>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
