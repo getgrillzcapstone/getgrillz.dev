@@ -219,3 +219,11 @@ $("#partySuppliesButton").click(function(){
         $("#grillSuppliesButton").removeClass("active");
     }
 });
+
+//TOGGLES VISIBILITY OF PASSWORD/CONFIRMPASSWORD ON CONFIRM ORDER PAGE
+$("#continueButton").click(function(){
+    if($('#password').is(':hidden')) {
+        $("#password").toggle();
+        $("#confirmPassword").toggle();
+    }
+});

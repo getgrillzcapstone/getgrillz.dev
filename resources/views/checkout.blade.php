@@ -181,12 +181,6 @@
                             <th class="headerPadding">Price</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        {{-- <th class="headerPadding"></th>
-                        <th class="headerPadding"></th>
-                        <th class="headerPadding"></th>
-                        <th class="orderTotal">Total: $</th> --}}
-                    </tfoot>
                     <tbody>
                         <tr>
                             <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
@@ -222,9 +216,11 @@
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="btn btn-default checkoutButton" id="checkoutButton">
-                            <h4 class="checkoutButtonText">Checkout</h4>
-                        </div>
+                        <a href="/confirm-order">
+                            <div class="btn btn-default checkoutButton" id="">
+                                <h4 class="checkoutButtonText">Checkout</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
