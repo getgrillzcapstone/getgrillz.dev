@@ -30,3 +30,10 @@ Route::get('/checkout', function () {
 Route::get('/confirm-order', function () {
     return view('confirmOrder');
 });
+
+
+Route::resource('items', 'ItemsController');
+
+Route::resource('orders', 'OrderssController');
+
+Route::resource('users', 'UsersController');
