@@ -34,7 +34,7 @@
                 margin: 0;
                 padding: 0;
                 width: 100%;
-                color: #e74c3c;
+                color: #c0392b;
                 display: table;
                 font-family: thunder;
             }
