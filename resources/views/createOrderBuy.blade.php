@@ -38,13 +38,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 whatTypeOfGrill">
                 <h1>What Type Of Grill Are You Looking For?</h1>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 charcoalDiv" value="2">
-                <div class="btn btn-default charcoalButton" id="charcoalButton">
-                    <h4 class="charcoalText">Charcoal</h4>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 charcoalDiv">
+                <div class="btn btn-default charcoalButton" id="charcoalButton" value="2">
+                    <h4 class="charcoalText" id="charcoalButton">Charcoal</h4>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 propaneDiv" value="1">
-                <div class="btn btn-default propaneButton" id="propaneButton">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 propaneDiv">
+                <div class="btn btn-default propaneButton" id="propaneButton" value="1">
                     <h4 class="propaneText">Propane</h4>
                 </div>
             </div>
@@ -86,11 +86,11 @@
                         </a>
                     </div>
                 </div>
-    
+
                 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
                 <script src="/js/orders.js"></script>
 
-      
+
 
     </div>
 
