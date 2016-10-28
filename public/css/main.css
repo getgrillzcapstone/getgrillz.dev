@@ -5,7 +5,7 @@
 
 body, html {
     background-color: black;
-    background-image: url("/getgrillz_images/brick-wall.png");
+    /*background-image: url("/getgrillz_images/brick-wall.png");*/
     height: auto;
 }
 
@@ -46,6 +46,7 @@ a:active {
 
     .navBarContainer {
         padding: 0;
+        bottom: 0;
     }
 
     .navbarLogo {
@@ -1011,4 +1012,41 @@ a:active {
 
     tr > td {
         text-align: center;
+    }
+
+/*FOR FAQ/CONTACT PAGE*/
+    .faqContainer {
+        background-color: #FFF5EE;
+        height: 110vh;
+    }
+
+    .faqHeader {
+        border-bottom-style: solid;
+    }
+
+    .faqQuestion {
+        background-color: #CA6924;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .faqAnswer {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 20px;
+    }
+
+    #faqAnswer1 {
+        display: none;
+    }
+
+    #faqAnswer2 {
+        display: none;
+    }
+
+    #faqAnswer3 {
+        display: none;
+    }
+
+    #faqAnswer4 {
+        display: none;
     }
