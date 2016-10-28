@@ -29,58 +29,58 @@
         </thead>
         <tbody>
           <tr>
-              <td>4</td>
-              <td>6, 5, 2</td>
-              <td>1234-02-23</td>
-              <td>1234-02-23</td>
-              <td>$432.98</td>
-              <td></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-              <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
+              <td class="centeredTableText">4</td>
+              <td class="centeredTableText">6, 5, 2</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">$432.98</td>
+              <td class="centeredTableText"></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+              <td class="centeredTableText"><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
           </tr>
           <tr>
-              <td>2</td>
-              <td>4, 1, 2</td>
-              <td>1234-02-23</td>
-              <td>1234-02-23</td>
-              <td>$432.98</td>
-              <td></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-              <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
+              <td class="centeredTableText">2</td>
+              <td class="centeredTableText">4, 1, 2</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">$432.98</td>
+              <td class="centeredTableText"></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+              <td class="centeredTableText"><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
           </tr>
           <tr>
-              <td>4</td>
-              <td>6, 5, 2</td>
-              <td>1234-02-23</td>
-              <td>1234-02-23</td>
-              <td>$432.98</td>
-              <td></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-              <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
+              <td class="centeredTableText">4</td>
+              <td class="centeredTableText">6, 5, 2</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">$432.98</td>
+              <td class="centeredTableText"></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+              <td class="centeredTableText"><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
           </tr>
           <tr>
-              <td>3</td>
-              <td>1, 7, 3</td>
-              <td>1234-02-23</td>
-              <td>1234-02-23</td>
-              <td>$432.98</td>
-              <td></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-              <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
+              <td class="centeredTableText">3</td>
+              <td class="centeredTableText">1, 7, 3</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">$432.98</td>
+              <td class="centeredTableText"></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+              <td class="centeredTableText"><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
           </tr>
           <tr>
-              <td>4</td>
-              <td>6, 5, 2</td>
-              <td>1234-02-23</td>
-              <td>1234-02-23</td>
-              <td>$432.98</td>
-              <td></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-              <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
+              <td class="centeredTableText">4</td>
+              <td class="centeredTableText">6, 5, 2</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">$432.98</td>
+              <td class="centeredTableText"></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+              <td class="centeredTableText"><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
           </tr>
           <tr>
-              <td>4</td>
-              <td>6, 5, 2</td>
-              <td>1234-02-23</td>
-              <td>1234-02-23</td>
-              <td>$432.98</td>
-              <td></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
-              <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
+              <td class="centeredTableText">4</td>
+              <td class="centeredTableText">6, 5, 2</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">1234-02-23</td>
+              <td class="centeredTableText">$432.98</td>
+              <td class="centeredTableText"></span><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
+              <td class="centeredTableText"><span class="glyphicon glyphicon-remove" aria-hidden="true"></td>
           </tr>
         </tbody>
       </table>
