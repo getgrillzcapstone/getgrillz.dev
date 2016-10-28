@@ -9,6 +9,33 @@ use App\Http\Controllers\Controller;
 
 class OrderController extends Controller
 {
+    
+    public function rent()
+    {
+        session()->flush();
+        session(['order_type' => 'rent']);
+        // dd(session()->all());
+        return view('createOrderRent');
+    }
+
+
+
+    public function buy()
+    {
+        
+        session()->flush();
+        session(['order_type' => 'buy']);
+
+        
+
+        
+        // dd(session()->all());
+        return view('createOrderBuy');      
+    }
+
+
+
+
     /**
      * Display a listing of the resource.
      *
