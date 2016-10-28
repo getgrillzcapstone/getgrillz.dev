@@ -18,8 +18,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 enterEmailDiv">
                 <form class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                     <div class="form-group">
+<<<<<<< HEAD
                       <label for="emailConfirmOrder">Email address</label>
                       <input type="email" class="form-control" id="emailConfirmOrder" placeholder="Enter email">
+=======
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" id="email"placeholder="Enter email">
+>>>>>>> master
                     </div>
                     <div class="form-group password" id="passwordConfirmOrder">
                       <label for="passwordConfirmOrder">Password</label>

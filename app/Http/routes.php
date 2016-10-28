@@ -38,3 +38,9 @@ Route::get('/confirm-order', function () {
 Route::get('/your-orders', function () {
     return view('yourOrders');
 });
+
+Route::resource('items', 'ItemsController');
+
+Route::resource('orders', 'OrderssController');
+
+Route::resource('users', 'UsersController');
