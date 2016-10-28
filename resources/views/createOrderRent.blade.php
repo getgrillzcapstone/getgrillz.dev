@@ -2,6 +2,20 @@
 
 @section('content')
 
+
+
+        {{-- Sample Test Form --}}
+            <form action="{{ action('ItemController@index') }}" method="GET" id="itemsform">
+                <input type="" name="fuel">
+                <input type="" name="size">
+                <button type="submit" class="btn btn-primary">Select</button>
+            </form>
+        {{-- End Sample Test Form --}}
+
+
+
+
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 heroDiv">
