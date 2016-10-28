@@ -2,6 +2,7 @@ $(function() {
     $('input[name="selectingADay"]').daterangepicker({
         singleDatePicker: true,
         showDropdowns: true,
+        applyClass: "customCalenderButton",
     });
 });
 
@@ -9,6 +10,7 @@ $(function() {
     $('input[name="selectingMultiple"]').daterangepicker({
         showDropdowns: true,
          "opens": "center",
+         applyClass: "customCalenderButton",
     });
 });
 
