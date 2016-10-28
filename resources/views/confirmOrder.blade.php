@@ -297,7 +297,7 @@
                 					</div>
                 				</div>
                 			</div>
-                			<button class="demo__button" data-dismiss="modal">Confirm</button>
+                			<button class="demo__button" data-dismiss="modal" id="confirmPayment">Confirm</button>
                 		</form>
                 	</div>
               </div>
