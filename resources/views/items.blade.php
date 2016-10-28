@@ -25,16 +25,16 @@
                     <h4 class="panel-title">Grill Types</h4>
                 </div>
                 <div class="panel-body">
-                    <form>
+                    <form action="{{ action('ItemController@setItemCategory') }}">
                         <div class="form-group"></div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Propane
+                                <input id="propane" type="checkbox">Propane
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Charcoal
+                                <input id="charcoal" type="checkbox">Charcoal
                             </label>
                         </div>
                         <button class="btn btn-default btn-sm pull-right">Apply</button>
@@ -46,56 +46,71 @@
                     <h4 class="panel-title">Brands</h4>
                 </div>
                 <div class="panel-body">
-                    <form>
+                    <form action="{{ action('ItemController@setManufacturer') }}">
                         <div class="form-group"></div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Weber
+                                <input id="weber" type="checkbox">Weber
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Charbroil
+                                <input id="charbroil" type="checkbox">Charbroil
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Napoleon
+                                <input id="napoleon" type="checkbox">Napoleon
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Nexgrill
+                                <input id="nexgrill" type="checkbox">Nexgrill
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Big Green Egg
+                                <input id="greenegg" type="checkbox">Big Green Egg
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Dyna-Glo
+                                <input id="dynaglo" type="checkbox">Dyna-Glo
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Chargriller
+                                <input id="chargriller" type="checkbox">Chargriller
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">KitchenAid
+                                <input id="kitchenaid" type="checkbox">KitchenAid
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">MasterBuilt
+                                <input id="masterbuilt" type="checkbox">MasterBuilt
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Smoke Hollow
+                                <input id="smokehollow" type="checkbox">Smoke Hollow
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input id="rivergrille" type="checkbox">Rivergrille
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input id="kingsford" type="checkbox">Kingsford
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input id="stok" type="checkbox">Stok
                             </label>
                         </div>
                         <button class="btn btn-default btn-sm pull-right">Apply</button>
@@ -107,21 +122,21 @@
                     <h4 class="panel-title">Size</h4>
                 </div>
                 <div class="panel-body">
-                    <form>
+                    <form action="{{ action('ItemController@setSize') }}">
                         <div class="form-group"></div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Small
+                                <input id="small" type="checkbox">Small
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Medium
+                                <input id="medium" type="checkbox">Medium
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">Large
+                                <input id="large" type="checkbox">Large
                             </label>
                         </div>
                         <button class="btn btn-default btn-sm pull-right">Apply</button>
@@ -150,26 +165,29 @@
                 </div>
             </div>
 
+
+        @foreach($items as $item)
             <div class="row products">
                 <!-- product-->
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/nexgrill4burner.jpg" alt="" class="img-responsive" >
+                        <div class="quick-view-button"><a href="{{action('ItemController@show', $item->id)}}" data-toggle="modal" data-target="#product-quick-view-modal">
+                            <img src="{{ $item->image }}" alt="" class="img-responsive" >
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer coloredText">Nexgrill</p>
-                            <h4 class="coloredText">Large Four Burner</h4>
-                            <h5 class="price coloredText">$350.75</h5>
+                            <p class="manufacturer coloredText">{{ $manufacturer->name }}</p>
+                            <h4 class="coloredText">{{ $item->model }}</h4>
+                            <h5 class="price coloredText">{{ $item->price }}</h5>
                         </div>
                     </div>
                 </div>
+        @endforeach
                 <!-- /product-->
                 <!-- product-->
 
-                <div class="col-md-4 col-sm-6">
+               {{--  <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
                         <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
@@ -252,8 +270,8 @@
                     </div>
                 </div>
                 <!-- /product-->
-            </div>
-            <div class="row products">
+            </div> --}}
+           {{--  <div class="row products">
                      <!-- product-->
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
@@ -305,7 +323,7 @@
                 <!-- /product-->
             </div>
                 <!-- /product-->
-            </div>
+            </div> --}}
             <div class="pages text-center">
                 <ul class="pagination">
                     <li><a href="#">&laquo;</a></li>
@@ -327,14 +345,14 @@
                     <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
                     <div class="row quick-view product-main">
                         <div class="col-sm-6">
-                            <div class="quick-view-main-image"><img src="/propane_grill_images/napoleon8burner.jpg" alt="" class="img-responsive"></div>
+                            <div class="quick-view-main-image"><img src="{{ $item->image }}" alt="" class="img-responsive"></div>
                         </div>
                         <div class="col-sm-6">
-                            <h2 class="product__heading">Large Eight Burner</h2>
-                            <p class="text-muted text-small">Grill up delicious food this summer with the Weber Genesis E-310 3-Burner Gas Grill. Featuring 3 stainless steel burners, this grill is designed to put out up to 38,000 BTUs of cooking power. Its painted steel shroud incorporates a built-in thermometer, and also features a stainless steel handle.</p>
+                            <h2 class="product__heading">{{ $item->manufacturer->name . " " . $item->model}}</h2>
+                            <p class="text-muted text-small">{{ $item->description }}</p>
                             <div class="box">
                                 <form>
-                                   <h5 class="price">$2449.99</h5>
+                                   <h5 class="price">{{ $item->price }}</h5>
                                     <p class="text-center">
                                         {{-- <button type="submit" class="btn btn-default"><a href="/checkout">Add to Order</a></button> --}}
                                         <a href="/checkout" class="btn btn-default">Add to Order</a>
