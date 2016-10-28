@@ -470,8 +470,9 @@ a:active {
         display: none;
     }
 
-    .customCalenderButtons {
+    .customCalenderButton {
         background-color: #CA6924;
+        color: #FFF5EE;
     }
 
 /*///////////////////////////////////////////FOR CHARCOAL OR PROPANE*/
@@ -984,11 +985,10 @@ a:active {
     .yourOrdersDiv {
         width: 100%;
         height: 100vh;
-        background-color: #D7C9AA;
+        background-color: #FFF5EE;
     }
 
     .yourOrdersText {
-        margin-top: 10px;
         border-bottom-style: solid;
     }
 
@@ -996,8 +996,8 @@ a:active {
     }
 
     .yourOrdersTableHeader {
-        border-bottom-style: solid;
-        border-color: #333333;
+        /*border-bottom-style: solid;
+        border-color: #333333;*/
     }
 
     .yourOrdersTable {
@@ -1006,5 +1006,9 @@ a:active {
     }
 
     .centeredTableText {
+        text-align: center;
+    }
+
+    tr > td {
         text-align: center;
     }

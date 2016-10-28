@@ -3,6 +3,8 @@
 <head>
     <title>GetGrillz</title>
     @include('layout.partials.header')
+    @yield('footerStyling')
+
 </head>
 <body>
     @include('layout.partials.navbar')
