@@ -35,6 +35,10 @@ Route::get('/your-orders', function () {
     return view('yourOrders');
 });
 
+Route::get('/thankyou', function () {
+    return view('thankYou');
+});
+
 Route::resource('items', 'ItemController');
 
 // Route::resource('orders', 'OrderController');
