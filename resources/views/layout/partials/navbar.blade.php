@@ -39,7 +39,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="navBarListItems"><h3 id="login" data-toggle="modal" data-target="#loginModal">Login/Register</h3></li>
                 <li class="navBarListItems"><h3><a href="/your-orders" class="coloredAnchorTag noTextDecoration">Your Orders</a></h3></li>
-                <li class="navBarListItems"><h3><a href="#" class="coloredAnchorTag noTextDecoration">FAQs/Contact</a></h3></li>
+                <li class="navBarListItems"><h3><a href="/faq-contact" class="coloredAnchorTag noTextDecoration">FAQs/Contact</a></h3></li>
             </ul>
         </div>
     </div>
