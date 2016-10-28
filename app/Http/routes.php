@@ -32,8 +32,8 @@ Route::get('/confirm-order', function () {
 });
 
 
-Route::resource('items', 'ItemsController');
+// Route::resource('items', 'ItemController');
 
-Route::resource('orders', 'OrderssController');
+// Route::resource('orders', 'OrdersController');
 
-Route::resource('users', 'UsersController');
+// Route::resource('users', 'UserController');
