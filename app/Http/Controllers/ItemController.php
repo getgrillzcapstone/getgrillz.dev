@@ -17,13 +17,15 @@ class ItemController extends Controller
      */
     public function index()
     {
-       // return view('items');
+       
+        // dd(request());
 
-        dd(request());
+        $items = Item::all()->where('item_category_id', '=', 1);
+        dd($items);
 
-        $items = Item::all();
-        // dd($items);
-
+            // SELECT * FROM 
+            // items
+            // WHERE item_category_id = 1;
 
         return view('items', ['items' => $items]);
 

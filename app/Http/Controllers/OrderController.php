@@ -25,6 +25,10 @@ class OrderController extends Controller
         
         session()->flush();
         session(['order_type' => 'buy']);
+
+        
+
+        
         // dd(session()->all());
         return view('createOrderBuy');      
     }
