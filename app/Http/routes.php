@@ -23,7 +23,9 @@ Route::get('/create-order-buy', function () {
     return view('createOrderBuy');
 });
 
-
+Route::get('/faq-contact', function () {
+    return view('faqContact');
+});
 
 Route::get('/checkout', function () {
     return view('checkout');
@@ -39,8 +41,6 @@ Route::get('/your-orders', function () {
 
 Route::resource('items', 'ItemController');
 
-
 // Route::resource('orders', 'OrderController');
 //
 // Route::resource('users', 'UserController');
-

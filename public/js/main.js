@@ -178,7 +178,7 @@ $("#partySuppliesButton").click(function(){
     }
 });
 
-//TOGGLES VISIBILITY OF PASSWORD/CONFIRMPASSWORD ON CONFIRM ORDER PAGE
+// TOGGLES VISIBILITY OF PASSWORD/CONFIRMPASSWORD ON CONFIRM ORDER PAGE
 $("#continueButtonConfirmOrder").click(function(){
     if($('#passwordConfirmOrder').is(':hidden')) {
         $("#passwordConfirmOrder").toggle();
@@ -204,3 +204,20 @@ $("#chevron-downConfirmOrder").click(function(){
         scrollTop: $("#yourOrderDiv").offset().top
     }, 1000);
 });
+
+// FOR FAQ ANSWERS AND ANIMATION FOR +
+$("#faqQuestion1").click(function(){
+    $("#faqAnswer1").toggle();
+})
+
+$("#faqQuestion2").click(function(){
+    $("#faqAnswer2").toggle();
+})
+
+$("#faqQuestion3").click(function(){
+    $("#faqAnswer3").toggle();
+})
+
+$("#faqQuestion4").click(function(){
+    $("#faqAnswer4").toggle();
+})
