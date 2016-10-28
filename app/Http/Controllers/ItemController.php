@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Item;
 
 class ItemController extends Controller
 {
@@ -16,7 +17,14 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+       // return view('items');
+
+        $items = Item::all();
+        dd($items);
+        return view('items', ['items' => $items]);
+
+
+
     }
 
     /**

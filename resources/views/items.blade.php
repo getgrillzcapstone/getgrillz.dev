@@ -25,7 +25,7 @@
                     <h4 class="panel-title">Grill Types</h4>
                 </div>
                 <div class="panel-body">
-                    <form action="{{ action('ItemController@setItemCategory') }}">
+                    <form {{-- action="{{ action('ItemController@setItemCategory') }} --}}">
                         <div class="form-group"></div>
                         <div class="checkbox">
                             <label>
@@ -46,7 +46,7 @@
                     <h4 class="panel-title">Brands</h4>
                 </div>
                 <div class="panel-body">
-                    <form action="{{ action('ItemController@setManufacturer') }}">
+                    <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
                         <div class="form-group"></div>
                         <div class="checkbox">
                             <label>
@@ -122,7 +122,7 @@
                     <h4 class="panel-title">Size</h4>
                 </div>
                 <div class="panel-body">
-                    <form action="{{ action('ItemController@setSize') }}">
+                    <form {{-- action="{{ action('ItemController@setSize') }}" --}}>
                         <div class="form-group"></div>
                         <div class="checkbox">
                             <label>
@@ -173,11 +173,11 @@
                     <div class="product">
                         <div class="image" >
                         <div class="quick-view-button"><a href="{{action('ItemController@show', $item->id)}}" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="{{ $item->image }}" alt="" class="img-responsive" >
+                            <img src="{{-- {{ $item->image }} --}}" alt="" class="img-responsive" >
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer coloredText">{{ $manufacturer->name }}</p>
+                            <p class="manufacturer coloredText">{{ $manufacturer->name }}<</p>
                             <h4 class="coloredText">{{ $item->model }}</h4>
                             <h5 class="price coloredText">{{ $item->price }}</h5>
                         </div>
@@ -187,7 +187,7 @@
                 <!-- /product-->
                 <!-- product-->
 
-               {{--  <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
                         <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
@@ -270,7 +270,7 @@
                     </div>
                 </div>
                 <!-- /product-->
-            </div> --}}
+            </div>
            {{--  <div class="row products">
                      <!-- product-->
                 <div class="col-md-4 col-sm-6">
@@ -345,14 +345,14 @@
                     <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
                     <div class="row quick-view product-main">
                         <div class="col-sm-6">
-                            <div class="quick-view-main-image"><img src="{{ $item->image }}" alt="" class="img-responsive"></div>
+                            <div class="quick-view-main-image"><img src="{{-- {{ $item->image }} --}}" alt="" class="img-responsive"></div>
                         </div>
                         <div class="col-sm-6">
-                            <h2 class="product__heading">{{ $item->manufacturer->name . " " . $item->model}}</h2>
-                            <p class="text-muted text-small">{{ $item->description }}</p>
+                            <h2 class="product__heading">{{-- {{ $item->manufacturer->name . " " . $item->model}} --}}</h2>
+                            <p class="text-muted text-small">{{-- {{ $item->description }} --}}</p>
                             <div class="box">
                                 <form>
-                                   <h5 class="price">{{ $item->price }}</h5>
+                                   <h5 class="price">{{-- {{ $item->price }} --}}</h5>
                                     <p class="text-center">
                                         {{-- <button type="submit" class="btn btn-default"><a href="/checkout">Add to Order</a></button> --}}
                                         <a href="/checkout" class="btn btn-default">Add to Order</a>

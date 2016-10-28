@@ -23,9 +23,7 @@ Route::get('/create-order-buy', function () {
     return view('createOrderBuy');
 });
 
-Route::get('/items', function () {
-    return view('items');
-});
+
 
 Route::get('/checkout', function () {
     return view('checkout');
@@ -39,9 +37,9 @@ Route::get('/your-orders', function () {
     return view('yourOrders');
 });
 
-// Route::resource('items', 'ItemController');
+Route::resource('items', 'ItemController');
 
-//
+
 // Route::resource('orders', 'OrderController');
 //
 // Route::resource('users', 'UserController');
