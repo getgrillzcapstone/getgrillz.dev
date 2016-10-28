@@ -167,17 +167,18 @@
 
 
         @foreach($items as $item)
+        {{-- echo $item->name; --}}
             <div class="row products">
                 <!-- product-->
                 <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
-                        <div class="quick-view-button"><a href="{{action('ItemController@show', $item->id)}}" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="{{-- {{ $item->image }} --}}" alt="" class="img-responsive" >
+                        <div class="quick-view-button">{{-- <a href="{{action('ItemController@show', $item->id)}}" data-toggle="modal" data-target="#product-quick-view-modal"> --}}
+                            <img src="{{ $item->image }}" alt="" class="img-responsive" >
                             </a></div>
                         </div>
                         <div class="text">
-                            <p class="manufacturer coloredText">{{ $manufacturer->name }}<</p>
+                            <p class="manufacturer coloredText">{{-- {{ $manufacturer->name }} --}}</p>
                             <h4 class="coloredText">{{ $item->model }}</h4>
                             <h5 class="price coloredText">{{ $item->price }}</h5>
                         </div>

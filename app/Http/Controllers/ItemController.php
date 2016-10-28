@@ -20,7 +20,7 @@ class ItemController extends Controller
        // return view('items');
 
         $items = Item::all();
-        dd($items);
+        // dd($items);
         return view('items', ['items' => $items]);
 
 
