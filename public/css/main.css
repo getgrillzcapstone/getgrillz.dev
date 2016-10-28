@@ -4,7 +4,7 @@
 }
 
 body, html {
-    background-color: black;
+    background-color: #CA6924;
     /*background-image: url("/getgrillz_images/brick-wall.png");*/
     height: auto;
 }
@@ -984,7 +984,7 @@ a:active {
 
 /*FOR YOUR ORDERS*/
     .yourOrdersDiv {
-        width: 100%;
+        /*width: 100%;*/
         height: 100vh;
         background-color: #FFF5EE;
     }
