@@ -188,7 +188,7 @@
                 <!-- /product-->
                 <!-- product-->
 
-                <div class="col-md-4 col-sm-6">
+                {{-- <div class="col-md-4 col-sm-6">
                     <div class="product">
                         <div class="image" >
                         <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
@@ -271,7 +271,7 @@
                     </div>
                 </div>
                 <!-- /product-->
-            </div>
+            </div> --}}
            {{--  <div class="row products">
                      <!-- product-->
                 <div class="col-md-4 col-sm-6">
