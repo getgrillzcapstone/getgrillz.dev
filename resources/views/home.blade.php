@@ -5,18 +5,12 @@
         <div class="row">
             <div class="col-lg-12 heroImgContainer">
                 <img src="/getgrillz_images/hero_image2.jpeg" class="heroImg">
-                {{-- <video autoplay muted loop style="width:100%; height: auto;">
-                  <source src="/getgrillz_images/smolderingcharcoal.mp4" type="video/mp4">
-                </video> --}}
                 <h1 class="overlay1">
-                    If you live in a city, you may not have space for a grill or a safe place to lock one up.
+                    Don't Have A Space For A Grill?
                 </h1>
-                <h1 class="overlay2">
-                    Problem solved with GetGrillz
-                </h1>
-                <h1 class="overlay3">
-                    A delivery service for grill rentals!
-                </h1>
+                <h3 class="overlay2">
+                    Problem solved with GetGrillz, a delivery service for grill rentals!
+                </h3>
             </div>
         </div>
         <div class="row bannerContainer">
@@ -45,7 +39,7 @@
                         can rent our grills and have a great time!
                     </p>
                     <div class="rentButton">
-                        <a href="/create-order"><h3 class="rent">Rent</h3></a>
+                        <a href="/create-order-rent"><h3 class="rent">Rent</h3></a>
                     </div>
                 </div>
             </figure>
@@ -60,7 +54,7 @@
                         and before you know it, you'll have your very own high-quality grill!
                     </p>
                     <div class="buyButton">
-                        <a href="/create-order"><h3 class="rent">Buy</h3></a>
+                        <a href="/create-order-buy"><h3 class="rent">Buy</h3></a>
                     </div>
                 </div>
             </figure>
