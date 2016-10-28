@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Item;
+use DB;
 
 class ItemController extends Controller
 {
@@ -17,10 +18,23 @@ class ItemController extends Controller
      */
     public function index()
     {
-       // return view('items');
+       
+        // dd(request()->input('fuel'));
 
-        $items = Item::all();
+        $fueltype = request()->input('fuel');
+        $size = request()->input('size');
+        $items = DB::table('items')->where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
+        // $items = DB::table('items')->where('size', '=', $size)-> get();
+
+        // ->orWhere('size', 'Medium')->orWhere('size', 'Large')->orWhere('size', '%')
+    
+    
         // dd($items);
+
+            // SELECT * FROM 
+            // items
+            // WHERE item_category_id = 1;
+
         return view('items', ['items' => $items]);
 
 
