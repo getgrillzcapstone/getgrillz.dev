@@ -16,7 +16,7 @@
         <div class="row bannerContainer">
             <h1 class="bannerHeader">What We Offer...</h1>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <img src="/charcoal_grill_images/rivergrille_charcoalgrill_11.jpg" class="bannerImg1">
+                <img src="/charcoal_grill_images/rivergrille_charcoal.jpg" class="bannerImg1">
                 <h3>Grills</h3>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
