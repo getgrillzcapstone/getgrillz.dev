@@ -6,7 +6,7 @@
             <div class="col-lg-12 heroImgContainer">
                 <img src="/getgrillz_images/hero_image2.jpeg" class="heroImg">
                 <h1 class="overlay1">
-                    Don't Have A Space For A Grill?
+                    Don't Have Space For A Grill?
                 </h1>
                 <h3 class="overlay2">
                     Problem solved with GetGrillz, a delivery service for grill rentals!

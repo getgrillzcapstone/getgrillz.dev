@@ -15,14 +15,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/create-order-rent', function () {
-    return view('createOrderRent');
-});
+Route::get('/create-order-rent', 'OrderController@rent');
 
-Route::get('/create-order-buy', function () {
-    return view('createOrderBuy');
-});
-
+Route::get('/create-order-buy', 'OrderController@buy');
 
 
 Route::get('/checkout', function () {

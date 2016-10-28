@@ -19,8 +19,12 @@ class ItemController extends Controller
     {
        // return view('items');
 
+        dd(request());
+
         $items = Item::all();
         // dd($items);
+
+
         return view('items', ['items' => $items]);
 
 
