@@ -54,13 +54,14 @@
                 <div class="map" id="map"></div>
                 <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTKNZdOuGDVz0NNe2drCK7P45W2OkF5tw"></script>
+                <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
                 <!-- Script to show address on map -->
                 <script type="text/javascript">
-                (function() {
-                    "use strict";
+                    (function() {
+                        "use strict";
 
-                    // Set our map options
-                    var mapOptions = {
+                        // Set our map options
+                        var mapOptions = {
                         // Set the zoom level
                         zoom: 10,
 
@@ -69,11 +70,98 @@
                             lat:  29.426791,
                             lng: -98.489602
                         }
-                    };
 
-                    // Render the map
-                    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-                })();
+                        };
+
+                        // Render the map
+                        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+                        // Create lat and long for our marker position
+                        var codeup = { lat: 29.426791, lng: -98.489602 };
+                        var geocoder = new google.maps.Geocoder();
+
+                        // Add the marker to our existing map
+                        var marker = new google.maps.Marker({
+                        position: codeup,
+                        map: map,
+                        draggable: true,
+                        animation: google.maps.Animation.DROP
+                        });
+                        geocoder.geocode({'latLng': codeup }, function(results, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                if (results[0]) {
+                                    var str = results[1].formatted_address
+                                    var prettyAddress = str.split(",");
+                                    var zipCodeState = prettyAddress[2];
+                                    var zipCode = zipCodeState.split(" ");
+                                    $('#streetAddress').val(prettyAddress[0]);
+                                    $('#city').val(prettyAddress[1]);
+                                    $('#zip').val(zipCode[2]);
+                                    $('#state').val(zipCode[1]);
+                                }
+                            }
+                        });
+
+                        google.maps.event.addListener(marker, 'dragend', function() {
+                            geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
+                                if (status == google.maps.GeocoderStatus.OK) {
+                                    if (results[0]) {
+                                        var str = results[0].formatted_address
+                                        var prettyAddress = str.split(",");
+                                        var zipCodeState = prettyAddress[2];
+                                        var zipCode = zipCodeState.split(" ");
+                                        $('#streetAddress').val(prettyAddress[0]);
+                                        $('#city').val(prettyAddress[1]);
+                                        $('#zip').val(zipCode[2]);
+                                        $('#state').val(zipCode[1]);
+                                    }
+                                } else {
+                                    alert("We were unable to find this location!");
+                                }
+                            });
+                        });
+                        $( document ).ready(function() {
+                            $("#showOnMapButton").click(function(){
+                                function searchAddress() {
+                                    var addressInput = document.getElementById('streetAddress').value;
+                                    addressInput += document.getElementById('city').value;
+                                    addressInput += " " + document.getElementById('zip').value;
+                                    addressInput += " " + document.getElementById('state').value;
+                                    console.log(addressInput);
+
+                                    var geocoder = new google.maps.Geocoder();
+
+                                    geocoder.geocode({address: addressInput}, function(results, status) {
+
+                                      if (status == google.maps.GeocoderStatus.OK) {
+
+                                        var myResult = results[0].geometry.location; // reference LatLng value
+
+                                        createMarker(myResult); // call the function that adds the marker
+
+                                        map.setCenter(myResult);
+
+                                        map.setZoom(17);
+
+                                      }
+                                    });
+                                }
+
+                                    function createMarker(latlng) {
+                                     // If the user makes another search you must clear the marker variable
+                                     if(marker != undefined && marker != ''){
+                                      marker.setMap(null);
+                                      marker = '';
+                                     }
+
+                                     marker = new google.maps.Marker({
+                                        map: map,
+                                        position: latlng
+                                     });
+                                    }
+                                searchAddress();
+                            });
+                        });
+                    })();
                 </script>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 addressFieldsDiv">

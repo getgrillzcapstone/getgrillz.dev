@@ -470,6 +470,10 @@ a:active {
         display: none;
     }
 
+    .customCalenderButtons {
+        background-color: #CA6924;
+    }
+
 /*///////////////////////////////////////////FOR CHARCOAL OR PROPANE*/
     .whatTypeOfGrill {
         text-align: center;

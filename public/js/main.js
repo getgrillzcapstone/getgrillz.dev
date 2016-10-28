@@ -1,7 +1,7 @@
 $(function() {
     $('input[name="selectingADay"]').daterangepicker({
         singleDatePicker: true,
-        showDropdowns: true
+        showDropdowns: true,
     });
 });
 
