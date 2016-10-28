@@ -122,7 +122,7 @@ class ItemsTableSeeder extends Seeder
     $item11 = new App\Item();
     $item11->item_category_id = 1;
     $item11->manufacturer_id = 3;
-    $item11->model = 'EIght Burner';
+    $item11->model = 'Eight Burner';
     $item11->size = 'Large';
     $item11->description = 'Lorem impsum text is for sample.';
     $item11->price = 435.75;
@@ -153,7 +153,7 @@ class ItemsTableSeeder extends Seeder
     $item14->item_category_id = 1;
     $item14->manufacturer_id = 3;
     $item14->model = 'Three Burner';
-    $item14->size = 'Small';
+    $item14->size = 'Medium';
     $item14->description = 'Lorem impsum text is for sample.';
     $item14->price = 435.75;
     $item14->image = '/propane_grill_images/napoleon3burner.jpg';
@@ -162,7 +162,7 @@ class ItemsTableSeeder extends Seeder
     $item15 = new App\Item();
     $item15->item_category_id = 1;
     $item15->manufacturer_id = 3;
-    $item15->model = 'Five Burner';
+    $item15->model = 'Table Top';
     $item15->size = 'Small';
     $item15->description = 'Lorem impsum text is for sample.';
     $item15->price = 435.75;
@@ -173,7 +173,7 @@ class ItemsTableSeeder extends Seeder
     $item16->item_category_id = 1;
     $item16->manufacturer_id = 3;
     $item16->model = 'Medium Burner';
-    $item16->size = 'Small';
+    $item16->size = 'Medium';
     $item16->description = 'Lorem impsum text is for sample.';
     $item16->price = 435.75;
     $item16->image = '/propane_grill_images/napoleon3burner2.jpg';
