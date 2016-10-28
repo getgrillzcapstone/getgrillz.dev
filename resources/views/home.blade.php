@@ -34,9 +34,9 @@
                 <div>
                     <h2><span>Rent</span></h2>
                     <hr>
-                    <p>Pick from our broad selection of high quality grills to rent for a
-                        day, weekend, or how ever long you need! At our low hourly rate, anyone
-                        can rent our grills and have a great time!
+                    <p>Choose from our wide selection of high quality grills to rent for a
+                        day, a weekend or how ever long you need! GetGrillz offers ultra affordable daily rates, 
+                        so anyone can rent a grill and have a great time!
                     </p>
                     <div class="rentButton">
                         <a href="/create-order-rent"><h3 class="rent">Rent</h3></a>
@@ -48,10 +48,8 @@
                 <div>
                     <h2><span>Buy</span></h2>
                     <hr>
-                    <p>We offer our customers the chance to purchase from our broad high-quality
-                        selection of grills for a less-than-retail price. Just browse through our
-                        inventory, add the grill you like to your order, tell us where to deliver it,
-                        and before you know it, you'll have your very own high-quality grill!
+                    <p>We don't just rent... You can buy! <br>
+                    GetGrillz offers customers the opportunity to purchase from our broad selection of grills at below retail price. Browse through our inventory, add the grill you like to your order, tell us where to deliver it, and before you know it you will be the proud owner of a new grill!
                     </p>
                     <div class="buyButton">
                         <a href="/create-order-buy"><h3 class="rent">Buy</h3></a>
