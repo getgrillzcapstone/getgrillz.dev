@@ -15,8 +15,12 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/create-order', function () {
-    return view('createOrder');
+Route::get('/create-order-rent', function () {
+    return view('createOrderRent');
+});
+
+Route::get('/create-order-buy', function () {
+    return view('createOrderBuy');
 });
 
 Route::get('/items', function () {
@@ -31,9 +35,14 @@ Route::get('/confirm-order', function () {
     return view('confirmOrder');
 });
 
+Route::get('/your-orders', function () {
+    return view('yourOrders');
+});
 
 // Route::resource('items', 'ItemController');
 
-// Route::resource('orders', 'OrdersController');
-
+//
+// Route::resource('orders', 'OrderController');
+//
 // Route::resource('users', 'UserController');
+

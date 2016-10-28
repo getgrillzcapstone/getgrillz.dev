@@ -18,18 +18,18 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 enterEmailDiv">
                 <form class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                     <div class="form-group">
-                      <label for="email">Email address</label>
-                      <input type="email" class="form-control" id="email"placeholder="Enter email">
+                      <label for="emailConfirmOrder">Email address</label>
+                      <input type="email" class="form-control" id="emailConfirmOrder" placeholder="Enter email">
                     </div>
-                    <div class="form-group password" id="password">
-                      <label for="password">Password</label>
-                      <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                    <div class="form-group password" id="passwordConfirmOrder">
+                      <label for="passwordConfirmOrder">Password</label>
+                      <input type="password" class="form-control" id="passwordConfirmOrder" placeholder="Enter Password">
                     </div>
-                    <div class="form-group confirmPassword" id="confirmPassword">
-                      <label for="confirmPassword">Confirm Password</label>
-                      <input type="confirmPassword" class="form-control" id="confirmPassword" placeholder="Enter Password">
+                    <div class="form-group confirmPassword" id="confirmPasswordConfirmOrder">
+                      <label for="confirmPasswordConfirmOrder">Confirm Password</label>
+                      <input type="confirmPassword" class="form-control" id="confirmPasswordConfirmOrder" placeholder="Enter Password">
                     </div>
-                    <div class="btn btn-default continueButton" id="continueButton">
+                    <div class="btn btn-default continueButton" id="continueButtonConfirmOrder">
                         <h4>Continue</h4>
                     </div>
                 </form>
@@ -96,10 +96,13 @@
                 <div class="btn btn-default showOnMapButton" id="showOnMapButton">
                     <h4>Show On Map</h4>
                 </div>
+                <div class="chevron-down">
+                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" id="chevron-downConfirmOrder"></span>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 yourOrderDiv">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 yourOrderDiv" id="yourOrderDiv">
                 <h1>Do We Have Everything Correct?</h1>
                 <table id="example" class="display" cellspacing="0" width="100%">
                     <thead>
