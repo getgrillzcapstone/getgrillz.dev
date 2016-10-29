@@ -10,15 +10,6 @@ $("#continueButtonConfirmOrder").click(function(){
     }
 });
 
-$("#continueButtonLogin").click(function(){
-    if($('#passwordLogin').is(':hidden')) {
-        $("#passwordLogin").toggle();
-        $("#confirmPasswordLogin").toggle();
-    } else {
-        $('#loginModal').modal('toggle');
-    }
-});
-
 $("#chevron-downConfirmOrder").click(function(){
     $('html, body').animate({
         scrollTop: $("#yourOrderDiv").offset().top
