@@ -228,3 +228,7 @@
     </div>
 
 @stop
+
+@section('javascriptFileForCheckout')
+    <script src="/js/checkout.js"></script>
+@endsection
