@@ -6,9 +6,9 @@
 
         {{-- Sample Test Form --}}
             <form action="{{ action('ItemController@index') }}" method="GET" id="itemsform">
-                <input type="" id="qta_field_fuel" name="fuel" value="">
-                <input type="" id="qta_field_size" name="size" value="">
-                <button type="submit" class="btn btn-primary">Select</button>
+                <input type="hidden" id="qta_field_fuel" name="fuel" value="">
+                <input type="hidden" id="qta_field_size" name="size" value="">
+                {{-- <button type="submit" class="btn btn-primary">Select</button> --}}
             </form>
         {{-- End Sample Test Form --}}
 
@@ -58,29 +58,29 @@
                         <h1>What Size Grill Are You Looking For?</h1>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <a href="/items" title="submit">
-                            <div class="btn btn-default sizeButton smallSizeButton" id="smallSizeButton">
+                        <a>
+                            <div class="btn btn-default sizeButton smallSizeButton" id="smallSizeButton" value="Small">
                                 <h4 class="sizeButtonText smallSizeButtonText">Small</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <a href="/items" title="submit">
-                            <div class="btn btn-default sizeButton mediumSizeButton" id="mediumSizeButton">
+                        <a>
+                            <div class="btn btn-default sizeButton mediumSizeButton" id="mediumSizeButton" value="Medium">
                                 <h4 class="sizeButtonText mediumSizeButtonText">Medium</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <a href="/items" title="submit">
-                            <div class="btn btn-default sizeButton largeSizeButton" id="largeSizeButton">
+                        <a>
+                            <div class="btn btn-default sizeButton largeSizeButton" id="largeSizeButton" value="Large">
                                 <h4 class="sizeButtonText largeSizeButtonText">Large</h4>
                             </div>
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <a href="/items" href="/items?=${item.fuel}&${item.size}" title="submit">
-                            <div class="btn btn-default imNotSureButton" id="imNotSureButton">
+                        <a>
+                            <div class="btn btn-default imNotSureButton" id="imNotSureButton" value="%">
                                 <h4 class="imNotSureButtonText">I'm Not Sure</h4>
                             </div>
                         </a>
