@@ -275,7 +275,7 @@ class ItemsTableSeeder extends Seeder
     $item25->size = 'Small';
     $item25->description = 'Lorem impsum text is for sample.';
     $item25->price = 435.75;
-    $item25->image = '/propane_grill_images/charbroil-bistro.jpg';
+    $item25->image = '/propane_grill_images/charbroil_bistro.jpg';
     $item25->save();
 
     $item26 = new App\Item();
