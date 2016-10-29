@@ -14,33 +14,32 @@
 Route::get('/', function () {
     return view('home');
 });
-
 Route::get('/create-order-rent', 'OrderController@rent');
-
 Route::get('/faq-contact', function () {
     return view('faqContact');
 });
-
 Route::get('/create-order-buy', 'OrderController@buy');
-
 Route::get('/checkout', function () {
     return view('checkout');
 });
-
 Route::get('/confirm-order', function () {
     return view('confirmOrder');
 });
-
 Route::get('/your-orders', function () {
     return view('yourOrders');
 });
-
 Route::get('/thankyou', function () {
     return view('thankYou');
 });
-
 Route::resource('items', 'ItemController');
 
 // Route::resource('orders', 'OrderController');
 //
 // Route::resource('users', 'UserController');
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
