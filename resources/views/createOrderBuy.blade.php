@@ -95,3 +95,7 @@
     </div>
 
 @stop
+
+@section('javascriptFileForCreateOrderBuy')
+    <script src="/js/createOrder.js"></script>
+@endsection

@@ -118,3 +118,8 @@
     </div>
 
 @stop
+
+@section('javascriptFilesForCreateOrderRent')
+    <script src="/js/createOrder.js"></script>
+    <script src="/js/createOrderRent.js"></script>
+@endsection

@@ -307,3 +307,7 @@
         </div>
     </div>
 @stop
+
+@section('javascriptFileForConfirmOrder')
+    <script src="/js/confirmOrder.js"></script>
+@endsection

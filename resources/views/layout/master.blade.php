@@ -14,5 +14,11 @@
     @include('layout.partials.footer')
 
     @include('layout.partials.scriptTags')
+    @yield('javascriptFilesForCreateOrderRent')
+    @yield('javascriptFileForCreateOrderBuy')
+    @yield('javascriptFileForCheckout')
+    @yield('javascriptFileForConfirmOrder')
+    @yield('javascriptFilesForFaqContact')
+    @yield('javascriptFileThankyou')
 </body>
 </html>

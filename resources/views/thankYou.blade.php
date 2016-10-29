@@ -191,3 +191,7 @@
     </div>
 </div>
 @stop
+
+@section('javascriptFileThankyou')
+    <script src="/js/thankyou.js"></script>
+@endsection

@@ -98,3 +98,7 @@
         <br>
     </div>
 @stop
+
+@section('javascriptFilesForFaqContact')
+    <script src="/js/faqContact.js"></script>
+@endsection
