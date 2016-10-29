@@ -21,7 +21,7 @@
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <img src="/getgrillz_images/bbqtools.jpg" class="bannerImg2">
-                <h3>Grills Accessories</h3>
+                <h3>Grill Accessories</h3>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <img src="/partysupplies_images/folding_table1.jpg" class="bannerImg3">
