@@ -11,7 +11,7 @@ class ItemsTableSeeder extends Seeder
      */
     public function run()
 {
-    
+
 // Weber Propane
     $item1 = new App\Item();
     $item1->item_category_id = 1;
@@ -179,7 +179,7 @@ class ItemsTableSeeder extends Seeder
     $item16->image = '/propane_grill_images/napoleon3burner2.jpg';
     $item16->save();
 
-    
+
 // Masterbuilt Propane
     $item17 = new App\Item();
     $item17->item_category_id = 1;
@@ -222,7 +222,7 @@ class ItemsTableSeeder extends Seeder
     $item20->image = '/propane_grill_images/kitchenaid6burner.jpg';
     $item20->save();
 
-    
+
 // Dynaglo Propane
     $item21 = new App\Item();
     $item21->item_category_id = 1;
@@ -254,7 +254,7 @@ class ItemsTableSeeder extends Seeder
     $item23->image = '/propane_grill_images/dynaglo5burner.jpg';
     $item23->save();
 
-    
+
 // Chargriller Propane
     $item24 = new App\Item();
     $item24->item_category_id = 1;
@@ -266,7 +266,7 @@ class ItemsTableSeeder extends Seeder
     $item24->image = '/propane_grill_images/chargrillerpro3.jpg';
     $item24->save();
 
-    
+
 // Charbroil Propane
     $item25 = new App\Item();
     $item25->item_category_id = 1;
@@ -389,16 +389,6 @@ class ItemsTableSeeder extends Seeder
     $item35->save();
 
 // Green Egg Charcoal
-    $item36 = new App\Item();
-    $item36->item_category_id = 2;
-    $item36->manufacturer_id = 5;
-    $item36->model = 'Charcoal XYZ';
-    $item36->size = 'Small';
-    $item36->description = 'Lorem impsum text is for sample.';
-    $item36->price = 435.75;
-    $item36->image = '/charcoal_grill_images/greenegg_small.jpg';
-    $item36->save();
-
     $item37 = new App\Item();
     $item37->item_category_id = 2;
     $item37->manufacturer_id = 5;
@@ -505,7 +495,7 @@ class ItemsTableSeeder extends Seeder
     $item46->image = '/charcoal_grill_images/weber_small_table.jpg';
     $item46->save();
 
-    
+
 
 
 

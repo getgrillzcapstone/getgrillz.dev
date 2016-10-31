@@ -168,9 +168,6 @@
 				</div>
 			</div>
 	<p id="signature">Made with &#9825; by <a href="http://www.josesentis.com" target="_blank">Jose Sentis</a></p>
-    {{-- <div class="thankyouMessage">
-
-    </div> --}}
     <!-- Modal -->
     <div id="thankyouModal" class="modal fade" role="dialog">
       <div class="modal-dialog">

@@ -1,181 +1,165 @@
 @extends('layout.master')
 
 @section('content')
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="row page-top">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <h1 class="text-center coloredText">Grills and Grills and Grills</h1>
-                    <p class="text-muted text-center coloredText">Propane, charcoal, big, medium, small. Choices for everyone.</p>
-                    <br>
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1 class="text-center">Grills, Grills and Grills</h1>
+                <p class="text-muted text-center coloredText">Propane, charcoal, big, medium, small. Choices for everyone.</p>
+                <br>
             </div>
         </div>
-    </div>
 
-
-    <div class="row">
-        <div class="col-md-3">
-            <!-- menus and filters-->
-            <div class="panel panel-default sidebar-menu">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Grill Types</h4>
-                </div>
-                <div class="panel-body">
-                    <form {{-- action="{{ action('ItemController@setItemCategory') }} --}}">
-                        <div class="form-group"></div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="propane" type="checkbox">Propane
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="charcoal" type="checkbox">Charcoal
-                            </label>
-                        </div>
-                        <button class="btn btn-default btn-sm pull-right">Apply</button>
-                    </form>
-                </div>
-            </div>
-            <div class="panel panel-default sidebar-menu">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Brands</h4>
-                </div>
-                <div class="panel-body">
-                    <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
-                        <div class="form-group"></div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="weber" type="checkbox">Weber
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="charbroil" type="checkbox">Charbroil
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="napoleon" type="checkbox">Napoleon
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="nexgrill" type="checkbox">Nexgrill
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="greenegg" type="checkbox">Big Green Egg
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="dynaglo" type="checkbox">Dyna-Glo
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="chargriller" type="checkbox">Chargriller
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="kitchenaid" type="checkbox">KitchenAid
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="masterbuilt" type="checkbox">MasterBuilt
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="smokehollow" type="checkbox">Smoke Hollow
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="rivergrille" type="checkbox">Rivergrille
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="kingsford" type="checkbox">Kingsford
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="stok" type="checkbox">Stok
-                            </label>
-                        </div>
-                        <button class="btn btn-default btn-sm pull-right">Apply</button>
-                    </form>
-                </div>
-            </div>
-            <div class="panel panel-default sidebar-menu">
-                <div class="panel-heading">
-                    <h4 class="panel-title">Size</h4>
-                </div>
-                <div class="panel-body">
-                    <form {{-- action="{{ action('ItemController@setSize') }}" --}}>
-                        <div class="form-group"></div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="small" type="checkbox">Small
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="medium" type="checkbox">Medium
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input id="large" type="checkbox">Large
-                            </label>
-                        </div>
-                        <button class="btn btn-default btn-sm pull-right">Apply</button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <div class="col-md-9">
-            <div class="info-bar">
-                <div class="row">
-                    <div class="col-sm-12 col-md-8 products-number-sort">
-                        <div class="row">
-                            <div class="form-inline">
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="products-sort-by">
-                                        <select name="sort-by" class="form-control">
-                                            <option>Sort by: Price Low to High</option>
-                                            <option>Sort by: Price High to Low</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dropDownSort">
+                <div class="form-inline">
+                    <div class="pull-right">
+                        <select name="sort-by" class="form-control">
+                            <option>Sort by: Price Low to High</option>
+                            <option>Sort by: Price High to Low</option>
+                        </select>
                     </div>
                 </div>
             </div>
+        </div>
 
-
-        @foreach($items as $item)
-        {{-- echo $item->name; --}}
-            <div class="row products">
-                <!-- product-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button">{{-- <a href="{{action('ItemController@show', $item->id)}}" data-toggle="modal" data-target="#product-quick-view-modal"> --}}
-                            <img src="{{ $item->image }}" alt="" class="img-responsive" >
-                            </a></div>
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 categoriesDiv">
+                <!-- menus and filters-->
+                <div class="panel panel-default sidebar-menu">
+                    <div class="panel-heading customPanelHeading">
+                        <h4 class="panel-title">Grill Types</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form {{-- action="{{ action('ItemController@setItemCategory') }} "--}}>
+                            <div class="form-group"></div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="propane" type="checkbox">Propane
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="charcoal" type="checkbox">Charcoal
+                                </label>
+                            </div>
+                            <button class="btn btn-default btn-sm pull-right">Apply</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default sidebar-menu">
+                    <div class="panel-heading customPanelHeading">
+                        <h4 class="panel-title">Brands</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
+                            <div class="form-group"></div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="weber" type="checkbox">Weber
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="charbroil" type="checkbox">Charbroil
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="napoleon" type="checkbox">Napoleon
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="nexgrill" type="checkbox">Nexgrill
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="greenegg" type="checkbox">Big Green Egg
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="dynaglo" type="checkbox">Dyna-Glo
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="chargriller" type="checkbox">Chargriller
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="kitchenaid" type="checkbox">KitchenAid
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="masterbuilt" type="checkbox">MasterBuilt
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="smokehollow" type="checkbox">Smoke Hollow
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="rivergrille" type="checkbox">Rivergrille
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="kingsford" type="checkbox">Kingsford
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="stok" type="checkbox">Stok
+                                </label>
+                            </div>
+                            <button class="btn btn-default btn-sm pull-right">Apply</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default sidebar-menu">
+                    <div class="panel-heading customPanelHeading">
+                        <h4 class="panel-title">Size</h4>
+                    </div>
+                    <div class="panel-body">
+                        <form {{-- action="{{ action('ItemController@setSize') }}" --}}>
+                            <div class="form-group"></div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="small" type="checkbox">Small
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="medium" type="checkbox">Medium
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input id="large" type="checkbox">Large
+                                </label>
+                            </div>
+                            <button class="btn btn-default btn-sm pull-right">Apply</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                @foreach($items as $item)
+                    {{-- <!-- product--> --}}
+                    <div class="product itemsContainer">
+                        <div class="itemImage">
+                            <img src="{{$item->image}}" class="img-responsive">
+                            <div class="overlay">
+                                <!-- Trigger the modal with a button -->
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#product-quick-view-modal">Open Modal</button>
+                            </div>
                         </div>
                         <div class="text">
                             <p class="manufacturer coloredText">{{-- {{ $manufacturer->name }} --}}</p>
@@ -183,195 +167,66 @@
                             <h5 class="price coloredText">{{ $item->price }}</h5>
                         </div>
                     </div>
-                </div>
-        @endforeach
-                <!-- /product-->
-                <!-- product-->
 
-                {{-- <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/napoleon3burner.jpg" alt="" class="img-responsive" >
-                            </a></div>
-                        </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">Napoleon</p>
-                            <h4 class="coloredText">Small Three Burner</h4>
-                            <h5 class="price coloredText">$349.99</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- /product-->
-                <!-- product-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/weber-bistro.jpg" alt="" class="img-responsive" >
-                            </a></div>
-                        </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">Weber</p>
-                            <h4 class="coloredText">Bistro</h4>
-                            <h5 class="price coloredText">$149.99</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- /product-->
-            </div>
-            <div class="row products">
-                <!-- product-->
-                     <!-- product-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/weberspirit210.jpg" alt="" class="img-responsive" >
-                            </a></div>
-                        </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">Weber</p>
-                            <h4 class="coloredText">Spirit 210</h4>
-                            <h5 class="price coloredText">$349.99</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- /product-->
-                <!-- product-->
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/napoleon4burner.jpg" alt="" class="img-responsive" >
-                            </a></div>
-                        </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">Napoleon</p>
-                            <h4 class="coloredText">Medium Four Burner</h4>
-                            <h5 class="price coloredText">$525.50</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- /product-->
-                <!-- product-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/webersummitt420.jpg" alt="" class="img-responsive" >
-                            </a></div>
-                        </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">Weber</p>
-                            <h4 class="coloredText">Summitt 420</h4>
-                            <h5 class="price coloredText">$1299.00</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- /product-->
-            </div> --}}
-           {{--  <div class="row products">
-                     <!-- product-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/webersummitt670.jpg" alt="" class="img-responsive" >
-                            </a></div>
-                        </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">Weber</p>
-                            <h4 class="coloredText">Summitt 670</h4>
-                            <h5 class="price coloredText">$2350.75</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- /product-->
-                <!-- product-->
+                    {{-- <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
 
-                <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/nexgrill6burner.jpg" alt="" class="img-responsive" >
-                            </a></div>
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
                         </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">Nexgrill</p>
-                            <h4 class="coloredText">Large Six Burner</h4>
-                            <h5 class="price coloredText">$1999.99</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- /product-->
-                <!-- product-->
-                <div class="col-md-4 col-sm-6">
-                    <div class="product">
-                        <div class="image" >
-                        <div class="quick-view-button"><a href="#" data-toggle="modal" data-target="#product-quick-view-modal">
-                            <img src="/propane_grill_images/webergenesis310.jpg" alt="" class="img-responsive" >
-                            </a></div>
-                        </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">Weber</p>
-                            <h4 class="coloredText">Genesis 310</h4>
-                            <h5 class="price coloredText">$699.99</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- /product-->
-            </div>
-                <!-- /product-->
-            </div> --}}
-            <div class="pages text-center">
-                <ul class="pagination">
-                    <li><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- quick view modal box-->
-    <div id="product-quick-view-modal" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
-                    <div class="row quick-view product-main">
-                        <div class="col-sm-6">
-                            <div class="quick-view-main-image"><img src="{{-- {{ $item->image }} --}}" alt="" class="img-responsive"></div>
-                        </div>
-                        <div class="col-sm-6">
-                            <h2 class="product__heading">{{-- {{ $item->manufacturer->name . " " . $item->model}} --}}</h2>
-                            <p class="text-muted text-small">{{-- {{ $item->description }} --}}</p>
-                            <div class="box">
-                                <form>
-                                   <h5 class="price">{{-- {{ $item->price }} --}}</h5>
-                                    <p class="text-center">
-                                        {{-- <button type="submit" class="btn btn-default"><a href="/checkout">Add to Order</a></button> --}}
-                                        <a href="/checkout" class="btn btn-default">Add to Order</a>
-                                    </p>
-                                </form>
+
+                      </div>
+                    </div> --}}
+                    <!-- quick view modal box-->
+                    <div id="product-quick-view-modal" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                                    <div class="row quick-view product-main">
+                                        <div class="col-sm-6">
+                                            <div class="quick-view-main-image"><img src="{{ $item->image }}" alt="" class="img-responsive"></div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            {{-- <h2 class="product__heading">{{$item->manufacturer->name . " " . $item->model}}</h2> --}}
+                                            <p class="text-muted text-small">{{ $item->description }}</p>
+                                            <div class="box">
+                                                <form>
+                                                   <h5 class="price">{{ $item->price }}</h5>
+                                                    <p class="text-center">
+                                                        {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
+                                                        <a href="/checkout" class="btn btn-default">Add to Order</a>
+                                                    </p>
+                                                </form>
+                                            </div>
+                                            <!-- /.box-->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- /.box-->
                         </div>
+                        <!-- /.modal-dialog-->
                     </div>
-                </div>
+                    <!-- /.modal-->
+                    <!-- /quick view modal box-->
+
+                @endforeach
             </div>
         </div>
-        <!-- /.modal-dialog-->
+        <div class="row">
+            <br>
+        </div>
     </div>
-    <!-- /.modal-->
-    <!-- /quick view modal box-->
-</div>
-
-
-
 @stop
