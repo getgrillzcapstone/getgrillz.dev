@@ -55,7 +55,7 @@
 
                 <div class="row sizeButtonDiv" id="whatSizeGrillRow">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 whatSizeGrill">
-                        <h1>What Size Grill Are You Looking For?</h1>
+                        <h1>What Size Grill Do You Need?</h1>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <a>

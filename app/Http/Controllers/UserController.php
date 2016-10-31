@@ -9,6 +9,15 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
+    
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -48,7 +57,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $data['user'] = User::findOrFail($id);
+        $data['orders'] = $data['user']->orders();
+
+        return view('orders')->with($data);
     }
 
     /**
@@ -82,6 +94,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->action('home');
     }
 }

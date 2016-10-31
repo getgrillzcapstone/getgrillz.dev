@@ -18,14 +18,45 @@ $(document).ready(function() {
             e.preventDefault();
         }
     });
+
+    $('#continueButtonLogin').click(function(event) {
+        event.preventDefault();
+        // required inputs for ajax
+        var token = 'dumb';
+        var url = $("#loginmod").attr('action');
+        var type = $("#loginmod").attr('action');
+
+        // data to be passed
+        // var email =
+        // var password =
+        // var confirm_password =
+        
+        console.log(token,url,type);
+        
+        $.ajax({
+            url: "/users",
+            type: "GET",
+            data: {
+                email:  10,
+                password: 20,
+                confirm_password: 20,
+                _token:  80
+            }
+        });
+    alert('Button with id "continueButtonLogin" was clicked');
+            });
+    
+
 });
 
 // FOR LOGIN ON NAVBAR AND CONFIRM ORDER PAGE
-$("#continueButtonLogin").click(function(){
-    if($('#passwordLogin').is(':hidden')) {
-        $("#passwordLogin").toggle();
-        $("#confirmPasswordLogin").toggle();
-    } else {
-        $('#loginModal').modal('toggle');
-    }
-});
+// $("#continueButtonLogin").click(function(){
+//     if($('#passwordLogin').is(':hidden')) {
+//         $("#passwordLogin").toggle();
+//         $("#confirmPasswordLogin").toggle();
+//     } else {
+//         $('#loginModal').modal('toggle');
+//     }
+// });
+
+
