@@ -156,10 +156,10 @@
                     <div class="product itemsContainer">
                         <div class="itemImage">
                             <img src="{{$item->image}}" class="img-responsive">
-                            <div class="overlay">
+                            {{-- <div class="overlay"> --}}
                                 <!-- Trigger the modal with a button -->
-                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#product-quick-view-modal">Open Modal</button>
-                            </div>
+                                <button type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}">Preview Item</button>
+                            {{-- </div> --}}
                         </div>
                         <div class="text">
                             <p class="manufacturer coloredText">{{-- {{ $manufacturer->name }} --}}</p>
@@ -190,7 +190,7 @@
                       </div>
                     </div> --}}
                     <!-- quick view modal box-->
-                    <div id="product-quick-view-modal" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade">
+                    <div id="product-quick-view-modal-{{$item->id}}" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-body">
@@ -207,7 +207,7 @@
                                                    <h5 class="price">{{ $item->price }}</h5>
                                                     <p class="text-center">
                                                         {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
-                                                        <a href="/checkout" class="btn btn-default">Add to Order</a>
+                                                        <a class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add to Order</a>
                                                     </p>
                                                 </form>
                                             </div>
