@@ -31,8 +31,8 @@ $(document).ready(function() {
         var password = $("#passwordLogin").val();
         var confirm_password = $("#confirmPasswordLogin").val();
         
-        console.log(token,url,type,email,password,confirm_password);
-        console.log(password);
+        // console.log(token,url,type,email,password,confirm_password);
+        // console.log(password);
         
         $.ajax({
             url: url,
@@ -44,8 +44,8 @@ $(document).ready(function() {
                 _token:  token
             }
         });
-    alert('Button with id "continueButtonLogin" was clicked');
-            });
+    
+    });
     
 
 });

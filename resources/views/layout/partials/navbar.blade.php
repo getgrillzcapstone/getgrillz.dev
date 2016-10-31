@@ -63,11 +63,11 @@
                     <label for="emailLogin">Email address</label>
                     <input type="email" class="form-control" id="emailLogin" placeholder="Enter email" name="email">
                   </div>
-                  <div class="form-group password" id="passwordLogin">
+                  <div class="form-group password">
                     <label for="passwordLogin">Password</label>
                     <input type="password" class="form-control" id="passwordLogin" placeholder="Enter Password" name="password">
                   </div>
-                  <div class="form-group confirmPassword" id="confirmPasswordLogin">
+                  <div class="form-group confirmPassword">
                     <label for="confirmPasswordLogin">Confirm Password</label>
                     <input type="password" class="form-control" id="confirmPasswordLogin" placeholder="Enter Password" name="password_confirmation">
                   </div>
