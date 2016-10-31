@@ -57,7 +57,7 @@
           <div class="modal-footer loginModal" id="loginModal">
               {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Login</button> --}}
           {{-- </div> --}}
-              <form method="POST" action="/auth/regsiter" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <form method="POST" action="{{{ action('Auth\AuthController@postLogin') }}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="loginmod">
               <input type="hidden" name="_token" value="{{{csrf_token()}}}">
                   <div class="form-group">
                     <label for="emailLogin">Email address</label>

@@ -31,7 +31,7 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
-        $this->redirectPath = action('OrderController@index');
+        $this->redirectPath = action('AuthController@index');
     }
 
     /**
