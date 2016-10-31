@@ -11,10 +11,10 @@ class UserController extends Controller
 {
     
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
 
 
@@ -46,7 +46,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $email = $request->input('email');
+        // $email = $request->input('email');
     }
 
     /**
@@ -57,10 +57,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $data['user'] = User::findOrFail($id);
-        $data['orders'] = $data['user']->orders();
+        // $data['user'] = User::findOrFail($id);
+        // $data['orders'] = $data['user']->orders();
 
-        return view('orders')->with($data);
+        // return view('orders')->with($data);
     }
 
     /**
@@ -94,8 +94,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::findOrFail($id);
-        $user->delete();
-        return redirect()->action('home');
+        // $user = User::findOrFail($id);
+        // $user->delete();
+        // return redirect()->action('home');
     }
 }

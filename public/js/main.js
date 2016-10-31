@@ -22,25 +22,26 @@ $(document).ready(function() {
     $('#continueButtonLogin').click(function(event) {
         event.preventDefault();
         // required inputs for ajax
-        var token = 'dumb';
+        var token = $("#token").val();
         var url = $("#loginmod").attr('action');
-        var type = $("#loginmod").attr('action');
+        var type = $("#loginmod").attr('method');
 
         // data to be passed
-        // var email =
-        // var password =
-        // var confirm_password =
+        var email = $("#emailLogin").val();
+        var password = $("#passwordLogin").val();
+        var confirm_password = $("#confirmPasswordLogin").val();
         
-        console.log(token,url,type);
+        console.log(token,url,type,email,password,confirm_password);
+        console.log(password);
         
         $.ajax({
-            url: "/users",
-            type: "GET",
+            url: url,
+            type: type,
             data: {
-                email:  10,
-                password: 20,
-                confirm_password: 20,
-                _token:  80
+                email:  email,
+                password: password,
+                confirm_password: confirm_password,
+                _token:  token
             }
         });
     alert('Button with id "continueButtonLogin" was clicked');
