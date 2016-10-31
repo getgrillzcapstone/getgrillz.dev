@@ -21,11 +21,11 @@ $(document).ready(function() {
 });
 
 // FOR LOGIN ON NAVBAR AND CONFIRM ORDER PAGE
-$("#continueButtonLogin").click(function(){
-    if($('#passwordLogin').is(':hidden')) {
-        $("#passwordLogin").toggle();
-        $("#confirmPasswordLogin").toggle();
-    } else {
-        $('#loginModal').modal('toggle');
-    }
-});
+// $("#continueButtonLogin").click(function(){
+//     if($('#passwordLogin').is(':hidden')) {
+//         $("#passwordLogin").toggle();
+//         $("#confirmPasswordLogin").toggle();
+//     } else {
+//         $('#loginModal').modal('toggle');
+//     }
+// });
