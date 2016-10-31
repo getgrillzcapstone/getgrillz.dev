@@ -57,20 +57,21 @@
           <div class="modal-footer loginModal" id="loginModal">
               {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Login</button> --}}
           {{-- </div> --}}
-              <form class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <form method="POST" action="{{{ action('Auth\AuthController@postLogin') }}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="loginmod">
+              <input type="hidden" name="_token" value="{{{csrf_token()}}}">
                   <div class="form-group">
                     <label for="emailLogin">Email address</label>
-                    <input type="email" class="form-control" id="emailLogin" placeholder="Enter email">
+                    <input type="email" class="form-control" id="emailLogin" placeholder="Enter email" name="email">
                   </div>
                   <div class="form-group password" id="passwordLogin">
                     <label for="passwordLogin">Password</label>
-                    <input type="password" class="form-control" id="passwordLogin" placeholder="Enter Password">
+                    <input type="password" class="form-control" id="passwordLogin" placeholder="Enter Password" name="password">
                   </div>
                   <div class="form-group confirmPassword" id="confirmPasswordLogin">
                     <label for="confirmPasswordLogin">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmPasswordLogin" placeholder="Enter Password">
+                    <input type="password" class="form-control" id="confirmPasswordLogin" placeholder="Enter Password" name="password_confirmation">
                   </div>
-                  <div class="btn btn-default continueButton" id="continueButtonLogin">
+                  <button type="submit" class="btn btn-default continueButton" id="continueButtonLogin">
                       <h4>Continue</h4>
                   </div>
               </form>

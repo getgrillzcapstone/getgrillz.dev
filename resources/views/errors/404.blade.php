@@ -62,9 +62,11 @@
             <div class="content">
                 <div class="title" id="page_effect" style="display:none;">404: <br>This page went up in smoke
                 <br>
-                
         
                 </div>
+                <br>
+                <br>
+                <a href="/" style="color:#ca6924;"><h2>Go Home</h2></a>
             </div>
         </div>
         

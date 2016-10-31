@@ -735,11 +735,11 @@ a:active {
     }
 
     .password {
-        display: none;
+        /* display: none; */
     }
 
     .confirmPassword {
-        display: none;
+        /* display: none; */
     }
 
     .addressDiv {
