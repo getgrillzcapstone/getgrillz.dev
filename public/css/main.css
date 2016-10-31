@@ -9,6 +9,15 @@ body, html {
     height: auto;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 100px;
+}
+
 h1{
 
   font-family: thunder;
@@ -95,14 +104,16 @@ a:active {
 
 /*////////////////////////////////////////////////////////FOR FOOTER*/
     .footerContainer > span {
-        padding-top: 2vh;
+        padding-top: 10px;
     }
 
     .footer {
         background-color: #FFF5EE;
         text-align: center;
-        /*width: 100%;
-        height: auto;*/
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 113px;
     }
 
     .footerLinks {
@@ -1975,3 +1986,58 @@ a:active {
     background-color: #1C1E1E;
     /*opacity: .9;*/
 }
+
+/*FOR ITEMS PAGE*/
+    .categoriesDiv {
+        height: 100%;
+    }
+
+    .itemImage {
+        width: 275px;
+        height: 275px;
+        border-style: solid;
+    }
+
+    .itemsContainer {
+        display: inline-block;
+        padding-right: 20px;
+    }
+
+    .dropDownSort {
+        margin-bottom: 10px;
+        padding-right: 70px;
+    }
+
+    .panel-default > .panel-heading {
+      color: #FFF5EE;
+      background-color: #7B2D26;
+      border-color: #000;
+    }
+
+
+    .panel-default {
+        border-color: #000;
+    }
+
+    .overlay {
+      background: rgba(41, 128, 185, 0.7);
+      bottom: 0;
+      color: white;
+      font-size: 1em;
+      left: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 3.75em 3em;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      right: 0;
+      -webkit-transition: 0.6s;
+      transition: 0.6s;
+      height: 275px;
+      width: 275px;
+    }
+
+    .overlay:hover {
+        opacity: 1;
+    }
