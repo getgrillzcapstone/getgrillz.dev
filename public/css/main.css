@@ -2019,7 +2019,7 @@ a:active {
         border-color: #000;
     }
 
-    .overlay {
+    /*.overlay {
       background: rgba(41, 128, 185, 0.7);
       bottom: 0;
       color: white;
@@ -2040,4 +2040,4 @@ a:active {
 
     .overlay:hover {
         opacity: 1;
-    }
+    }*/
