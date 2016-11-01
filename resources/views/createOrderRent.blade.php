@@ -21,12 +21,12 @@
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 rentHeader">
                 <h1 class="rentA">Rent A</h1>
                 <h1 class="grill">Grill</h1>
-                <div class="btn btn-default getStartedButton" id="getStartedButton">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default getStartedButton" id="getStartedButton">
                     <h4>Get Started</h4>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-right rentDescription">
-                <img src="/getgrillz_images/backyard-party.jpg" class=" rentDescriptionPicture img-thumbnail" alt="backyard-partyx">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 rentDescription">
+                <img src="/getgrillz_images/backyard-party.jpg" class=" rentDescriptionPicture img-responsive" alt="backyard-partyx">
                 <div class="rentCaption">
                     <p>Our renting process is easy, intuitive, and at our low hourly-rates, it's afforadable!
                         Just pick the dates you would like to rent or click Just Browsing to see what we've got
@@ -37,29 +37,29 @@
         </div>
         <div class="row" id="datePickRow">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pickADate">
-                <div class="btn btn-default pickADateButton" id="pickADateButton">
+                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default pickADateButton" id="pickADateButton">
                     <h4>Looking For A Specific Day</h4>
-                </div>
+                </button>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 justBrowsing">
-                <div class="btn btn-default justBrowsingButton" id="justBrowsingButton" data-toggle="tooltip" title="You're afraid of commitment aren't you?">
+                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default justBrowsingButton" id="justBrowsingButton" data-toggle="tooltip" title="You're afraid of commitment aren't you?">
                     <h4>Just Browsing</h4>
-                </div>
+                </button>
             </div>
         </div>
         <div class="row calenderDiv" id="calenderDiv">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 calender selectingADay">
-                <div class="btn btn-default dateButton" id="selectingADayButton">
-                    <h4 class="sizeButtonText smallSizeButtonText">Select A Day</h4>
-                </div>
+                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default dateButton" id="selectingADayButton">
+                    <h4 class="smallSizeButtonText">Select A Day</h4>
+                </button>
                 <div class="dateInputDiv selectingADayDiv">
                     <input type="text" name="selectingADay" value="" class="dateInput" id="selectingADay"/>
                 </div>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 calender selectingMultiple">
-                <div class="btn btn-default dateButton" id="selectingMultipleButton">
-                    <h4 class="sizeButtonText smallSizeButtonText">...Or Mulitple Days?</h4>
-                </div>
+                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default dateButton" id="selectingMultipleButton">
+                    <h4 class="smallSizeButtonText">...Or Mulitple Days?</h4>
+                </button>
                 <div class="dateInputDiv selectingMultipleDiv">
                     <input type="text" name="selectingMultiple" value="" class="dateInput" id="selectingMultiple"/>
                 </div>
@@ -69,47 +69,47 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 whatTypeOfGrill">
                 <h1>What Type Of Grill Are You Looking For?</h1>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 charcoalDiv">
-                <div class="btn btn-default charcoalButton" id="charcoalButton" value="2">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 charcoalDiv">
+                <button class="col-xs-12 col-sm-12 col-md-6 col-lg-6 btn btn-default charcoalButton" id="charcoalButton" value="2">
                     <h4 class="charcoalText">Charcoal</h4>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 propaneDiv">
-                <div class="btn btn-default propaneButton" id="propaneButton" value="1">
+                </button>
+            {{-- </div> --}}
+            {{-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 propaneDiv"> --}}
+                <button class="col-xs-12 col-sm-12 col-md-6 col-lg-6 btn btn-default propaneButton" id="propaneButton" value="1">
                     <h4 class="propaneText">Propane</h4>
-                </div>
+                </button>
             </div>
         </div>
         <div class="row sizeButtonDiv" id="whatSizeGrillRow">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 whatSizeGrill">
                 <h1>What Size Grill Are You Looking For?</h1>
             </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <a>
-                    <div class="btn btn-default sizeButton smallSizeButton" id="smallSizeButton" value="Small">
+                    <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton smallSizeButton" id="smallSizeButton" value="Small">
                         <h4 class="sizeButtonText smallSizeButtonText">Small</h4>
-                    </div>
+                    </button>
                 </a>
             </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <a>
-                    <div class="btn btn-default sizeButton mediumSizeButton" id="mediumSizeButton" value="Medium">
+                    <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton mediumSizeButton" id="mediumSizeButton" value="Medium">
                         <h4 class="sizeButtonText mediumSizeButtonText">Medium</h4>
-                    </div>
+                    </button>
                 </a>
             </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <a>
-                    <div class="btn btn-default sizeButton largeSizeButton" id="largeSizeButton" value="Large">
+                    <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton largeSizeButton" id="largeSizeButton" value="Large">
                         <h4 class="sizeButtonText largeSizeButtonText">Large</h4>
-                    </div>
+                    </button>
                 </a>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <a>
-                    <div class="btn btn-default imNotSureButton" id="imNotSureButton" value="%">
+                    <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default imNotSureButton" id="imNotSureButton" value="%">
                         <h4 class="imNotSureButtonText">I'm Not Sure</h4>
-                    </div>
+                    </button>
                 </a>
             </div>
         </div>
