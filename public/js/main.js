@@ -24,6 +24,7 @@ $(document).ready(function(){
             e.preventDefault();
         }
     });
+});
 
     $('#continueButtonLogin').click(function(event) {
         event.preventDefault();
@@ -51,7 +52,6 @@ $(document).ready(function(){
                 _token:  token
             }
         });
-
     });
 
 // FOR LOGIN ON NAVBAR AND CONFIRM ORDER PAGE
