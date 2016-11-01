@@ -1,61 +1,130 @@
 @extends('layout.master')
 
+@section('footerStyling')
+    <style>
+        .footer {
+            background-color: #CA6924;
+        }
+    </style>
+@stop
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 heroImgContainer">
-                <img src="/getgrillz_images/hero_image2.jpeg" class="heroImg">
-                <h1 class="overlay1">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 heroImgContainer">
+                <h1 class="heroHeader">
                     Don't Have Space For A Grill?
                 </h1>
-                <h3 class="overlay2">
-                    Problem solved with GetGrillz, a delivery service for grill rentals!
+                <h3 class="heroSupport">
+                    Problem solved with GetGrillz, a delivery service for grill rentals <br>in the San Antonio Area!
                 </h3>
+                <button class="btn btn-default customBtnDefault rentHeroButton">
+                    Rent
+                </button>
+                <button class="btn btn-default customBtnDefault buyHeroButton">
+                    Buy
+                </button>
             </div>
         </div>
-        <div class="row bannerContainer">
-            <h1 class="bannerHeader">What We Offer...</h1>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <img src="/charcoal_grill_images/rivergrille_charcoal.jpg" class="bannerImg1">
-                <h3>Grills</h3>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <img src="/getgrillz_images/bbqtools.jpg" class="bannerImg2">
-                <h3>Grill Accessories</h3>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <img src="/partysupplies_images/folding_table1.jpg" class="bannerImg3">
-                <h3>Party Supplies</h3>
+
+        <div class="row faqRow">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                <h1 class="faqHeader">Our Frequently Asked Questions</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 landingPageRentDiv">
-                <h2 class="landingPageRentHeader">Rent</h2>
-                <hr>
-                <p class="landingPageRentText">Choose from our wide selection of high quality grills to rent for a
-                    day, a weekend or how ever long you need! GetGrillz offers ultra affordable daily rates,
-                    so anyone can rent a grill and have a great time!
+        <div class="row faqRow">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqQuestion">
+                <h3 id="faqQuestion1"><span>+</span> How To Contact Us</h3>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+        </div>
+        <div class="row faqRow">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqAnswer" id="faqAnswer1">
+                <p>GetGrilz likes to take care of our customers like we take care of our products.
+                    However, our products don't ask questions, but you do, so our question for you:
+                    how can we help?
+                    <br>
+                    Contact Us By:
+                    <br>
+                    - Email: getGrillz@help.com
+                    <br>
+                    - Phone: (210)-726-4277
                 </p>
-                <a href="/create-order-rent" class="landingPageRentButton">
-                    <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default text-center landingPageRentButton">
-                        <h3>Rent</h3>
-                    </button>
-                </a>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 landingPageBuyDiv">
-                <h2 class="landingPageBuyHeader">Buy</h2>
-                <hr>
-                <p class="landingPageBuyText">We don't just rent... You can buy! <br>
-                GetGrillz offers customers the opportunity to purchase from our broad selection of grills at below retail price.
-                Browse through our inventory, add the grill you like to your order, tell us where to deliver it,
-                and before you know it you will be the proud owner of a new grill!
-                </p>
-                <a href="/create-order-buy">
-                    <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default text-center landingPageBuyButton">
-                        <h3>Buy</h3>
-                    </button>
-                </a>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
         </div>
+        <div class="row faqRow">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqQuestion">
+                <h3 id="faqQuestion2"><span id="plus2">+</span> What Are We?</h3>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+        </div>
+        <div class="row faqRow">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqAnswer" id="faqAnswer2">
+                <p>...What are you? All joking aside, GetGrillz is a warehouse holding more
+                    grills than we know what to do with. Which is why we've allowed our
+                    wonderful customers to rent and buy our grills and supplies
+                </p>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+        </div>
+        <div class="row faqRow">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqQuestion">
+                <h3 id="faqQuestion3"><span id="plus3">+</span> How Do I "GetGrillz"?</h3>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+        </div>
+        <div class="row faqRow">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqAnswer" id="faqAnswer3">
+                <p>Start by selecting whether you're intrested in renting or buying a grill from our home
+                    page, then simply follow our easy and intuitive selection process that will
+                    ultimately lead you to selecting from our available inventory
+                </p>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+        </div>
+        <div class="row faqRow">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqQuestion">
+                <h3 id="faqQuestion4"><span id="plus4">+</span> What's the Rent/Buy Process Like?</h3>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+        </div>
+        <div class="row faqRow">
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqAnswer" id="faqAnswer4">
+                <p>Choose from our wide selection of high quality grills to either buy or rent for a
+                    day, a weekend or how ever long you need! GetGrillz offers ultra affordable rates,
+                    so anyone can rent or buy a grill and have a great time!
+                </p>
+            </div>
+        </div>
+        <br>
+    </div>
     </div>
 @stop
+
+@section('javascriptFilesForFaqContact')
+    <script src="/js/faqContact.js"></script>
+@endsection
