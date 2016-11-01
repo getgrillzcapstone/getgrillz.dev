@@ -55,7 +55,7 @@ a:active {
 
     .navBarContainer {
         padding: 0;
-        bottom: 0;
+        /*bottom: 0;*/
     }
 
     .navbarLogo {
@@ -64,7 +64,8 @@ a:active {
     }
 
     .getGrillz {
-        margin-left: 5px;
+        vertical-align: middle;
+        display: inline;
     }
 
     .noTextDecoration:hover {
@@ -102,6 +103,48 @@ a:active {
         background-color: #CA6924;
     }
 
+    .customHamburgerIcon {
+        display: none;
+    }
+
+    .customHamburgerImg {
+        float: right;
+    }
+
+    .hamburgerMenu {
+        font-size: 1rem;
+    }
+
+    .hideHamburgerMenu {
+        display: none;
+    }
+
+    .hamburgerMenuLinks {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #FFF5EE;
+        font-family: thunder;
+    }
+
+    .hamburgerMenuLink {
+        display: inline-block;
+        padding-left: 1em;
+        font-size: 3em;
+    }
+
+    @media screen and (max-width: 1050px) {
+        .navBarStuff {
+            display: none;
+        }
+
+        .customHamburgerIcon {
+            display: inline-block;
+            margin-top: .5rem;
+        }
+    }
+
 /*////////////////////////////////////////////////////////FOR FOOTER*/
     .footerContainer > span {
         padding-top: 10px;
@@ -113,7 +156,7 @@ a:active {
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 113px;
+        min-height: 113px;
     }
 
     .footerLinks {
@@ -135,6 +178,8 @@ a:active {
         /*height: 720px;*/
         position:relative;
         text-align: center;
+        font-size: 1rem;
+        background-color: black;
     }
 
     .heroImgContainer img {
@@ -150,7 +195,7 @@ a:active {
         color: #F7F3E3;
         margin-top: 10%;
         width: 100%;
-        font-size: 4em;
+        font-size: 6vw;
     }
 
     .overlay2 {
@@ -161,6 +206,7 @@ a:active {
         color: #F7F3E3;
         margin-top: 21%;
         width: 100%;
+        line-height: 2em;
     }
 
 /*//////////////////////////////////FOR BANNER IMAGES BELOW HERO IMG*/
@@ -257,10 +303,7 @@ a:active {
       position: relative;
       float: left;
       overflow: hidden;
-      min-width: 220px;
-      max-width: 50%;
-      max-height: auto;
-      width: 100%;
+      width: 50%;
       background: #000000;
       text-align: center;
     }
@@ -365,24 +408,34 @@ a:active {
       transition-delay: 0s;
     }
 
+    @media only screen and (max-width: 800px) {
+        figure.snip0014 {
+          width: 100%;
+          display: none;
+        }
+
+    }
+
 /*///////////////////////////////////////////////FOR YOUR ORDER PAGE*/
-    .heroDiv {
-        width: 100%;
-        height: 100%;
-        background-color: #cfcfc4;
-        /*background-image: url("/getgrillz_images/brick-wall.png");*/
+    .row.rentContainer {
+        background-color: #CFCFC4;
     }
 
     .rentA {
-        font-size: 9.5em;
+        font-size: 11em;
     }
 
     .grill {
-        font-size: 15em;
-        letter-spacing: 10px;
+        font-size: 14em;
+        letter-spacing: .02em;
+    }
+
+    .rentHeader {
+        font-size: 1rem;
     }
 
     .rentDescription {
+        font-size: 1rem;
         text-align: center;
     }
 
@@ -648,8 +701,10 @@ a:active {
         }
 
         .addToOrderButton {
-            width: 800px;
+            width: 60%;
+            max-width: 800px;
             background-color: #CA6924;
+            margin: auto;
             margin-top: 2%;
         }
 

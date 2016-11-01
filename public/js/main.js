@@ -1,4 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function(){
+    $(".customHamburgerIcon").click(function(){
+        $(".hideHamburgerMenu").toggle();
+    });
+});
+
+$(document).ready(function(){
     $(".quantityField").keydown(function (e) {
         // Allow: backspace, delete, tab, escape, enter and .
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
@@ -27,11 +33,14 @@ $(document).ready(function() {
         var type = $("#loginmod").attr('method');
 
         // data to be passed
+        // var email =
+        // var password =
+        // var confirm_password =
+
         var email = $("#emailLogin").val();
         var password = $("#passwordLogin").val();
         var confirm_password = $("#confirmPasswordLogin").val();
-        
-        
+
         $.ajax({
             url: url,
             type: type,
@@ -42,11 +51,8 @@ $(document).ready(function() {
                 _token:  token
             }
         });
-    
-    });
-    
 
-});
+    });
 
 // FOR LOGIN ON NAVBAR AND CONFIRM ORDER PAGE
 // $("#continueButtonLogin").click(function(){
@@ -57,5 +63,3 @@ $(document).ready(function() {
 //         $('#loginModal').modal('toggle');
 //     }
 // });
-
-

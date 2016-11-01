@@ -17,23 +17,21 @@
 
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 heroDiv">
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rentHeader">
-                    <h1 class="rentA">Rent A</h1>
-                    <h1 class="grill">Grill</h1>
-                    <div class="btn btn-default getStartedButton" id="getStartedButton">
-                        <h4>Get Started</h4>
-                    </div>
+        <div class="row rentContainer">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 rentHeader">
+                <h1 class="rentA">Rent A</h1>
+                <h1 class="grill">Grill</h1>
+                <div class="btn btn-default getStartedButton" id="getStartedButton">
+                    <h4>Get Started</h4>
                 </div>
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pull-right rentDescription">
-                    <img src="/getgrillz_images/backyard-party.jpg" class=" rentDescriptionPicture img-thumbnail" alt="backyard-partyx">
-                    <div class="rentCaption">
-                        <p>Our renting process is easy, intuitive, and at our low hourly-rates, it's afforadable!
-                            Just pick the dates you would like to rent or click Just Browsing to see what we've got
-                            in stock!
-                        </p>
-                    </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-right rentDescription">
+                <img src="/getgrillz_images/backyard-party.jpg" class=" rentDescriptionPicture img-thumbnail" alt="backyard-partyx">
+                <div class="rentCaption">
+                    <p>Our renting process is easy, intuitive, and at our low hourly-rates, it's afforadable!
+                        Just pick the dates you would like to rent or click Just Browsing to see what we've got
+                        in stock!
+                    </p>
                 </div>
             </div>
         </div>
