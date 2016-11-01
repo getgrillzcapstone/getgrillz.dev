@@ -36,9 +36,11 @@
                     day, a weekend or how ever long you need! GetGrillz offers ultra affordable daily rates,
                     so anyone can rent a grill and have a great time!
                 </p>
+                <a href="/create-order-rent">
                 <button class="col-xs-11 col-sm-11 col-md-11 col-lg-11 btn btn-default text-center landingPageRentButton">
-                    <a href="/create-order-rent"><h3>Rent</h3></a>
+                    <h3>Rent</h3>
                 </button>
+                </a>
                 <img src="/getgrillz_images/dinnerparty.jpeg" class="landingPageRentImg">
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 landingPageBuyDiv">
@@ -49,9 +51,11 @@
                 Browse through our inventory, add the grill you like to your order, tell us where to deliver it,
                 and before you know it you will be the proud owner of a new grill!
                 </p>
-                <button class="col-xs-11 col-sm-11 col-md-11 col-lg-11 btn btn-default text-center landingPageBuyButton">
-                    <a href="/create-order-buy"><h3>Buy</h3></a>
-                </button>
+                <a href="/create-order-buy">
+                    <button class="col-xs-11 col-sm-11 col-md-11 col-lg-11 btn btn-default text-center landingPageBuyButton">
+                        <h3>Buy</h3>
+                    </button>
+                </a>
                 <img src="/getgrillz_images/hero_image1.jpeg" class="landingPageBuyImg">
             </div>
         </div>
