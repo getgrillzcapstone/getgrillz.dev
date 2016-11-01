@@ -83,7 +83,14 @@
       <div class="modal-dialog">
 
         <!-- Modal content-->
-        <div class="modal-content">
+          <div class="modal-content">
+          @if(count($errors))
+            <div class="alert alert-danger">
+          @foreach($errors->all() as $error)
+            <p>{{ $error }}</p>
+          @endforeach
+            </div>
+          @endif
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Please Enter Your Email</h4>
@@ -102,10 +109,10 @@
                     <label for="passwordLogin">Password</label>
                     <input type="password" class="form-control" id="passwordLogin" placeholder="Enter Password" name="password">
                   </div>
-                  <div class="form-group confirmPassword">
+                  {{-- <div class="form-group confirmPassword">
                     <label for="confirmPasswordLogin">Confirm Password</label>
                     <input type="password" class="form-control" id="confirmPasswordLogin" placeholder="Enter Password" name="password_confirmation">
-                  </div>
+                  </div> --}}
                   <button type="submit" class="btn btn-default continueButton" id="continueButtonLogin">
                       <h4>Continue</h4>
                   </div>
