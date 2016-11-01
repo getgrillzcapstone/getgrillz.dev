@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 justBrowsing">
-                <div class="btn btn-default justBrowsingButton" id="justBrowsingButton">
+                <div class="btn btn-default justBrowsingButton" id="justBrowsingButton" data-toggle="tooltip" title="You're afraid of commitment aren't you?">
                     <h4>Just Browsing</h4>
                 </div>
             </div>
@@ -124,6 +124,10 @@
 @stop
 
 @section('javascriptFilesForCreateOrderRent')
+    <script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})</script>
     <script src="/js/createOrder.js"></script>
     <script src="/js/createOrderRent.js"></script>
 @endsection

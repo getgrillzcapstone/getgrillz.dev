@@ -28,11 +28,11 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest', ['except' => 'getLogout']);
-        $this->redirectPath = action('AuthController@index');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('guest', ['except' => 'getLogout']);
+    //     $this->redirectPath = action('AuthController@index');
+    // }
 
     /**
      * Get a validator for an incoming registration request.
@@ -40,6 +40,9 @@ class AuthController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+    protected $redirectPath = '/';
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
