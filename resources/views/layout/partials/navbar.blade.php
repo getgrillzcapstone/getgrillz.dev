@@ -46,7 +46,7 @@
             <ul class="nav navbar-nav navbar-right">
                 
                 @if(!Auth::check())
-                <li class="navBarListItems"><h3 id="login" data-toggle="modal" data-target="#loginModal">Login/Register</h3>
+                <li class="navBarListItems"><h3 id="login" data-toggle="modal" data-target="#loginModal">Login</h3>
                 </li>
                 
                 @else
@@ -80,40 +80,43 @@
 
     <!-- Modal -->
     <div id="loginModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-          <div class="modal-content">
-          @if(count($errors))
+    @if(count($errors))
             <div class="alert alert-danger">
           @foreach($errors->all() as $error)
             <p>{{ $error }}</p>
           @endforeach
             </div>
           @endif
+              
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+          <div class="modal-content">
+        
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Please Enter Your Email</h4>
           </div>
           {{-- <div class="modal-body"> --}}
           <div class="modal-footer loginModal" id="loginModal">
-              {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Login</button> --}}
-          {{-- </div> --}}
+          
+          
               <form method="POST" action="{{{ action('Auth\AuthController@postLogin') }}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="loginmod">
+              {{ csrf_field() }}
               <input type="hidden" id="token" name="_token" value="{{{csrf_token()}}}">
                   <div class="form-group">
                     <label for="emailLogin">Email address</label>
-                    <input type="email" class="form-control" id="emailLogin" placeholder="Enter email" name="email">
+                    <input type="text" class="form-control" id="emailLogin" placeholder="Enter email" name="email" value="{{ old('email') }}" required>
                   </div>
                   <div class="form-group password">
                     <label for="passwordLogin">Password</label>
-                    <input type="password" class="form-control" id="passwordLogin" placeholder="Enter Password" name="password">
+                    <input type="password" class="form-control" id="passwordLogin" placeholder="Enter Password" name="password" required>
                   </div>
                   {{-- <div class="form-group confirmPassword">
                     <label for="confirmPasswordLogin">Confirm Password</label>
                     <input type="password" class="form-control" id="confirmPasswordLogin" placeholder="Enter Password" name="password_confirmation">
                   </div> --}}
-                  <button type="submit" class="btn btn-default continueButton" id="continueButtonLogin">
+                  <button type="button" class="btn btn-default continueButton" id="continueButtonLogin" data-dismiss="modal">
                       <h4>Continue</h4>
                   </div>
               </form>
@@ -129,7 +132,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hideHamburgerMenu">
             <div class="hamburgerMenu">
                 <ul class="hamburgerMenuLinks">
-                    <li class="hamburgerMenuLink" data-toggle="modal" data-target="#loginModal">Login/Register</li>
+                    <li class="hamburgerMenuLink" data-toggle="modal" data-target="#loginModal">Login</li>
                     <li class="hamburgerMenuLink"><a href="/your-orders" class="coloredAnchorTag noTextDecoration">Your Orders</a></li>
                     <li class="hamburgerMenuLink"><a href="/faq-contact" class="coloredAnchorTag noTextDecoration">FAQs/Contact Us</a></li>
                 </ul>
