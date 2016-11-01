@@ -4,7 +4,7 @@
 }
 
 body, html {
-    background-color: #CA6924;
+    background-color: #FFF5EE;
     /*background-image: url("/getgrillz_images/brick-wall.png");*/
     height: auto;
 }
@@ -169,14 +169,43 @@ a:active {
     }
 
 /*////////////////////////////////////////////////////FOR HERO IMAGE*/
-    .heroImg {
+    .heroImgContainer {
+        background-image: url("/getgrillz_images/hero_image2.jpeg");
+        background-size: cover;
+        height: 100vh;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .heroHeader {
+        font-size: 7.5em;
+        color: #FFF5EE;
+        margin-top: 2em;
+    }
+
+    .heroSupport {
+        font-size: 3em;
+        color: #FFF5EE;
+        margin-top: 2em;
+    }
+
+    .rentHeroButton {
+        margin-top: 3em;
+        margin-right: 10px;
+    }
+
+    .buyHeroButton {
+        margin-top: 3em;
+        margin-right: 10px;
+    }
+
+    /*.heroImg {
         width: 100%;
         height: auto;
     }
 
     .heroImgContainer {
         padding: 0;
-        /*height: 720px;*/
         position:relative;
         text-align: center;
         font-size: 1rem;
@@ -188,12 +217,20 @@ a:active {
         z-index:0;
     }
 
+    .rentHeroButton {
+        margin-right: 10px;
+    }
+
+    .buyHeroButton {
+        margin-right: 10px;
+    }
+
     .overlay1 {
         position:absolute;
         top:0;
         left:0;
         z-index:1;
-        color: #F7F3E3;
+        color: #FFF5EE;
         margin-top: 10%;
         width: 100%;
         font-size: 6vw;
@@ -204,11 +241,11 @@ a:active {
         top:0;
         left:0;
         z-index:1;
-        color: #F7F3E3;
+        color: #FFF5EE;
         margin-top: 21%;
         width: 100%;
         line-height: 2em;
-    }
+    }*/
 
 /*//////////////////////////////////FOR BANNER IMAGES BELOW HERO IMG*/
     .bannerContainer {
@@ -397,7 +434,7 @@ a:active {
     }
 
     .calender > h2 {
-        color: #F7F3E3;
+        color: #FFF5EE;
     }
 
     .selectingADay {
@@ -484,7 +521,7 @@ a:active {
     .sizeButtonDiv {
         height: 55vh;
         background-color: #1C1E1E;
-        color: #F7F3E3;
+        color: #FFF5EE;
         text-align: center;
     }
 
@@ -553,7 +590,7 @@ a:active {
             width: 100%;
             height: 72vh;
             background-color: #7B2D26;
-            color: #F7F3E3;
+            color: #FFF5EE;
             display: none;
         }
 
@@ -584,7 +621,7 @@ a:active {
             width: 100%;
             height: 72vh;
             background-color: #262B2F;
-            color: #F7F3E3;
+            color: #FFF5EE;
             display: none;
         }
 
@@ -699,7 +736,7 @@ a:active {
         width: 100%;
         height: 10vh;
         background-color: #7B2D26;
-        color: #F7F3E3;
+        color: #FFF5EE;
     }
 
     .whereDeliver {
@@ -713,14 +750,14 @@ a:active {
         border-right-style: solid;
         border-bottom-style: solid;
         background-color: #7B2D26;
-        color: #F7F3E3;
+        color: #FFF5EE;
     }
 
     .enterAddressDiv {
         text-align: center;
         border-bottom-style: solid;
         background-color: #7B2D26;
-        color: #F7F3E3;
+        color: #FFF5EE;
     }
 
     .mapDiv {
@@ -728,7 +765,7 @@ a:active {
         height: 82vh;
         border-right-style: solid;
         background-color: #7B2D26;
-        color: #F7F3E3;
+        color: #FFF5EE;
     }
 
     .map {
@@ -742,7 +779,7 @@ a:active {
         width: 50%;
         height: 82vh;
         background-color: #7B2D26;
-        color: #F7F3E3;
+        color: #FFF5EE;
     }
 
     .zipInput {
@@ -756,7 +793,7 @@ a:active {
     .showOnMapButton {
         width: 100%;
         background-color: #262B2F;
-        color: #F7F3E3;
+        color: #FFF5EE;
         border-color: transparent;
     }
 
@@ -975,24 +1012,30 @@ a:active {
     }
 
 /*FOR FAQ/CONTACT PAGE*/
-    .faqContainer {
-        background-color: #FFF5EE;
-        height: 110vh;
-    }
-
     .faqHeader {
         border-bottom-style: solid;
     }
 
-    .faqQuestion {
-        background-color: #CA6924;
-        border-radius: 5px;
-        margin-bottom: 20px;
+    .faqRow {
+        background-color: #FFF5EE;
     }
 
     .faqAnswer {
         font-family: 'Josefin Sans', sans-serif;
         font-size: 20px;
+    }
+
+    .faqButtonContainer {
+        font-size: 1rem;
+    }
+
+    .customBtnDefault {
+        width: 500px;
+        height: 50px;
+        background-color: #CA6924;
+        color: #FFF5EE;
+        font-family: thunder;
+        font-size: 2.5em;
     }
 
     #faqAnswer1 {
