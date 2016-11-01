@@ -48,8 +48,19 @@ $(document).ready(function(){
                 // confirm_password: confirm_password,
                 _token:  token
             }
+        }).done(function(){
+            location.reload();
+        }).fail(function(){
+            alert('login failed');
         });
+
     });
+
+
+
+
+
+
 
 // FOR LOGIN ON NAVBAR AND CONFIRM ORDER PAGE
 // $("#continueButtonLogin").click(function(){

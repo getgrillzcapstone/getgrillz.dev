@@ -80,14 +80,6 @@
 
     <!-- Modal -->
     <div id="loginModal" class="modal fade" role="dialog">
-    @if(count($errors))
-            <div class="alert alert-danger">
-          @foreach($errors->all() as $error)
-            <p>{{ $error }}</p>
-          @endforeach
-            </div>
-          @endif
-              
       <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -116,8 +108,8 @@
                     <label for="confirmPasswordLogin">Confirm Password</label>
                     <input type="password" class="form-control" id="confirmPasswordLogin" placeholder="Enter Password" name="password_confirmation">
                   </div> --}}
-                  <button type="button" class="btn btn-default continueButton" id="continueButtonLogin" data-dismiss="modal">
-                      <h4>Continue</h4>
+                  <button type="submit" class="btn btn-default continueButton" id="continueButtonLogin" data-dismiss="modal">
+                      <h4>Continue</h4></button>
                   </div>
               </form>
           </div>

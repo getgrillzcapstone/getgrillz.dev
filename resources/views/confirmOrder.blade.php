@@ -28,7 +28,7 @@
                     </div>
                     <div class="form-group confirmPassword" id="confirmPasswordConfirmOrder">
                       <label for="confirmPasswordConfirmOrder">Confirm Password</label>
-                      <input type="confirmPassword" class="form-control" id="confirmPasswordConfirmOrder" placeholder="Enter Password">
+                      <input type="password" class="form-control" id="confirmPasswordConfirmOrder" placeholder="Enter Password">
                     </div>
                     <div class="btn btn-default continueButton" id="continueButtonConfirmOrder">
                         <h4>Continue</h4>
