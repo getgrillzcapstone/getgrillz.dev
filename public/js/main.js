@@ -39,6 +39,7 @@ $(document).ready(function(){
         var password = $("#passwordLogin").val();
         // var confirm_password = $("#confirmPasswordLogin").val();
 
+        
         $.ajax({
             url: url,
             type: type,
