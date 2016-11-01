@@ -18,14 +18,14 @@
 
     <div class="container-fluid">
         <div class="row rentContainer">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 rentHeader">
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 rentHeader">
                 <h1 class="rentA">Rent A</h1>
                 <h1 class="grill">Grill</h1>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default getStartedButton" id="getStartedButton">
                     <h4>Get Started</h4>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 rentDescription">
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 rentDescription">
                 <img src="/getgrillz_images/backyard-party.jpg" class=" rentDescriptionPicture img-responsive" alt="backyard-partyx">
                 <div class="rentCaption">
                     <p>Our renting process is easy, intuitive, and at our low hourly-rates, it's afforadable!
@@ -36,14 +36,14 @@
             </div>
         </div>
         <div class="row" id="datePickRow">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pickADate">
-                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default pickADateButton" id="pickADateButton">
-                    <h4>Looking For A Specific Day</h4>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center pickADate">
+                <button class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn btn-default pickADateButton" id="pickADateButton">
+                    <h4 class="pickADateText">Looking For A Specific Day</h4>
                 </button>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 justBrowsing">
-                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default justBrowsingButton" id="justBrowsingButton" data-toggle="tooltip" title="You're afraid of commitment aren't you?">
-                    <h4>Just Browsing</h4>
+                <button class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn btn-default justBrowsingButton" id="justBrowsingButton" data-toggle="tooltip" title="You're afraid of commitment aren't you?">
+                    <h4 class="pickADateText">Just Browsing</h4>
                 </button>
             </div>
         </div>

@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <div class="row navBarRow">
-        <div class="col-xs-11 col-sm-11 col-md-4 col-lg-4 navBarContainer">
+        <div class="col-xs-11 col-sm-6 col-md-4 col-lg-4 navBarContainer">
             <a href="/"><img src="/getgrillz_images/logo.png" class="navbarLogo"></a>
             <h2 class="getGrillz"><a href="/" class="coloredAnchorTag noTextDecoration">GetGrillz</a></h2>
         </div>
-        
-        
+
+
 
 
 
@@ -25,7 +25,7 @@
             <a href="{{action('UsersController@index')}}">
               Users</a>
           </li>
-          
+
           <li class=""><a href="{{action('PostsController@create')}}">
             Create Post</a>
           </li>
@@ -42,13 +42,13 @@
 
 
 
-        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 navBarContainer navBarStuff">
+        <div class="col-xs-1 col-sm-6 col-md-8 col-lg-8 navBarContainer navBarStuff">
             <ul class="nav navbar-nav navbar-right">
-                
+
                 @if(!Auth::check())
                 <li class="navBarListItems"><h3 id="login" data-toggle="modal" data-target="#loginModal">Login/Register</h3>
                 </li>
-                
+
                 @else
 
                 <li class="navBarListItems"><h3><a href="/your-orders" class="coloredAnchorTag noTextDecoration">Your Orders</a></h3>
@@ -56,7 +56,7 @@
 
                 <li class="navBarListItems"><h3><a href="{{action('Auth\AuthController@getLogout')}}" class="coloredAnchorTag noTextDecoration">Logout</a></h3>
                 </li>
-                
+
                 @endif
                 <li class="navBarListItems"><h3><a href="/faq-contact" class="coloredAnchorTag noTextDecoration">FAQs/Contact</a></h3>
                 </li>
@@ -67,7 +67,7 @@
             <img src="/getgrillz_images/hamburgerIcon.png" class="customHamburgerImg">
         </div>
     </div>
-    
+
 
 
 

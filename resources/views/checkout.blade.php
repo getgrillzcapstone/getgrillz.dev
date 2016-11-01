@@ -6,15 +6,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 forgettingSomething">
                 <h1>Are You Forgetting Something?</h1>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 grillSupplies">
-                <div class="btn btn-default grillSuppliesButton" id="grillSuppliesButton">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 grillSupplies">
+                <button class="btn btn-default grillSuppliesButton" id="grillSuppliesButton">
                     <h4 class="grillSuppliesText">Grill Supplies</h4>
-                </div>
+                </button>
             </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 partySupplies">
-                <div class="btn btn-default partySuppliesButton" id="partySuppliesButton">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 partySupplies">
+                <button class="btn btn-default partySuppliesButton" id="partySuppliesButton">
                     <h4 class="partySuppliesText">Party Supplies</h4>
-                </div>
+                </button>
             </div>
         </div>
         <div class="row">

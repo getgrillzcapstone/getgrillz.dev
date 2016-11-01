@@ -135,7 +135,7 @@ a:active {
         cursor: pointer;
     }
 
-    @media screen and (max-width: 1050px) {
+    @media screen and (max-width: 850px) {
         .navBarStuff {
             display: none;
         }
@@ -239,85 +239,52 @@ a:active {
 
 /*////////////////////////////////////////////FOR RENT OR BUY BANNER*/
     .landingPageRentDiv {
-        /*text-align: right;*/
-        font-size: 1rem;
-        position: relative;
-        overflow: hidden;
-        background-color: black;
+        background-image: url("/getgrillz_images/dinnerparty.jpeg");
+        background-size: cover;
+        min-height: 400px;
         color: #FFF5EE;
-        min-height: 450px;
     }
 
     .landingPageRentHeader {
-        position: relative;
-        z-index: 2;
+
     }
 
     .landingPageRentText {
-        font-size: 2.5em;
-        position: relative;
-        z-index: 2;
+        font-size: 1.5em;
     }
 
     .landingPageRentButton {
-        position: absolute;
-        z-index: 2;
-        background-color: #CA6924;
-        bottom: 5vh;
-    }
 
-    .landingPageRentImg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.6;
     }
 
     .landingPageBuyDiv {
-        font-size: 1rem;
-        position: relative;
-        overflow: hidden;
-        background-color: black;
+        background-image: url("/getgrillz_images/hero_image1.jpeg");
+        background-size: cover;
+        min-height: 400px;
         color: #FFF5EE;
-        min-height: 450px;
     }
 
     .landingPageBuyHeader {
-        position: relative;
-        z-index: 2;
+
     }
 
     .landingPageBuyText {
-        font-size: 2.5em;
-        position: relative;
-        z-index: 2;
+        font-size: 1.5em;
     }
 
     .landingPageBuyButton {
-        position: absolute;
-        z-index: 2;
-        background-color: #CA6924;
-        bottom: 5vh;
-    }
 
-    .landingPageBuyImg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.6;
     }
 
     @media only screen and (max-width: 850px) {
         .landingPageRentDiv {
             width: 100%;
+            height: 350px;
         }
 
         .landingPageBuyDiv {
             width: 100%;
+            height: 450px;
         }
     }
 
@@ -372,8 +339,13 @@ a:active {
     .pickADateButton {
         background-color: #CA6924;
         border-color: #1C1E1E;
-        margin-top: 25%;
+        margin-top: 20%;
+        margin-left: 25%;
         font-family: thunder;
+    }
+
+    .pickADateText {
+        font-size: 1.5vw;
     }
 
     .justBrowsing {
@@ -387,16 +359,26 @@ a:active {
     .justBrowsingButton {
         background-color: #CA6924;
         border-color: #262B2F;
-        margin-top: 25%;
+        margin-top: 20%;
+        margin-left: 25%;
         font-family: thunder;
     }
 
-    @media only screen and (max-width: 750px) {
+    @media only screen and (max-width: 1075px) {
         .pickADate {
             width: 100%;
         }
         .justBrowsing {
             width: 100%;
+        }
+        .pickADateText {
+            font-size: 2.5vw;
+        }
+    }
+
+    @media only screen and (max-width: 560px) {
+        .pickADateText {
+            font-size: 3vw;
         }
     }
 
@@ -561,8 +543,8 @@ a:active {
         }
 
         .grillSuppliesButton {
-            width: 500px;
-            height: 70px;
+            /*width: 500px;
+            height: 70px;*/
             background-color: #CA6924;
             margin-top: 10%;
         }
@@ -592,8 +574,8 @@ a:active {
         }
 
         .partySuppliesButton {
-            width: 500px;
-            height: 70px;
+            /*width: 500px;
+            height: 70px;*/
             background-color: #CA6924;
             margin-top: 10%;
         }

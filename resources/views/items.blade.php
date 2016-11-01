@@ -207,7 +207,7 @@
                                                    <h5 class="price">{{ $item->price }}</h5>
                                                     <p class="text-center">
                                                         {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
-                                                        <a class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add to Order</a>
+                                                        <a href="/checkout" class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add to Order</a>
                                                     </p>
                                                 </form>
                                             </div>
