@@ -11,6 +11,7 @@
                 </a>
             </div>
         </div>
+        @if(!Auth::check())
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 loginOrRegisterDiv">
                 <h1 class="loginOrRegister">Login Or Register</h1>
@@ -35,6 +36,7 @@
                 </form>
             </div>
         </div>
+        @endif
         <div class="row" id="deliveryRow">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addressDiv">
                 <h1 class="whereDeliver">Where Should We Deliver Your Order?</h1>
