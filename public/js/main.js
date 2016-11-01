@@ -28,19 +28,16 @@ $(document).ready(function(){
 
     $('#continueButtonLogin').click(function(event) {
         event.preventDefault();
+       
         // required inputs for ajax
         var token = $("#token").val();
         var url = $("#loginmod").attr('action');
         var type = $("#loginmod").attr('method');
 
-        // data to be passed
-        // var email =
-        // var password =
-        // var confirm_password =
-
+        // data to be passed  
         var email = $("#emailLogin").val();
         var password = $("#passwordLogin").val();
-        var confirm_password = $("#confirmPasswordLogin").val();
+        // var confirm_password = $("#confirmPasswordLogin").val();
 
         $.ajax({
             url: url,
@@ -48,7 +45,7 @@ $(document).ready(function(){
             data: {
                 email:  email,
                 password: password,
-                confirm_password: confirm_password,
+                // confirm_password: confirm_password,
                 _token:  token
             }
         });
