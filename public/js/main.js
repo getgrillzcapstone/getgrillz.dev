@@ -1,4 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function(){
+    $(".customHamburgerIcon").click(function(){
+        $(".hideHamburgerMenu").toggle();
+    });
+});
+
+$(document).ready(function(){
     $(".quantityField").keydown(function (e) {
         // Allow: backspace, delete, tab, escape, enter and .
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
@@ -30,9 +36,9 @@ $(document).ready(function() {
         // var email =
         // var password =
         // var confirm_password =
-        
+
         console.log(token,url,type);
-        
+
         $.ajax({
             url: "/users",
             type: "GET",
@@ -45,7 +51,7 @@ $(document).ready(function() {
         });
     alert('Button with id "continueButtonLogin" was clicked');
             });
-    
+
 
 });
 
@@ -58,5 +64,3 @@ $(document).ready(function() {
 //         $('#loginModal').modal('toggle');
 //     }
 // });
-
-
