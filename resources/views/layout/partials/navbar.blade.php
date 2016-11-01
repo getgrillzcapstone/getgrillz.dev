@@ -93,7 +93,7 @@
               {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Login</button> --}}
           {{-- </div> --}}
               <form method="POST" action="{{{ action('Auth\AuthController@postLogin') }}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="loginmod">
-              <input type="hidden" id="token" name="_token" value="{{{csrf_token()}}}"> 
+              <input type="hidden" id="token" name="_token" value="{{{csrf_token()}}}">
                   <div class="form-group">
                     <label for="emailLogin">Email address</label>
                     <input type="email" class="form-control" id="emailLogin" placeholder="Enter email" name="email">
@@ -122,9 +122,9 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hideHamburgerMenu">
             <div class="hamburgerMenu">
                 <ul class="hamburgerMenuLinks">
-                    <li class="hamburgerMenuLink">Login/Register</li>
-                    <li class="hamburgerMenuLink">Your Orders</li>
-                    <li class="hamburgerMenuLink">FAQs/Contact Us</li>
+                    <li class="hamburgerMenuLink" data-toggle="modal" data-target="#loginModal">Login/Register</li>
+                    <li class="hamburgerMenuLink"><a href="/your-orders" class="coloredAnchorTag noTextDecoration">Your Orders</a></li>
+                    <li class="hamburgerMenuLink"><a href="/faq-contact" class="coloredAnchorTag noTextDecoration">FAQs/Contact Us</a></li>
                 </ul>
             </div>
         </div>
