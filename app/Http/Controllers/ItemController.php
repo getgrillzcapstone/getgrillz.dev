@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Item;
+use App\Manufacturer;
 use DB;
 
 class ItemController extends Controller
@@ -23,23 +24,35 @@ class ItemController extends Controller
 
         $fueltype = request()->input('fuel');
         $size = request()->input('size');
+        
+        session(['fueltype' => $fueltype]);
+        session(['size' => $size]);
+
         $items = DB::table('items')->where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
-        // $items = DB::table('items')->where('size', '=', $size)-> get();
+        $manufacturers = Manufacturer::all();
 
-        // ->orWhere('size', 'Medium')->orWhere('size', 'Large')->orWhere('size', '%')
-    
-    
         // dd($items);
-
-            // SELECT * FROM 
-            // items
-            // WHERE item_category_id = 1;
-
-        return view('items', ['items' => $items]);
-
-
+        return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
 
     }
+
+    public function manSort()
+    {
+        
+        // dd(request()->input('fuel'));
+       // dd(request()->input('man'));
+       $mans = request()->input('man');
+       $fueltype = request()->input('fuel');
+        $size = request()->input('size');
+       $items = DB::table('items')->where('manufacturer_id', $mans)->where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
+
+       $manufacturers = Manufacturer::all();
+       return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
+       // return view('items', ['items' => $items->get(), 'manufacturers' => $manufacturers]);
+
+    }
+
+
 
     /**
      * Show the form for creating a new resource.

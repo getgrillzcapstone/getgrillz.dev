@@ -34,120 +34,73 @@
                     <div class="panel-heading customPanelHeading">
                         <h4 class="panel-title">Grill Types</h4>
                     </div>
+    <form action="{{ action('ItemController@manSort') }}" method='POST'>
+         {{{ csrf_field() }}}
                     <div class="panel-body">
-                        <form {{-- action="{{ action('ItemController@setItemCategory') }} "--}}>
+                        
                             <div class="form-group"></div>
                             <div class="checkbox">
                                 <label>
-                                    <input id="propane" type="checkbox">Propane
+                                    <input name="fuel[]" id="propane" type="checkbox" value="1">Propane
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input id="charcoal" type="checkbox">Charcoal
+                                    <input name="fuel[]" id="charcoal" type="checkbox" value="2">Charcoal
                                 </label>
                             </div>
-                            <button class="btn btn-default btn-sm pull-right">Apply</button>
-                        </form>
+                            <button type="submit" class="btn btn-default btn-sm pull-right">Apply</button>
+                       
                     </div>
                 </div>
                 <div class="panel panel-default sidebar-menu">
+                    
                     <div class="panel-heading customPanelHeading">
                         <h4 class="panel-title">Brands</h4>
                     </div>
+                    
                     <div class="panel-body">
+                        
+                        {{-- <div class="form-group"> --}}
+                           
+                            @foreach($manufacturers as $manufacturer) 
                         <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
                             <div class="form-group"></div>
 
                             <div class="checkbox">
+                                
                                 <label>
-                                    <input id="weber" type="checkbox">Weber
-                                </label>
+                                    <input name="man[]" type="checkbox" value="{{ $manufacturer->id }}">{{ $manufacturer->name }}
+                                </label>    
+                                
                             </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="charbroil" type="checkbox">Charbroil
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="napoleon" type="checkbox">Napoleon
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="nexgrill" type="checkbox">Nexgrill
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="greenegg" type="checkbox">Big Green Egg
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="dynaglo" type="checkbox">Dyna-Glo
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="chargriller" type="checkbox">Chargriller
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="kitchenaid" type="checkbox">KitchenAid
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="masterbuilt" type="checkbox">MasterBuilt
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="smokehollow" type="checkbox">Smoke Hollow
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="rivergrille" type="checkbox">Rivergrille
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="kingsford" type="checkbox">Kingsford
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input id="stok" type="checkbox">Stok
-                                </label>
-                            </div>
+                            @endforeach
                             <button class="btn btn-default btn-sm pull-right">Apply</button>
-                        </form>
+                        </div>
                     </div>
-                </div>
+               
+
+
                 <div class="panel panel-default sidebar-menu">
                     <div class="panel-heading customPanelHeading">
                         <h4 class="panel-title">Size</h4>
                     </div>
                     <div class="panel-body">
-                        <form {{-- action="{{ action('ItemController@setSize') }}" --}}>
+                        
                             <div class="form-group"></div>
                             <div class="checkbox">
                                 <label>
-                                    <input id="small" type="checkbox">Small
+                                    <input name="size[]" id="small" type="checkbox" value="Small">Small
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input id="medium" type="checkbox">Medium
+                                    <input name="size[]" id="medium" type="checkbox" value="Medium">Medium
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input id="large" type="checkbox">Large
+                                    <input name="size[]" id="large" type="checkbox" value="Large">Large
                                 </label>
                             </div>
                             <button class="btn btn-default btn-sm pull-right">Apply</button>
