@@ -63,6 +63,9 @@
                     <div class="dateInputDiv selectingADayDiv">
                         <input type="text" name="selectingADay" value="" class="dateInput" id="selectingADay"/>
                     </div>
+                    <div class="text-align chevronCalender1">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" id="chevronCalender1"></span>
+                    </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 calender selectingMultiple">
                     <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default dateButton" id="selectingMultipleButton">
@@ -70,6 +73,9 @@
                     </button>
                     <div class="dateInputDiv selectingMultipleDiv">
                         <input type="text" name="selectingMultiple" value="" class="dateInput" id="selectingMultiple"/>
+                    </div>
+                    <div class="text-align chevronCalender2">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" id="chevronCalender2"></span>
                     </div>
                 </div>
             </div>
