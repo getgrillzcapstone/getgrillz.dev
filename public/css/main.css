@@ -432,6 +432,18 @@ a:active {
         font-family: thunder;
     }
 
+    .chevronCalender1 {
+        color: #FFF5EE;
+        font-size: 10vh;
+        display: none;
+    }
+
+    .chevronCalender2 {
+        color: #FFF5EE;
+        font-size: 10vh;
+        display: none;
+    }
+
     .dateInputDiv {
         margin-top: 30px;
     }
