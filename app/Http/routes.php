@@ -33,6 +33,9 @@ Route::get('/thankyou', function () {
 });
 Route::resource('items', 'ItemController');
 
+Route::post('manufacturer', 'ItemController@manSort');
+
+
 // Route::resource('orders', 'OrderController');
 //
 // Route::resource('users', 'UserController');
