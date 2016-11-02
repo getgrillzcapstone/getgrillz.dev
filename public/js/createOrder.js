@@ -21,28 +21,25 @@ $("#justBrowsingButton").click(function(){
 });
 
 $("#charcoalButton").click(function(){
-        $('.sizeButtonDiv').slideToggle()
+        $("#charcoalButton").addClass("active");
+        $("#propaneButton").removeClass("active");
+        if (!$('.sizeButtonDiv').is(":visible")) {
+            $('.sizeButtonDiv').slideToggle()
+        }
         $('html, body').animate({
             scrollTop: $("#whatSizeGrillRow").offset().top
         }, 1000);
 });
 
 $("#propaneButton").click(function(){
-        $('.sizeButtonDiv').slideToggle()
+        $("#propaneButton").addClass("active");
+        $("#charcoalButton").removeClass("active");
+        if (!$('.sizeButtonDiv').is(":visible")) {
+            $('.sizeButtonDiv').slideToggle()
+        }
         $('html, body').animate({
             scrollTop: $("#whatSizeGrillRow").offset().top
         }, 1000);
-});
-
-// TOGGLES THE ACTIVE CLASS BETWEEN CHARCOAL AND PROPANE BUTTONS
-$("#charcoalButton").click(function(){
-    $("#charcoalButton").addClass("active");
-    $("#propaneButton").removeClass("active");
-});
-
-$("#propaneButton").click(function(){
-    $("#propaneButton").addClass("active");
-    $("#charcoalButton").removeClass("active");
 });
 
 // TOGGLES THE ACTIVE CLASS BETWEEN CHOOSE A SPECIFIC DAY AND JUST BROWSING

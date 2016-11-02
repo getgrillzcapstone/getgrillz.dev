@@ -181,6 +181,11 @@
           </div>
           <div class="modal-body modal-body-colored text-center">
               <h2>Now GetGrilling!</h2>
+              <a href="/">
+              <button class="btn btn-default addToOrderButton">
+                  <h4>Go Back Home</h4>
+              </button>
+              </a>
           </div>
         </div>
 

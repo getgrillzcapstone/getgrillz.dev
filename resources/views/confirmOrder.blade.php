@@ -17,22 +17,20 @@
                 <h1 class="loginOrRegister">Login Or Register</h1>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 enterEmailDiv">
-                <form class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <form class="col-xs-9 col-sm-9 col-md-9 col-lg-9" method="POST" action="{{{ action('Auth\AuthController@postLogin') }}}" id="loginConfirmOrder">
+                        {{ csrf_field() }}
+                        <input type="hidden" id="token" name="_token" value="{{{csrf_token()}}}">
                     <div class="form-group">
                       <label for="emailConfirmOrder">Email address</label>
-                      <input type="email" class="form-control" id="emailConfirmOrder" placeholder="Enter email">
+                      <input type="email" class="form-control" id="emailConfirmOrder" placeholder="Enter email" value="{{ old('email') }}" required>
                     </div>
                     <div class="form-group password" id="passwordConfirmOrder">
                       <label for="passwordConfirmOrder">Password</label>
-                      <input type="password" class="form-control" id="passwordConfirmOrder" placeholder="Enter Password">
+                      <input type="password" class="form-control" id="passwordConfirmOrder" placeholder="Enter Password" required>
                     </div>
-                    <div class="form-group confirmPassword" id="confirmPasswordConfirmOrder">
-                      <label for="confirmPasswordConfirmOrder">Confirm Password</label>
-                      <input type="password" class="form-control" id="confirmPasswordConfirmOrder" placeholder="Enter Password">
-                    </div>
-                    <div class="btn btn-default continueButton" id="continueButtonConfirmOrder">
+                    <button type="submit" class="btn btn-default continueButton" id="continueButtonConfirmOrder">
                         <h4>Continue</h4>
-                    </div>
+                    </button>
                 </form>
             </div>
         </div>
@@ -231,7 +229,7 @@
                     </tbody>
                 </table>
                 <h2 class="orderTotal">Total: $432.98</h2>
-                <div class="yourOrderButtonContainer">
+                {{-- <div class="yourOrderButtonContainer">
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div class="btn btn-default updateCartButton" id="updateCartButton">
                             <h4 class="updateCartButtonText">Update Cart</h4>
@@ -242,11 +240,23 @@
                             <h4 class="checkoutButtonText">This Looks Good!</h4>
                         </div>
                     </div>
+                </div> --}}
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
+                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
+                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default pickADateButton" id="confirmOrderupdateCartButton">
+                            <h4 class="pickADateText">Update Cart</h4>
+                    </button>
+                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
+                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
+                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default justBrowsingButton" id="confirmOrderConfirmButton" data-toggle="modal" data-target="#paymentModal">
+                        <h4 class="pickADateText">This Looks Good!</h4>
+                    </button>
+                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
                 </div>
             </div>
         </div>
         <!-- Modal -->
-        <div id="myModal" class="modal fade" role="dialog">
+        <div id="paymentModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
 
             <!-- Modal content-->
