@@ -1,5 +1,9 @@
 @extends('layout.master')
 
+@section('itemsCss')
+    <link href="/css/items.css" rel="stylesheet" type="text/css" />
+@stop
+
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -151,23 +155,28 @@
                     </div>
                 </div>
             </div>
+            @foreach($items as $item)
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                @foreach($items as $item)
+                
                     {{-- <!-- product--> --}}
                     <div class="product itemsContainer">
-                        <div class="itemImage">
-                            <img src="{{$item->image}}" class="img-responsive">
+                        {{-- <div class="itemImage"> --}}
+                            {{-- <img src="{{$item->image}}" class="img-responsive"> --}}
                             {{-- <div class="overlay"> --}}
                                 <!-- Trigger the modal with a button -->
                                 
 
-                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            {{-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"> --}}
                             <div class="itemImage hovereffect">
                               <img class="img-responsive" src="{{$item->image}}" alt="">
                             <div class="overlay">
-                            <h2>Hover effect 3</h2>
-                            <a class="info" type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}">Details</a>
-                            <a class="info" href="/checkout" class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add To Order</a>
+                            <div class="text">
+                           {{--  <p class="manufacturer coloredText">Manufacture</p>
+                            <h4 class="coloredText">{{ $item->model }}</h4>
+                            <h5 class="price coloredText">{{ $item->price }}</h5> --}}
+                        </div>
+                            <a class="info btn btn-info btn-md" type="button" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}" style="cursor:pointer;">Item Details</a>
+                            <a class="info btn btn-info btn-md" href="/checkout" style="cursor:pointer;" data-id="{{$item->id}}">Add To Order</a>
                             </div>
                             </div>
                             </div>
@@ -180,12 +189,8 @@
 {{--                                 <button type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}">Preview Item</button> --}}
                             {{-- </div> --}}
                         </div>
-                        <div class="text">
-                            <p class="manufacturer coloredText">{{-- {{ $manufacturer->name }} --}}</p>
-                            <h4 class="coloredText">{{ $item->model }}</h4>
-                            <h5 class="price coloredText">{{ $item->price }}</h5>
-                        </div>
-                    </div>
+                        
+                  
 
 
                     {{-- <!-- Modal -->

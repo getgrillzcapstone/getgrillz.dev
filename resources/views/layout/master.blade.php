@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GetGrillz</title>
     @include('layout.partials.header')
+    @yield('itemsCss')
     @yield('footerStyling')
 
 </head>

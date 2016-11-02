@@ -2001,14 +2001,14 @@ a:active {
     }
 
     .itemImage {
-        width: 275px;
-        height: 275px;
+        max-width: 275px;
+        max-height: 275px;
         border-style: solid;
     }
 
     .itemsContainer {
-        display: inline-block;
-        padding-right: 20px;
+        display: inline-grid;
+        /* padding-right: 20px; */
     }
 
     .dropDownSort {
