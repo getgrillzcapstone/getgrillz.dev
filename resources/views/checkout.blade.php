@@ -2,6 +2,30 @@
 
 @section('content')
     <div class="container-fluid">
+        <div class="row areYouForgettingSomethingDiv" id="whatTypeOfGrillRow">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 areYouForgettingSomethingHeader">
+                <h1>Are You Forgetting Something?</h1>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center areYouForgettingSomething">
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                </span>
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default charcoalButton" id="charcoalButton" value="2">
+                    <h4>Grill Supplies</h4>
+                </button>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                </span>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                </span>
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default propaneButton" id="propaneButton" value="1">
+                    <h4>Party Supplies</h4>
+                </button>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    {{-- <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 forgettingSomething">
                 <h1>Are You Forgetting Something?</h1>
@@ -225,7 +249,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 @stop
 
