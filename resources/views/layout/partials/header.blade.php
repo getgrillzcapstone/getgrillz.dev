@@ -3,3 +3,4 @@
 {{-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> --}}
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <link href="/css/main.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="/getgrillz_images/favicon.ico"/>
