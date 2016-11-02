@@ -495,6 +495,127 @@ class ItemsTableSeeder extends Seeder
     $item46->image = '/charcoal_grill_images/weber_small_table.jpg';
     $item46->save();
 
+// Tool-set
+    $item46 = new App\Item();
+    $item46->item_category_id = 3;
+    $item46->manufacturer_id = 1;
+    $item46->model = 'Weber Tool Set';
+    $item46->size = 'Small';
+    $item46->description = '3-Piece Stainless Steel Grill Tool Set';
+    $item46->price = 29.99;
+    $item46->image = '/grillsupplies_images/weberToolSet.jpeg';
+    $item46->save();
+
+// Table
+    $item46 = new App\Item();
+    $item46->item_category_id = 4;
+    $item46->manufacturer_id = 8;
+    $item46->model = 'Folding Table';
+    $item46->size = 'Large';
+    $item46->description = '6 ft. Folding Utility Table';
+    $item46->price = 89.99;
+    $item46->image = '/partysupplies_images/foldingTable.jpg';
+    $item46->save();
+
+// Chair
+    $item46 = new App\Item();
+    $item46->item_category_id = 5;
+    $item46->manufacturer_id = 8;
+    $item46->model = 'Folding Chairs';
+    $item46->size = 'Medium';
+    $item46->description = 'Folding Chairs (4-Pack)';
+    $item46->price = 47.37;
+    $item46->image = '/partysupplies_images/foldingChair.jpg';
+    $item46->save();
+
+// Utensils
+    $item46 = new App\Item();
+    $item46->item_category_id = 6;
+    $item46->manufacturer_id = 8;
+    $item46->model = 'Utensils';
+    $item46->size = 'Small';
+    $item46->description = 'Clear 96 Plastic Spoons, Forks, And Knives';
+    $item46->price = 21.89;
+    $item46->image = '/partysupplies_images/partyUtensils.jpg';
+    $item46->save();
+
+// Skewers
+    $item46 = new App\Item();
+    $item46->item_category_id = 7;
+    $item46->manufacturer_id = 1;
+    $item46->model = 'Skewers';
+    $item46->size = 'Small';
+    $item46->description = 'Set of Siz Stainless Steel Skewers';
+    $item46->price = 14.95;
+    $item46->image = '/grillsupplies_images/skewer.jpg';
+    $item46->save();
+
+// Rotisserie
+    $item46 = new App\Item();
+    $item46->item_category_id = 8;
+    $item46->manufacturer_id = 2;
+    $item46->model = 'Rotisserie';
+    $item46->size = 'Medium';
+    $item46->description = 'Grill Rotisserie';
+    $item46->price = 87.99;
+    $item46->image = '/grillsupplies_images/rotisserie.jpg';
+    $item46->save();
+
+// Planks
+    $item46 = new App\Item();
+    $item46->item_category_id = 9;
+    $item46->manufacturer_id = 8;
+    $item46->model = 'Planks';
+    $item46->size = 'Medium';
+    $item46->description = 'Cedar Grilling Planks (12-Pack)';
+    $item46->price = 19.99;
+    $item46->image = '/grillsupplies_images/planks.jpg';
+    $item46->save();
+
+// Rib-rack
+    $item46 = new App\Item();
+    $item46->item_category_id = 10;
+    $item46->manufacturer_id = 8;
+    $item46->model = 'Rib Rack';
+    $item46->size = 'Medium';
+    $item46->description = 'Rib Rack';
+    $item46->price = 19.99;
+    $item46->image = '/grillsupplies_images/ribrack.jpg';
+    $item46->save();
+
+// Vegetable-basket
+    $item46 = new App\Item();
+    $item46->item_category_id = 11;
+    $item46->manufacturer_id = 8;
+    $item46->model = 'Vegetable Basket';
+    $item46->size = 'Medium';
+    $item46->description = 'Vegetable Basket';
+    $item46->price = 25.99;
+    $item46->image = '/grillsupplies_images/vegetableBasket.jpg';
+    $item46->save();
+
+// Fish-basket
+    $item46 = new App\Item();
+    $item46->item_category_id = 12;
+    $item46->manufacturer_id = 8;
+    $item46->model = 'Fish Basket';
+    $item46->size = 'Medium';
+    $item46->description = 'Fish Basket';
+    $item46->price = 12.99;
+    $item46->image = '/grillsupplies_images/fishBasket.jpg';
+    $item46->save();
+
+// Turf-mat
+    $item46 = new App\Item();
+    $item46->item_category_id = 13;
+    $item46->manufacturer_id = 8;
+    $item46->model = 'Grass Turf';
+    $item46->size = 'Large';
+    $item46->description = 'Grass Turff (15ft x 15ft)';
+    $item46->price = 19.99;
+    $item46->image = '/partysupplies_images/grassTurf.jpg';
+    $item46->save();
+
 
 
 
