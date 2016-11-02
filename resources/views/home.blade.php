@@ -18,12 +18,16 @@
                 <h3 class="heroSupport">
                     Problem solved with GetGrillz, a delivery service for grill rentals <br>in the San Antonio Area!
                 </h3>
-                <button class="btn btn-default customBtnDefault rentHeroButton">
-                    Rent
-                </button>
-                <button class="btn btn-default customBtnDefault buyHeroButton">
-                    Buy
-                </button>
+                <a href="/create-order-rent">
+                    <button class="btn btn-default heroBtn rentHeroButton">
+                        Rent
+                    </button>
+                </a>
+                <a href="/create-order-buy">
+                    <button class="btn btn-default heroBtn buyHeroButton">
+                        Buy
+                    </button>
+                </a>
             </div>
         </div>
 
