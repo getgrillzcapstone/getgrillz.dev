@@ -6,7 +6,8 @@ $("#getStartedButton").click(function(){
         }, 1000);
 });
 
-$("#getStartedButtonBuyPage").click(function(){
+$("#getStartedButtonBuy").click(function(){
+        $('.whatTypeOfGrillDiv').slideToggle()
         $('html, body').animate({
             scrollTop: $("#whatTypeOfGrillRow").offset().top
         }, 1000);

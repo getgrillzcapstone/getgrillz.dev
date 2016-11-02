@@ -574,7 +574,46 @@ a:active {
     }
 
 /*/////////////////////////////////////////////////FOR CHECKOUT PAGE*/
-    .forgettingSomething {
+    .areYouForgettingSomethingHeader {
+        text-align: center;
+        color: #FFF5EE;
+        background-color: #1C1E1E;
+    }
+
+    .areYouForgettingSomething {
+        height: 25vh;
+        background-color: #1C1E1E;
+    }
+
+    .charcoalButton {
+        background-color: #CA6924;
+        color: #FFF5EE;
+        border-color: transparent;
+        margin-top: 6vh;
+    }
+
+    .propaneButton {
+        background-color: #CA6924;
+        color: #FFF5EE;
+        border-color: transparent;
+        margin-top: 6vh;
+    }
+
+    @media only screen and (max-width: 992px) {
+        .whatTypeOfGrill {
+            height: 30vh;
+        }
+
+        .charcoalButton {
+            margin-top: 2vh;
+        }
+
+        .propaneButton {
+            margin-top: 2vh;
+        }
+    }
+
+    /*.forgettingSomething {
         text-align: center;
         background-color: #1C1E1E;
         color: #fff5ee;
@@ -582,10 +621,11 @@ a:active {
 
     .quantityField {
         text-align: center;
-    }
+    }*/
 
     /*////////////////////////////////////////////FOR GRILL SUPPLIES*/
-        .grillSupplies {
+
+        /*.grillSupplies {
             width: 50%;
             height: 30vh;
             background-color: #1C1E1E;
@@ -596,10 +636,10 @@ a:active {
             margin-top: 4%;
         }
 
-        .grillSuppliesButton {
+        .grillSuppliesButton {*/
             /*width: 500px;
             height: 70px;*/
-            background-color: #CA6924;
+            /*background-color: #CA6924;
             margin-top: 10%;
         }
 
@@ -613,10 +653,10 @@ a:active {
 
         .grillSuppliesCheckboxes {
             text-align: center;
-        }
+        }*/
 
     /*////////////////////////////////////////////FOR PARTY SUPPLIES*/
-        .partySupplies {
+        /*.partySupplies {
             width: 50%;
             height: 30vh;
             background-color: #1C1E1E;
@@ -627,10 +667,10 @@ a:active {
             margin-top: 4%;
         }
 
-        .partySuppliesButton {
+        .partySuppliesButton {*/
             /*width: 500px;
             height: 70px;*/
-            background-color: #CA6924;
+            /*background-color: #CA6924;
             margin-top: 10%;
         }
 
@@ -645,10 +685,10 @@ a:active {
 
         .partySuppliesCheckboxes {
             text-align: center;
-        }
+        }*/
 
         /*///////////FOR PARTY/GRILL SUPPLIES AND YOUR ORDER PREVIEW*/
-        .addToOrderButtonDiv {
+        /*.addToOrderButtonDiv {
             text-align: center;
         }
 
@@ -669,10 +709,10 @@ a:active {
         .headerPadding {
             padding-top: 10px;
             padding-bottom: 10px;
-        }
+        }*/
 
         /*////////////////////////////////////FOR YOUR ORDER PREVIEW*/
-        .yourOrderDiv {
+        /*.yourOrderDiv {
             width: 100%;
             height: 65vh;
             background-color: #D7C9AA;
@@ -701,7 +741,7 @@ a:active {
             width: 500px;
             background-color: #CA6924;
             margin-top: 2%;
-        }
+        }*/
 /*////////////////////////////////////////////FOR CONFIRM ORDER PAGE*/
     .takeMeBackDiv {
         width: 100%;
