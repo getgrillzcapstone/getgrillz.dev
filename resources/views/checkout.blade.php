@@ -9,247 +9,215 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center areYouForgettingSomething">
                 <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
                 </span>
-                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default charcoalButton" id="charcoalButton" value="2">
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default charcoalButton" id="grillSuppliesButton" value="2">
                     <h4>Grill Supplies</h4>
                 </button>
                 <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
                 </span>
                 <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
                 </span>
-                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default propaneButton" id="propaneButton" value="1">
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default propaneButton" id="partySuppliesButton" value="1">
                     <h4>Party Supplies</h4>
                 </button>
                 <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
                 </span>
             </div>
         </div>
+        {{-- @foreach($items as $item) --}}
+        <div class="row grillSuppliesDiv">
+            <h1>Grill Supplies</h1>
+            <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
+                <thead>
+                    <tr>
+                        <th class="text-center"><h4>Add To Cart</h4></th>
+                        <th class="text-center"><h4>Item Name</h4></th>
+                        <th class="text-center"><h4>Quanity</h4></th>
+                        <th class="text-center"><h4>Price Per Item</h4></th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Fish Basket</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Planks</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Ribrack</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Rotisserie</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Skewers</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Vegetable Basket</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Tool Set</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
+                <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+                <button class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn btn-default addToOrderButton" id="">
+                    <h4 class="imNotSureButtonText">Add To Cart</h4>
+                </button>
+                <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+            </div>
+        </div>
+        {{-- @endforeach --}}
+
+        <div class="row partySuppliesDiv">
+            <h1>Party Supplies</h1>
+            <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
+                <thead>
+                    <tr>
+                        <th class="text-center"><h4>Add To Cart</h4></th>
+                        <th class="text-center"><h4>Item Name</h4></th>
+                        <th class="text-center"><h4>Quanity</h4></th>
+                        <th class="text-center"><h4>Price Per Item</h4></th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Folding Chair</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Folding Table</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Party Utensils</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Grass Turf</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                        <td>Filler</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
+                <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+                <button class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn btn-default addToOrderButton" id="">
+                    <h4 class="imNotSureButtonText">Add To Cart</h4>
+                </button>
+                <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+            </div>
+        </div>
+
+        <div class="row yourOrderDiv">
+            <h1>Here's Your Order So Far...</h1>
+            <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
+                <thead>
+                    <tr>
+                        <th class="text-center"><h4>Remove From Cart</h4></th>
+                        <th class="text-center"><h4>Item Name</h4></th>
+                        <th class="text-center"><h4>Quanity</h4></th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Folding Chair</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Folding Table</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Party Utensils</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Grass Turf</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Grass Turf</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Grass Turf</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Grass Turf</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Grass Turf</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Grass Turf</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>Grass Turf</td>
+                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default pickADateButton" id="pickADateButton">
+                        <h4 class="pickADateText">Update Cart</h4>
+                </button>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
+                <a href="/confirm-order">
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default justBrowsingButton" id="justBrowsingButton">
+                    <h4 class="pickADateText">Continue</h4>
+                </button>
+                </a>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
+            </div>
+        </div>
+
     </div>
 
-    {{-- <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 forgettingSomething">
-                <h1>Are You Forgetting Something?</h1>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 grillSupplies">
-                <button class="btn btn-default grillSuppliesButton" id="grillSuppliesButton">
-                    <h4 class="grillSuppliesText">Grill Supplies</h4>
-                </button>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 partySupplies">
-                <button class="btn btn-default partySuppliesButton" id="partySuppliesButton">
-                    <h4 class="partySuppliesText">Party Supplies</h4>
-                </button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 grillSuppliesChecklist" id="grillSuppliesChecklist">
-                <h2>Grill Supplies</h2>
-                <table id="example" class="display" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="tableHeader">
-                            <th class="headerPadding"></th>
-                            <th class="headerPadding">Item Name</th>
-                            <th class="quantityField headerPadding">Quanity</th>
-                            <th class="headerPadding">Price Per Item</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Propane</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Charcoal</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Baskets</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Racks</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Planks</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Lighter Fluid</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Rotisserie</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Skewers</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="grillSuppliesCheckboxes"><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>Foil</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
-                    <div class="btn btn-default addToOrderButton" id="addToOrderButton">
-                        <h4 class="addToOrderButtonText">Add To Order</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 partySuppliesChecklist" id="partySuppliesChecklist">
-                <h2>Party Supplies</h2>
-                <table id="example" class="display" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="tableHeader">
-                            <th class="headerPadding"></th>
-                            <th class="headerPadding">Item Name</th>
-                            <th class="quantityField headerPadding">Quanity</th>
-                            <th class="headerPadding">Price Per Item</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Chairs</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Tables</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Utensils</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Turfs</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Planks</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Lighter Fluid</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Rotisserie</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Skewers</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="partySuppliesCheckboxes"><input type="checkbox" name="name1" class="partySuppliesCheckbox"/></td>
-                            <td>Foil</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>Filler</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
-                    <div class="btn btn-default addToOrderButton" id="addToOrderButton">
-                        <h4 class="addToOrderButtonText">Add To Order</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 yourOrderDiv">
-                <h1>Your Order:</h1>
-                <table id="example" class="display" cellspacing="0" width="100%">
-                    <thead>
-                        <tr class="tableHeader">
-                            <th class="headerPadding"></th>
-                            <th class="headerPadding">Your Selected Items</th>
-                            <th class="quantityField headerPadding">Quanity</th>
-                            <th class="headerPadding">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
-                            <td>Filler</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>$Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
-                            <td>Filler</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>$Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
-                            <td>Filler</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>$Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
-                            <td>Filler</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>$Filler</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h2 class="orderTotal">Total: $432.98</h2>
-                <div class="yourOrderButtonContainer">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="btn btn-default updateCartButton" id="updateCartButton">
-                            <h4 class="updateCartButtonText">Update Cart</h4>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <a href="/confirm-order">
-                            <div class="btn btn-default checkoutButton" id="">
-                                <h4 class="checkoutButtonText">Checkout</h4>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 
 @stop
 
