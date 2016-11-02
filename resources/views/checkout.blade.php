@@ -202,13 +202,13 @@
             </table>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
                 <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
-                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default pickADateButton" id="pickADateButton">
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default pickADateButton" id="updateCartButton">
                         <h4 class="pickADateText">Update Cart</h4>
                 </button>
                 <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
                 <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
                 <a href="/confirm-order">
-                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default justBrowsingButton" id="justBrowsingButton">
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default justBrowsingButton" id="checkoutConfirmButton">
                     <h4 class="pickADateText">Continue</h4>
                 </button>
                 </a>

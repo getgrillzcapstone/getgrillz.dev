@@ -18,8 +18,5 @@ function init(){
 
   setTimeout(function(){
       $('#thankyouModal').modal('show');
-      setTimeout(function(){
-         window.location.href = ('/');
-     }, 4500);
  }, 4000);
 }
