@@ -53,15 +53,9 @@
                     </div>
                     <div class="panel-body">
                         <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
-                            {{-- <div class="form-group"></div> --}}
-                            {{ Form::checkbox('Weber', false) }};
-                            {{ Form::checkbox('Charbroil', false) }};
-                            {{ Form::checkbox('Napoleon', false) }};
-                            {{ Form::checkbox('Nexgrill', false) }};
-                            {{ Form::checkbox('Big Green Egg', false) }};
-
-
-                           {{--  <div class="checkbox">
+                            <div class="form-group"></div>
+                        
+                            <div class="checkbox">
                                 <label>
                                     <input id="weber" type="checkbox">Weber
                                 </label>
@@ -125,7 +119,7 @@
                                 <label>
                                     <input id="stok" type="checkbox">Stok
                                 </label>
-                            </div> --}}
+                            </div>
                             <button class="btn btn-default btn-sm pull-right">Apply</button>
                         </form>
                     </div>
@@ -165,7 +159,25 @@
                             <img src="{{$item->image}}" class="img-responsive">
                             {{-- <div class="overlay"> --}}
                                 <!-- Trigger the modal with a button -->
-                                <button type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}">Preview Item</button>
+                                
+
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="itemImage hovereffect">
+                              <img class="img-responsive" src="{{$item->image}}" alt="">
+                            <div class="overlay">
+                            <h2>Hover effect 3</h2>
+                            <a class="info" type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}">Details</a>
+                            <a class="info" href="/checkout" class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add To Order</a>
+                            </div>
+                            </div>
+                            </div>
+
+
+
+
+
+
+{{--                                 <button type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}">Preview Item</button> --}}
                             {{-- </div> --}}
                         </div>
                         <div class="text">
