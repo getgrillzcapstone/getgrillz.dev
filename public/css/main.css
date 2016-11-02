@@ -283,16 +283,8 @@ a:active {
         color: #FFF5EE;
     }
 
-    .landingPageRentHeader {
-
-    }
-
     .landingPageRentText {
         font-size: 1.5em;
-    }
-
-    .landingPageRentButton {
-
     }
 
     .landingPageBuyDiv {
@@ -302,16 +294,8 @@ a:active {
         color: #FFF5EE;
     }
 
-    .landingPageBuyHeader {
-
-    }
-
     .landingPageBuyText {
         font-size: 1.5em;
-    }
-
-    .landingPageBuyButton {
-
     }
 
     @media only screen and (max-width: 850px) {
@@ -327,96 +311,94 @@ a:active {
     }
 
 /*///////////////////////////////////////////////FOR YOUR ORDER PAGE*/
-    .row.rentContainer {
-        background-color: #CFCFC4;
-    }
-
-    .row.buyContainer {
-        background-color: #CFCFC4;
-    }
-
-    .rentA {
-        font-size: 15em;
-    }
-
-    .grill {
-        font-size: 20em;
-    }
-
-    .rentHeader {
+    .createOrderHeroContainer {
+        background-color: #1C1E1E;
         font-size: 1rem;
     }
 
-    .rentDescription {
-        font-size: 1rem;
-        text-align: center;
+    .rentAGrill {
+        font-size: 9.5em;
+        color: #FFF5EE;
     }
 
-    .rentDescriptionPicture {
-        width: 100%;
-        height: auto;
-        margin-top: 6%;
+    .createOrderHeroImgContainer {
+        padding: 0;
     }
 
-    .rentCaption {
-        font-size: 3em;
+    .createOrderHeroCaption {
+        padding: 0;
+        margin-top: 10vh;
+        /*font-size: 3.35vw;*/
+        font-size: 2.5vw;
         text-align: justify;
-        /*margin-left: 30px;*/
-        width: auto;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .getStartedButton {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        background-color: #CA6924;
+        color: #FFF5EE;
+        border-color: transparent;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .createOrderHeroCaption {
+            padding: 0;
+            margin-top: 6vh;
+            font-size: 2.8vw;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .createOrderHeroCaption {
+            padding: 0;
+            margin-top: 1.5vh;
+            font-size: 3.2vw;
+        }
+    }
+
+    @media only screen and (max-width: 489px) {
+        .rentAGrill {
+            font-size: 8em;
+        }
     }
 
 /*///////////FOR LOOKING FOR A SPECIFIC DAY OR JUST BROWSING SECTION*/
+    .pickADateContainer {
+        display: none;
+    }
+
     .pickADate {
-        width: 50%;
-        height: 50vh;
-        background-color: #1C1E1E;
-        text-align: center;
-        font-family: thunder;
+        height: 25vh;
+        background-color: #7B2D26;
     }
 
     .pickADateButton {
+        margin-top: 6vh;
         background-color: #CA6924;
-        border-color: #1C1E1E;
-        margin-top: 20%;
-        margin-left: 25%;
-        font-family: thunder;
-    }
-
-    .pickADateText {
-        font-size: 1.5vw;
-    }
-
-    .justBrowsing {
-        width: 50%;
-        height: 50vh;
-        background-color: #262B2F;
-        text-align: center;
-        font-family: thunder;
+        color: #FFF5EE;
+        border-color: transparent;
     }
 
     .justBrowsingButton {
+        margin-top: 6vh;
         background-color: #CA6924;
-        border-color: #262B2F;
-        margin-top: 20%;
-        margin-left: 25%;
-        font-family: thunder;
+        color: #FFF5EE;
+        border-color: transparent;
     }
 
-    @media only screen and (max-width: 1075px) {
+    @media only screen and (max-width: 992px) {
         .pickADate {
-            width: 100%;
+            height: 30vh;
         }
-        .justBrowsing {
-            width: 100%;
-        }
-        .pickADateText {
-            font-size: 2.5vw;
-        }
-    }
 
-    @media only screen and (max-width: 560px) {
-        .pickADateText {
-            font-size: 3vw;
+        .pickADateButton {
+            margin-top: 2vh;
+        }
+
+        .justBrowsingButton {
+            margin-top: 2vh;
         }
     }
 
@@ -429,8 +411,7 @@ a:active {
     .calender {
         width: 50%;
         height: 40vh;
-        /*height: 120vh;*/
-        background-color: #7B2D26;
+        background-color: #1C1E1E;
         font-family: thunder;
     }
 
@@ -440,10 +421,13 @@ a:active {
 
     .selectingADay {
         border-right-style: solid;
+        border-color: #FFF5EE;
     }
 
     .dateButton {
         background-color: #CA6924;
+        color: #FFF5EE;
+        border-color: transparent;
         margin-top: 15%;
         font-family: thunder;
     }
@@ -467,48 +451,63 @@ a:active {
     .customCalenderButton {
         background-color: #CA6924;
         color: #FFF5EE;
+        border-color: transparent;
     }
 
     @media only screen and (max-width: 750px) {
         .calender {
             width: 100%;
         }
+
         .justBrowsing {
             width: 100%;
+        }
+
+        .selectingADay {
+            border-right-style: none;
         }
     }
 
 /*///////////////////////////////////////////FOR CHARCOAL OR PROPANE*/
-    .whatTypeOfGrill {
+    .whatTypeOfGrillDiv {
+        display: none;
+    }
+
+    .whatTypeOfGrillHeader {
         text-align: center;
         background-color: #D7C9AA;
     }
 
-    .charcoalDiv {
-        width: 100%;
-        height: 50vh;
+    .whatTypeOfGrill {
+        height: 25vh;
         background-color: #D7C9AA;
-        text-align: center;
     }
 
     .charcoalButton {
         background-color: #CA6924;
-        margin-top: 10%;
-        font-family: thunder;
+        color: #FFF5EE;
+        border-color: transparent;
+        margin-top: 6vh;
     }
 
     .propaneButton {
         background-color: #CA6924;
-        margin-top: 10%;
-        font-family: thunder;
+        color: #FFF5EE;
+        border-color: transparent;
+        margin-top: 6vh;
     }
 
-    @media only screen and (max-width: 750px) {
-        .charcoalDiv {
-            width: 100%;
+    @media only screen and (max-width: 992px) {
+        .whatTypeOfGrill {
+            height: 30vh;
         }
-        .propaneDiv {
-            width: 100%;
+
+        .charcoalButton {
+            margin-top: 2vh;
+        }
+
+        .propaneButton {
+            margin-top: 2vh;
         }
     }
 
@@ -524,27 +523,32 @@ a:active {
         background-color: #1C1E1E;
         color: #FFF5EE;
         text-align: center;
+        display: none;
     }
 
     .sizeButton {
         background-color: #CA6924;
+        color: #FFF5EE;
+        border-color: transparent;
         margin-top: 15%;
         font-family: thunder;
     }
 
     .imNotSureButton {
         background-color: #CA6924;
+        color: #FFF5EE;
+        border-color: transparent;
         margin-top: 5%;
         font-family: thunder;
     }
 
     @media only screen and (max-width: 1000px) {
         .sizeButtonDiv {
-            height: 80vh;
+            height: 55vh;
         }
 
         .sizeButton {
-            margin-top: 6vh;
+            margin-top: 4vh;
         }
 
         .imNotSureButton {
