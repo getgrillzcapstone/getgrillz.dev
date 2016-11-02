@@ -53,8 +53,15 @@
                     </div>
                     <div class="panel-body">
                         <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
-                            <div class="form-group"></div>
-                            <div class="checkbox">
+                            {{-- <div class="form-group"></div> --}}
+                            {{ Form::checkbox('Weber', false) }};
+                            {{ Form::checkbox('Charbroil', false) }};
+                            {{ Form::checkbox('Napoleon', false) }};
+                            {{ Form::checkbox('Nexgrill', false) }};
+                            {{ Form::checkbox('Big Green Egg', false) }};
+
+
+                           {{--  <div class="checkbox">
                                 <label>
                                     <input id="weber" type="checkbox">Weber
                                 </label>
@@ -118,7 +125,7 @@
                                 <label>
                                     <input id="stok" type="checkbox">Stok
                                 </label>
-                            </div>
+                            </div> --}}
                             <button class="btn btn-default btn-sm pull-right">Apply</button>
                         </form>
                     </div>
