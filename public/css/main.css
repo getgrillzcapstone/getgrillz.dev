@@ -43,6 +43,10 @@ h5{
   font-family: thunder;
 }
 
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 a:active {
     text-decoration: none;
     color: #CA6924;
@@ -328,10 +332,9 @@ a:active {
     .createOrderHeroCaption {
         padding: 0;
         margin-top: 10vh;
-        /*font-size: 3.35vw;*/
         font-size: 2.5vw;
         text-align: justify;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
     }
 
     .getStartedButton {
@@ -623,37 +626,44 @@ a:active {
         text-align: center;
     }*/
 
+
     /*////////////////////////////////////////////FOR GRILL SUPPLIES*/
-
-        /*.grillSupplies {
-            width: 50%;
-            height: 30vh;
-            background-color: #1C1E1E;
-            text-align: center;
-        }
-
-        .grillSuppliesText {
-            margin-top: 4%;
-        }
-
-        .grillSuppliesButton {*/
-            /*width: 500px;
-            height: 70px;*/
-            /*background-color: #CA6924;
-            margin-top: 10%;
-        }
-
-        .grillSuppliesChecklist {
-            width: 100%;
-            height: 72vh;
-            background-color: #7B2D26;
-            color: #FFF5EE;
+        .grillSuppliesDiv {
+            background-color: #D7C9AA;
+            height: 65vh;
             display: none;
         }
 
-        .grillSuppliesCheckboxes {
-            text-align: center;
-        }*/
+        .partySuppliesDiv {
+            background-color: #7B2D26;
+            color: #FFF5EE;
+            height: 65vh;
+            display: none;
+        }
+
+        .yourOrderDiv {
+            height: 100%;
+            margin-bottom: 5vh;
+        }
+
+        .noTableBorder {
+            border-style: none;
+        }
+
+        .quantityCheckout {
+            width: 50px;
+        }
+
+        .addToOrderButton {
+            background-color: #CA6924;
+            color: #FFF5EE;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .addToOrderButtonDiv {
+                margin-top: 15px;
+            }
+        }
 
     /*////////////////////////////////////////////FOR PARTY SUPPLIES*/
         /*.partySupplies {

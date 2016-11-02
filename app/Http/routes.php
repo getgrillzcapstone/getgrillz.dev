@@ -14,26 +14,38 @@
 Route::get('/', function () {
     return view('home');
 });
+
 Route::get('/create-order-rent', 'OrderController@rent');
+
 Route::get('/faq-contact', function () {
     return view('faqContact');
 });
+
 Route::get('/create-order-buy', 'OrderController@buy');
+
 Route::get('/checkout', function () {
     return view('checkout');
 });
+
 Route::get('/confirm-order', function () {
     return view('confirmOrder');
 });
+
 Route::get('/your-orders', function () {
     return view('yourOrders');
 });
+
 Route::get('/thankyou', function () {
     return view('thankYou');
 });
+
 Route::resource('items', 'ItemController');
 
+
 Route::post('manufacturer', 'ItemController@manSort');
+
+
+// Route::resource('checkout', 'CheckoutController');
 
 
 // Route::resource('orders', 'OrderController');
@@ -51,6 +63,3 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 // Route::get('profile', ['middleware' => 'auth.basic', function() {
 //     // Only authenticated users may enter...
 // }]);
-
-
-

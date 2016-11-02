@@ -61,9 +61,12 @@
                     
                     <div class="panel-body">
                         
-                        <div class="form-group">
+                        {{-- <div class="form-group"> --}}
                            
                             @foreach($manufacturers as $manufacturer) 
+                        <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
+                            <div class="form-group"></div>
+
                             <div class="checkbox">
                                 
                                 <label>
@@ -106,15 +109,15 @@
                 </div>
             </div>
             @foreach($items as $item)
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
                     {{-- <!-- product--> --}}
                     <div class="product itemsContainer">
                         {{-- <div class="itemImage"> --}}
                             {{-- <img src="{{$item->image}}" class="img-responsive"> --}}
                             {{-- <div class="overlay"> --}}
                                 <!-- Trigger the modal with a button -->
-                                
+
 
                             {{-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"> --}}
                             <div class="itemImage hovereffect">
@@ -139,8 +142,8 @@
 {{--                                 <button type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}">Preview Item</button> --}}
                             {{-- </div> --}}
                         </div>
-                        
-                  
+
+
 
 
                     {{-- <!-- Modal -->
