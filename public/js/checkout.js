@@ -1,9 +1,9 @@
 $("#grillSuppliesButton").click(function(){
-    if($('#partySuppliesChecklist').is(':visible')) {
-        $("#partySuppliesChecklist").toggle();
+    if($(".partySuppliesDiv").is(':visible')) {
+        $(".partySuppliesDiv").slideToggle();
     }
-    $("#grillSuppliesChecklist").toggle();
-    if($('#grillSuppliesButton').hasClass("active")) {
+    $(".grillSuppliesDiv").slideToggle();
+    if($("#grillSuppliesButton").hasClass("active")) {
         $("#grillSuppliesButton").removeClass("active");
     } else {
         $("#grillSuppliesButton").addClass("active");
@@ -12,11 +12,11 @@ $("#grillSuppliesButton").click(function(){
 });
 
 $("#partySuppliesButton").click(function(){
-    if($('#grillSuppliesChecklist').is(':visible')) {
-        $("#grillSuppliesChecklist").toggle();
+    if($(".grillSuppliesDiv").is(':visible')) {
+        $(".grillSuppliesDiv").slideToggle();
     }
-    $("#partySuppliesChecklist").toggle();
-    if($('#partySuppliesButton').hasClass("active")) {
+    $(".partySuppliesDiv").slideToggle();
+    if($("#partySuppliesButton").hasClass("active")) {
         $("#partySuppliesButton").removeClass("active");
     } else {
         $("#partySuppliesButton").addClass("active");
