@@ -5,11 +5,6 @@
             <h2 class="getGrillz"><a href="/" class="coloredAnchorTag noTextDecoration">GetGrillz</a></h2>
         </div>
 
-
-
-
-
-
  {{-- @if(!Auth::check())
         <li>
           <a href="{{action('Auth\AuthController@getLogin')}}">
@@ -36,12 +31,6 @@
         @endif
  --}}
 
-
-
-
-
-
-
         <div class="col-xs-1 col-sm-6 col-md-8 col-lg-8 navBarContainer navBarStuff">
             <ul class="nav navbar-nav navbar-right">
 
@@ -66,16 +55,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
     <!-- Modal -->
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -89,8 +68,6 @@
           </div>
           {{-- <div class="modal-body"> --}}
           <div class="modal-footer loginModal" id="loginModal">
-
-
               <form method="POST" action="{{{ action('Auth\AuthController@postLogin') }}}" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="loginmod">
               {{ csrf_field() }}
               <input type="hidden" id="token" name="_token" value="{{{csrf_token()}}}">
@@ -122,18 +99,12 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 hideHamburgerMenu">
             <div class="hamburgerMenu">
                 <ul class="hamburgerMenuLinks">
-                    {{-- <li class="hamburgerMenuLink" data-toggle="modal" data-target="#loginModal" id="loginDropdown">Login</li>
-                    <li class="hamburgerMenuLink"><a href="/your-orders" class="coloredDropDownAnchorTag noTextDecoration">Your Orders</a></li> --}}
                     @if(!Auth::check())
                     <li class="hamburgerMenuLink" data-toggle="modal" data-target="#loginModal" id="loginDropdown">Login</li>
-
                     @else
-
                     <li class="hamburgerMenuLink"><a href="/your-orders" class="coloredDropDownAnchorTag noTextDecoration">Your Orders</a></li>
-
                     <li class="hamburgerMenuLink"><h3><a href="{{action('Auth\AuthController@getLogout')}}" class="coloredDropDownAnchorTag noTextDecoration">Logout</a></h3>
                     </li>
-
                     @endif
                 </ul>
             </div>

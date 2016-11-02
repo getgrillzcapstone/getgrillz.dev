@@ -1,5 +1,6 @@
 // SCROLLS DOWN WHEN CLICKED
 $("#getStartedButton").click(function(){
+        $('.pickADateContainer').slideToggle()
         $('html, body').animate({
             scrollTop: $("#datePickRow").offset().top
         }, 1000);
@@ -12,18 +13,21 @@ $("#getStartedButtonBuyPage").click(function(){
 });
 
 $("#justBrowsingButton").click(function(){
+        $('.whatTypeOfGrillDiv').slideToggle()
         $('html, body').animate({
             scrollTop: $("#whatTypeOfGrillRow").offset().top
         }, 1000);
 });
 
 $("#charcoalButton").click(function(){
+        $('.sizeButtonDiv').slideToggle()
         $('html, body').animate({
             scrollTop: $("#whatSizeGrillRow").offset().top
         }, 1000);
 });
 
 $("#propaneButton").click(function(){
+        $('.sizeButtonDiv').slideToggle()
         $('html, body').animate({
             scrollTop: $("#whatSizeGrillRow").offset().top
         }, 1000);
