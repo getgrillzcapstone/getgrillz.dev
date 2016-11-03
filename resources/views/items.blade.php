@@ -181,7 +181,7 @@
                                             <p class="text-muted text-small">{{ $item->description }}</p>
                                             <div class="box">
                                                 <form>
-                                                   <h5 class="price">{{ $item->price }}</h5>
+                                                   <h5 class="price">${{ $item->price }}</h5>
                                                     <p class="text-center">
                                                         {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
                                                         <a href="{{ route('item.addToCart', ['id' => $item->id])}}" class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add to Order</a>
