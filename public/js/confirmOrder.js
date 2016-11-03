@@ -38,4 +38,4 @@ $(document).ready(function(){
         window.location.href = "/thankyou";
     })
 
-}); //This is for the document.ready function at the top of the page
+}); //This is for the document.ready function at the top of the page.

@@ -66,4 +66,4 @@ $(document).ready(function(){
         $("#selectingADayButton").removeClass("active");
     });
 
-}); //This is for the document.ready function at the top of the page
+}); //This is for the document.ready function at the top of the page.
