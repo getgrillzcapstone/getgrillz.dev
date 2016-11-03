@@ -24,7 +24,8 @@ class ItemController extends Controller
 
         $fueltype = request()->input('fuel');
         $size = request()->input('size');
-        
+
+        // 
         session(['fueltype' => $fueltype]);
         session(['size' => $size]);
 
@@ -40,15 +41,34 @@ class ItemController extends Controller
     {
         
         // dd(request()->input('fuel'));
-       // dd(request()->input('man'));
-       $mans = request()->input('man');
-       $fueltype = request()->input('fuel');
-        $size = request()->input('size');
-       $items = DB::table('items')->where('manufacturer_id', $mans)->where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
+        // dd(request()->all());
+        
 
-       $manufacturers = Manufacturer::all();
-       return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
-       // return view('items', ['items' => $items->get(), 'manufacturers' => $manufacturers]);
+        $mans = request()->input('man');
+        $fueltype = request()->input('fuel');
+        $size = request()->input('size');
+        
+        $items = DB::table('items');
+
+        // $items = DB::table('items')->whereIn('manufacturer_id', $mans)->whereIn('size', $size)->whereIn('item_category_id', $fueltype)->get();
+
+        if(!empty($mans)){
+            $items->whereIn('manufacturer_id', $mans);
+        }
+
+        if(!empty($size)){
+            $items->whereIn('size', $size);
+        }
+
+        if(!empty($fueltype)){
+            $items->whereIn('item_category_id', $fueltype);
+        }
+
+        // dd($items);
+        $items = $items->get();
+        $manufacturers = Manufacturer::all();
+        return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
+        // return view('items', ['items' => $items->get(), 'manufacturers' => $manufacturers]);
 
     }
 
