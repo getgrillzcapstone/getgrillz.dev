@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Item;
 use App\Manufacturer;
 use DB;
+use Session;
 
 class ItemController extends Controller
 {
@@ -19,12 +20,12 @@ class ItemController extends Controller
      */
     public function index()
     {
-       
+
         // dd(request()->input('fuel'));
 
         $fueltype = request()->input('fuel');
         $size = request()->input('size');
-        
+
         session(['fueltype' => $fueltype]);
         session(['size' => $size]);
 
@@ -38,7 +39,7 @@ class ItemController extends Controller
 
     public function manSort()
     {
-        
+
         // dd(request()->input('fuel'));
        // dd(request()->input('man'));
        $mans = request()->input('man');
@@ -50,6 +51,27 @@ class ItemController extends Controller
        return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
        // return view('items', ['items' => $items->get(), 'manufacturers' => $manufacturers]);
 
+    }
+
+    public function getGrillSuppliesInventory()
+    {
+        $id_list = [3, 7, 8, 9, 10, 11, 12];
+        $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        $id_list = [4, 5, 6, 13];
+        $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        return view('checkout', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
+    }
+
+    public function getAddToCart(Request $request, $id)
+    {
+        $product = Item::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($product, $product->$id);
+
+        $request->session()->put('cart', $cart);
+        dd($request->session()->get('cart'));
+        return view('checkout');
     }
 
 

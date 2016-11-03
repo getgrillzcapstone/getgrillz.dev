@@ -23,9 +23,11 @@ Route::get('/faq-contact', function () {
 
 Route::get('/create-order-buy', 'OrderController@buy');
 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
+// Route::get('/checkout', function () {
+//     return view('checkout');
+// });
+
+Route::get('/checkout', 'ItemController@getGrillSuppliesInventory');
 
 Route::get('/confirm-order', function () {
     return view('confirmOrder');
@@ -39,8 +41,12 @@ Route::get('/thankyou', function () {
     return view('thankYou');
 });
 
-Route::resource('items', 'ItemController');
+Route::get('/add-to-cart/{id}', [
+    'uses' => 'ItemController@getAddToCart',
+    'as' => 'item.addToCart'
+]);
 
+Route::resource('items', 'ItemController');
 
 Route::post('manufacturer', 'ItemController@manSort');
 
