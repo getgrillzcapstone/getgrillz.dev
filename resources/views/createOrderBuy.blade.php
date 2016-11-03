@@ -6,8 +6,9 @@
 
         {{-- Sample Test Form --}}
             <form action="{{ action('ItemController@index') }}" method="GET" id="itemsform">
-                <input type="hidden" id="qta_field_fuel" name="fuel" value="">
-                <input type="hidden" id="qta_field_size" name="size" value="">
+                {{{ csrf_field() }}}
+                <input type="hidden" id="qta_field_fuel" name="fuel[]" value="">
+                <input type="hidden" id="qta_field_size" name="size[]" value="">
                 {{-- <button type="submit" class="btn btn-primary">Select</button> --}}
             </form>
         {{-- End Sample Test Form --}}
@@ -90,7 +91,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

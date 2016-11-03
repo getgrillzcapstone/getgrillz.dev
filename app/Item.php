@@ -42,4 +42,9 @@ class Item extends Model implements AuthenticatableContract,
     {
         return $this->hasOne('App\Manufacturer','id','manufacturer_id');
     }
+
+    public function order()
+    {
+        return $this->belongsToMany('App\Order', 'order_items', 'item_id', 'order_id');
+    }
 }

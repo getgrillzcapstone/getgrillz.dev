@@ -18,38 +18,43 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function index()
+    // {
+    //
+    //     // dd(request()->input('fuel'));
+    //
+    //     $fueltype = request()->input('fuel');
+    //     $size = request()->input('size');
+    //     session(['fueltype' => $fueltype]);
+    //     session(['size' => $size]);
+    //
+    //     $items = Item::where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
+    //     $manufacturers = Manufacturer::all();
+    //
+    //     // dd($items);
+    //     return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
+    //
+    // }
+
     public function index()
-    {
-
-        // dd(request()->input('fuel'));
-
-        $fueltype = request()->input('fuel');
-        $size = request()->input('size');
-        session(['fueltype' => $fueltype]);
-        session(['size' => $size]);
-
-        $items = Item::where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
-        $manufacturers = Manufacturer::all();
-
-        // dd($items);
-        return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
-
-    }
-
-    public function manSort()
     {
 
         // dd(request()->input('fuel'));
         // dd(request()->all());
 
-
         $mans = request()->input('man');
         $fueltype = request()->input('fuel');
         $size = request()->input('size');
 
-        // $items = DB::table('items');
 
-        $items = DB::table('items');
+        is_array($fueltype) ? $fueltype : settype($fueltype, 'array');
+        is_array($size) ? $size : settype($size, 'array');
+        $fueltype = $fueltype == "" ? ['Small', 'Medium', 'Large'] : $size;
+        if (!empty($size)) {
+            $size = $size[0] == "%" ? ['Small', 'Medium', 'Large'] : $size;
+        }
+
+        $items = Item::where('id','LIKE','%');
 
         // $items = DB::table('items')->whereIn('manufacturer_id', $mans)->whereIn('size', $size)->whereIn('item_category_id', $fueltype)->get();
 
@@ -72,34 +77,6 @@ class ItemController extends Controller
         // return view('items', ['items' => $items->get(), 'manufacturers' => $manufacturers]);
 
     }
-
-    public function getAddToCart(Request $request, $id)
-    {
-        $item = Item::find($id);
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
-        $cart->add($item, $item->$id);
-
-        $request->session()->put('cart', $cart);
-        // return $this->getCart();
-        return redirect()->action('ItemController@index');
-    }
-
-    public function getCart() {
-        if (!Session::has('cart')) {
-            return view('/checkout');
-        }
-        $oldCart = Session::get('cart');
-        $cart = new Cart($oldCart);
-        dd($cart);
-        $id_list = [3, 7, 8, 9, 10, 11, 12];
-        $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
-        $id_list = [4, 5, 6, 13];
-        $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
-        return view('checkout', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory, 'cartItems' => $cart->items, 'totalPrice' => $cart->totalPrice]);
-    }
-
-
 
     /**
      * Show the form for creating a new resource.
