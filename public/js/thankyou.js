@@ -1,22 +1,21 @@
-$( document ).ready(function() {
+$(document).ready(function(){
+    function init(){
 
-  init();
+        var milisecs = 2000;
 
-});
+        $.each($('.accordion'), function(i, obj){
 
-function init(){
+            var delayMS = milisecs - i*180;
 
-  var milisecs = 2000;
+            TweenLite.to(obj,0.1,{opacity:1, delay: delayMS/1000, ease:Linear.easeOut});
+            TweenLite.from(obj,1.5,{top:0, delay: delayMS/1000, ease:Bounce.easeOut});
+        });
 
-  $.each($('.accordion'), function(i, obj){
+        setTimeout(function(){
+            $('#thankyouModal').modal('show');
+        }, 4000);
+    }
 
-    var delayMS = milisecs - i*180;
+    init();
 
-    TweenLite.to(obj,0.1,{opacity:1, delay: delayMS/1000, ease:Linear.easeOut});
-    TweenLite.from(obj,1.5,{top:0, delay: delayMS/1000, ease:Bounce.easeOut});
-  });
-
-  setTimeout(function(){
-      $('#thankyouModal').modal('show');
- }, 4000);
-}
+}); //This is for the document.ready function at the top of the page
