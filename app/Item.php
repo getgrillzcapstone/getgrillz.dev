@@ -36,4 +36,10 @@ class Item extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+
+    public function manufacturer()
+    {
+        return $this->hasOne('App\Manufacturer','id','manufacturer_id');
+    }
 }

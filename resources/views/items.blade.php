@@ -128,44 +128,19 @@
                             <h4 class="coloredText">{{ $item->model }}</h4>
                             <h5 class="price coloredText">{{ $item->price }}</h5> --}}
                         </div>
-                            <a class="info btn btn-info btn-md" type="button" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}" style="cursor:pointer;">Item Details</a>
-                            <a class="info btn btn-info btn-md" href="{{ route('item.addToCart', ['id' => $item->id])}}" style="cursor:pointer;" data-id="{{$item->id}}">Add To Order</a>
+                            <a class="info btn btn-info btn-md" type="button" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}" style="cursor:pointer; font-family: thunder; border-color: transparent;">Item Details</a>
+                            
+
+                            <a class="info btn btn-info btn-md" href="{{ route('item.addToCart', ['id' => $item->id])}}" style="cursor:pointer; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add To Order</a>
                             </div>
                             </div>
                             </div>
 
 
-
-
-
-
-{{--                                 <button type="button" class="btn btn-info btn-md pull-right" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}">Preview Item</button> --}}
-                            {{-- </div> --}}
                         </div>
 
 
 
-
-                    {{-- <!-- Modal -->
-                    <div id="myModal" class="modal fade" role="dialog">
-                      <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Modal Header</h4>
-                          </div>
-                          <div class="modal-body">
-                            <p>Some text in the modal.</p>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div> --}}
                     <!-- quick view modal box-->
                     <div id="product-quick-view-modal-{{$item->id}}" tabindex="-1" role="dialog" aria-hidden="false" class="modal fade">
                         <div class="modal-dialog modal-lg">
@@ -178,13 +153,17 @@
                                         </div>
                                         <div class="col-sm-6">
                                             {{-- <h2 class="product__heading">{{$item->manufacturer->name . " " . $item->model}}</h2> --}}
-                                            <p class="text-muted text-small">{{ $item->description }}</p>
+                                            <br>
+                                            <center><img src="{{ $item->manufacturer->image }}" alt="" class="img-responsive" style="width: 50%;"></center>
+                                            <h3>{{ $item->manufacturer->name }}</h3>
+                                            <h5>{{ $item->model }}</h5>
+                                            <p class="text-muted text-small" style="text-align: justify; width: 90%">{{ $item->description }}</p>
                                             <div class="box">
                                                 <form>
-                                                   <h5 class="price">{{ $item->price }}</h5>
+                                                   <h5 class="price">${{ $item->price }}</h5>
                                                     <p class="text-center">
                                                         {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
-                                                        <a href="{{ route('item.addToCart', ['id' => $item->id])}}" class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add to Order</a>
+                                                        <a href="{{ route('item.addToCart', ['id' => $item->id])}}" class="info btn btn-info btn-md" style="cursor:pointer; background-color: #ca6924; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add to Order</a>
                                                     </p>
                                                 </form>
                                             </div>
