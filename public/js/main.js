@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 
 
-}); //This is for the document.ready function at the top of the page
+}); //This is for the document.ready function at the top of the page.
 
 
 

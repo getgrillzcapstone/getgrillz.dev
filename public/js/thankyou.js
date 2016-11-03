@@ -18,4 +18,4 @@ $(document).ready(function(){
 
     init();
 
-}); //This is for the document.ready function at the top of the page
+}); //This is for the document.ready function at the top of the page.
