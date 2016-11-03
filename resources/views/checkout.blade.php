@@ -36,48 +36,14 @@
                     </tr>
                 </thead>
                 <tbody style="text-align: center;">
+                    @foreach($grillInventory as $grillItem)
                     <tr>
                         <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Fish Basket</td>
+                        <td>{{$grillItem->model}}</td>
                         <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
+                        <td>{{$grillItem->price}}</td>
                     </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Planks</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Ribrack</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Rotisserie</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Skewers</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Vegetable Basket</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Tool Set</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
@@ -102,30 +68,14 @@
                     </tr>
                 </thead>
                 <tbody style="text-align: center;">
+                    @foreach($partyInventory as $partyItem)
                     <tr>
                         <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Folding Chair</td>
+                        <td>{{$partyItem->model}}</td>
                         <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
+                        <td>{{$partyItem->price}}</td>
                     </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Folding Table</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Party Utensils</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Grass Turf</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>Filler</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
