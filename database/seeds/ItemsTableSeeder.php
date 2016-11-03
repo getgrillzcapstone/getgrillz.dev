@@ -122,10 +122,10 @@ class ItemsTableSeeder extends Seeder
     $item11 = new App\Item();
     $item11->item_category_id = 1;
     $item11->manufacturer_id = 3;
-    $item11->model = 'Eight Burner';
+    $item11->model = 'Prestige PRO 665';
     $item11->size = 'Large';
-    $item11->description = 'Large size Eight Burner';
-    $item11->price = 902.45;
+    $item11->description = 'The new Prestige PRO Series PRO665RSIB Gas Grill comes with 8 burners in total, and can grill up to 42 hamburgers at once. That’s not those wimpy, freezer burned, store bought ones, but large and juicy, hand made, 4-inch patties. But you’re grilling on a PRO Series grill. You’re not going to be making burgers, unless you’re hosting the most amazing block party ever. You’re going to be grilling gourmet meals on the 9.5 - millimeter, stainless steel Wave cooking grids. While you’re busy grilling up the perfect steak, or slow grilling the perfect roast, you can cook amazing side dishes on the ceramic infrared side burner. Not just for quickly searing the perfect steak, the ceramic brick heats to 1,800°F in just over 30 seconds and can be used to make sauces, boil water, and even sauté.';
+    $item11->price = 3299.00;
     $item11->image = '/propane_grill_images/napoleon8burner.jpg';
     $item11->save();
 
