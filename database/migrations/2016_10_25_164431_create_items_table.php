@@ -18,7 +18,7 @@ class CreateItemsTable extends Migration
             $table->integer('manufacturer_id')->unsigned()->references('id')->on('manufacturers');
             $table->string('model', 45);
             $table->string('size', 10);
-            $table->string('description', 500);
+            $table->string('description', 900);
             $table->decimal('price', 6,2);
             $table->string('image', 70);
             $table->timestamps();
