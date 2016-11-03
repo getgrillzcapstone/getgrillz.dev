@@ -253,31 +253,41 @@ a:active {
     }
 
 /*//////////////////////////////////FOR BANNER IMAGES BELOW HERO IMG*/
-    .bannerContainer {
-        text-align: center;
-        background-color: white;
-    }
+.faqHeader {
+    border-bottom-style: solid;
+}
 
-    .bannerHeader {
-        margin-top: 0;
-        margin-bottom: 2%;
-    }
+.faqRow {
+    background-color: #FFF5EE;
+}
 
-    .bannerImg1 {
-        width: 50%;
-        height: auto;
-    }
+.faqQuestion {
+    cursor: pointer;
+}
 
-    .bannerImg2 {
-        width: 37%;
-        height: auto;
-        padding-bottom: 1%;
-    }
+.faqAnswer {
+    font-size: 20px;
+}
 
-    .bannerImg3 {
-        width: 50%;
-        height: auto;
-    }
+.faqButtonContainer {
+    font-size: 1rem;
+}
+
+#faqAnswer1 {
+    display: none;
+}
+
+#faqAnswer2 {
+    display: none;
+}
+
+#faqAnswer3 {
+    display: none;
+}
+
+#faqAnswer4 {
+    display: none;
+}
 
 /*////////////////////////////////////////////FOR RENT OR BUY BANNER*/
     .landingPageRentDiv {
