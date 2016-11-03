@@ -152,7 +152,6 @@
                                             <div class="quick-view-main-image"><img src="{{ $item->image }}" alt="" class="img-responsive"></div>
                                         </div>
                                         <div class="col-sm-6">
-                                            {{-- <h2 class="product__heading">{{$item->manufacturer->name . " " . $item->model}}</h2> --}}
                                             <br>
                                             <center><img src="{{ $item->manufacturer->image }}" alt="" class="img-responsive" style="width: 50%;"></center>
                                             <h3>{{ $item->manufacturer->name }}</h3>
@@ -160,7 +159,7 @@
                                             <p class="text-muted text-small" style="text-align: justify; width: 90%">{{ $item->description }}</p>
                                             <div class="box">
                                                 <form>
-                                                   <h5 class="price">${{ $item->price }}</h5>
+                                                   <h4 class="price">${{ $item->price }}</h4>
                                                     <p class="text-center">
                                                         {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
                                                         <a href="{{ action('OrderController@addToCart', ['id' => $item->id])}}" class="info btn btn-info btn-md" style="cursor:pointer; background-color: #ca6924; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add to Order</a>
