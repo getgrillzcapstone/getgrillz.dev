@@ -151,7 +151,7 @@ a:active {
         cursor: pointer;
     }
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 790px) {
         .navBarStuff {
             display: none;
         }

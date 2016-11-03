@@ -22,11 +22,11 @@
                         <input type="hidden" id="token" name="_token" value="{{{csrf_token()}}}">
                     <div class="form-group">
                       <label for="emailConfirmOrder">Email address</label>
-                      <input type="email" class="form-control" id="emailConfirmOrder" placeholder="Enter email" value="{{ old('email') }}" required>
+                      <input type="email" class="form-control" id="emailLoginConfirmOrder" placeholder="Enter email" value="{{ old('email') }}" required>
                     </div>
                     <div class="form-group password" id="passwordConfirmOrder">
                       <label for="passwordConfirmOrder">Password</label>
-                      <input type="password" class="form-control" id="passwordConfirmOrder" placeholder="Enter Password" required>
+                      <input type="password" class="form-control" id="passwordLoginConfirmOrder" placeholder="Enter Password" required>
                     </div>
                     <button type="submit" class="btn btn-default continueButton" id="continueButtonConfirmOrder">
                         <h4>Continue</h4>
