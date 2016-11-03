@@ -90,17 +90,17 @@
                             <div class="form-group"></div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="size[]" id="small" type="checkbox" value="Small">Small
+                                    <input name="size[]" id="Small" type="checkbox" value="Small">Small
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="size[]" id="medium" type="checkbox" value="Medium">Medium
+                                    <input name="size[]" id="Medium" type="checkbox" value="Medium">Medium
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="size[]" id="large" type="checkbox" value="Large">Large
+                                    <input name="size[]" id="Large" type="checkbox" value="Large">Large
                                 </label>
                             </div>
                             <button class="btn btn-default btn-sm pull-right">Apply</button>
