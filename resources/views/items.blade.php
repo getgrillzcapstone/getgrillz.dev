@@ -37,7 +37,7 @@
     <form action="{{ action('ItemController@manSort') }}" method='POST'>
          {{{ csrf_field() }}}
                     <div class="panel-body">
-                        
+
                             <div class="form-group"></div>
                             <div class="checkbox">
                                 <label>
@@ -50,35 +50,35 @@
                                 </label>
                             </div>
                             <button type="submit" class="btn btn-default btn-sm pull-right">Apply</button>
-                       
+
                     </div>
                 </div>
                 <div class="panel panel-default sidebar-menu">
-                    
+
                     <div class="panel-heading customPanelHeading">
                         <h4 class="panel-title">Brands</h4>
                     </div>
-                    
+
                     <div class="panel-body">
-                        
+
                         {{-- <div class="form-group"> --}}
-                           
-                            @foreach($manufacturers as $manufacturer) 
+
+                            @foreach($manufacturers as $manufacturer)
                         <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
                             <div class="form-group"></div>
 
                             <div class="checkbox">
-                                
+
                                 <label>
                                     <input name="man[]" type="checkbox" value="{{ $manufacturer->id }}">{{ $manufacturer->name }}
-                                </label>    
-                                
+                                </label>
+
                             </div>
                             @endforeach
                             <button class="btn btn-default btn-sm pull-right">Apply</button>
                         </div>
                     </div>
-               
+
 
 
                 <div class="panel panel-default sidebar-menu">
@@ -86,7 +86,7 @@
                         <h4 class="panel-title">Size</h4>
                     </div>
                     <div class="panel-body">
-                        
+
                             <div class="form-group"></div>
                             <div class="checkbox">
                                 <label>
@@ -129,7 +129,7 @@
                             <h5 class="price coloredText">{{ $item->price }}</h5> --}}
                         </div>
                             <a class="info btn btn-info btn-md" type="button" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}" style="cursor:pointer;">Item Details</a>
-                            <a class="info btn btn-info btn-md" href="/checkout" style="cursor:pointer;" data-id="{{$item->id}}">Add To Order</a>
+                            <a class="info btn btn-info btn-md" href="{{ route('item.addToCart', ['id' => $item->id])}}" style="cursor:pointer;" data-id="{{$item->id}}">Add To Order</a>
                             </div>
                             </div>
                             </div>
@@ -184,7 +184,7 @@
                                                    <h5 class="price">{{ $item->price }}</h5>
                                                     <p class="text-center">
                                                         {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
-                                                        <a href="/checkout" class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add to Order</a>
+                                                        <a href="{{ route('item.addToCart', ['id' => $item->id])}}" class="btn btn-default" style="cursor:pointer;" data-id="{{$item->id}}">Add to Order</a>
                                                     </p>
                                                 </form>
                                             </div>
