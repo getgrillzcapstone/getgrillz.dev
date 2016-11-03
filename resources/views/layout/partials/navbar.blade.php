@@ -73,11 +73,11 @@
               <input type="hidden" id="token" name="_token" value="{{{csrf_token()}}}">
                   <div class="form-group">
                     <label for="emailLogin">Email address</label>
-                    <input type="text" class="form-control" id="emailLoginConfirmOrder" placeholder="Enter email" name="email" value="{{ old('email') }}" required>
+                    <input type="text" class="form-control" id="emailLogin" placeholder="Enter email" name="email" value="{{ old('email') }}" required>
                   </div>
                   <div class="form-group password">
                     <label for="passwordLogin">Password</label>
-                    <input type="password" class="form-control" id="passwordLoginConfirmOrder" placeholder="Enter Password" name="password" required>
+                    <input type="password" class="form-control" id="passwordLogin" placeholder="Enter Password" name="password" required>
                   </div>
                   {{-- <div class="form-group confirmPassword">
                     <label for="confirmPasswordLogin">Confirm Password</label>
