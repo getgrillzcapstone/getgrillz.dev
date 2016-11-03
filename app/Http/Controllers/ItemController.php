@@ -49,8 +49,9 @@ class ItemController extends Controller
 
         is_array($fueltype) ? $fueltype : settype($fueltype, 'array');
         is_array($size) ? $size : settype($size, 'array');
-        $fueltype = $fueltype == "" ? ['Small', 'Medium', 'Large'] : $size;
+        $fueltype = $fueltype == null ? ['1', '2'] : $fueltype;
         if (!empty($size)) {
+            // $size = $size[0] == "%" ? ['Small', 'Medium', 'Large'] : $size;
             $size = $size[0] == "%" ? ['Small', 'Medium', 'Large'] : $size;
         }
 
