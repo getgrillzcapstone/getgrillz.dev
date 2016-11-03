@@ -381,7 +381,7 @@ class ItemsTableSeeder extends Seeder
     $item35 = new App\Item();
     $item35->item_category_id = 2;
     $item35->manufacturer_id = 8;
-    $item35->model = 'KitchenAid';
+    $item35->model = 'Pro Series 500';
     $item35->size = 'Medium';
     $item35->description = 'Medium size KitchenAid';
     $item35->price = 331.38;
@@ -392,7 +392,7 @@ class ItemsTableSeeder extends Seeder
     $item37 = new App\Item();
     $item37->item_category_id = 2;
     $item37->manufacturer_id = 5;
-    $item37->model = 'Greenegg';
+    $item37->model = 'Big Egg';
     $item37->size = 'Medium';
     $item37->description = 'Medium size Greenegg';
     $item37->price = 675.43;
