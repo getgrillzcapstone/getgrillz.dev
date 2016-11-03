@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class OrderController extends Controller
 {
-    
+
     public function rent()
     {
         session()->flush();
@@ -22,15 +22,11 @@ class OrderController extends Controller
 
     public function buy()
     {
-        
+
         session()->flush();
         session(['order_type' => 'buy']);
-
-        
-
-        
         // dd(session()->all());
-        return view('createOrderBuy');      
+        return view('createOrderBuy');
     }
 
 

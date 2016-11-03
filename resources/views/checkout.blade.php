@@ -23,7 +23,6 @@
                 </span>
             </div>
         </div>
-        {{-- @foreach($items as $item) --}}
         <div class="row grillSuppliesDiv">
             <h1>Grill Supplies</h1>
             <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
@@ -54,7 +53,6 @@
                 <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
             </div>
         </div>
-        {{-- @endforeach --}}
 
         <div class="row partySuppliesDiv">
             <h1>Party Supplies</h1>
@@ -97,58 +95,22 @@
                         <th class="text-center"><h4>Quanity</h4></th>
                     </tr>
                 </thead>
+                @if(Session::has('cart'))
                 <tbody style="text-align: center;">
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Folding Chair</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Folding Table</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Party Utensils</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Grass Turf</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Grass Turf</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Grass Turf</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Grass Turf</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Grass Turf</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Grass Turf</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>Grass Turf</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                    </tr>
+                        @foreach($cartItems as $cartItem)
+                        <tr>
+                            <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                            <td>{{$cartItem['item']['description']}}</td>
+                            <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                            <td>{{$cartItem['price']}}</td>
+                        </tr>
+                        @endforeach
                 </tbody>
+                        @else
+                            <div class="row">
+                                <h4 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">You Have No Items In Your Cart</h4>
+                            </div>
+                        @endif
             </table>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
                 <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>

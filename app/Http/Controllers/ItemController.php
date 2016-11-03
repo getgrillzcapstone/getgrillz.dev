@@ -71,25 +71,30 @@ class ItemController extends Controller
 
     }
 
-    public function getGrillSuppliesInventory()
+    public function getAddToCart(Request $request, $id)
     {
+        $item = Item::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($item, $item->$id);
+
+        $request->session()->put('cart', $cart);
+        // return $this->getCart();
+        return redirect()->action('ItemController@index');
+    }
+
+    public function getCart() {
+        if (!Session::has('cart')) {
+            return view('/checkout');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        dd($cart);
         $id_list = [3, 7, 8, 9, 10, 11, 12];
         $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
         $id_list = [4, 5, 6, 13];
         $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
-        return view('checkout', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
-    }
-
-    public function getAddToCart(Request $request, $id)
-    {
-        $product = Item::find($id);
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
-        $cart->add($product, $product->$id);
-
-        $request->session()->put('cart', $cart);
-        dd($request->session()->get('cart'));
-        return view('checkout');
+        return view('checkout', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory, 'cartItems' => $cart->items, 'totalPrice' => $cart->totalPrice]);
     }
 
 
