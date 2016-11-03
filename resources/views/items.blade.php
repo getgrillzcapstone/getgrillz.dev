@@ -34,7 +34,7 @@
                     <div class="panel-heading customPanelHeading">
                         <h4 class="panel-title">Grill Types</h4>
                     </div>
-    <form action="{{ action('ItemController@manSort') }}" method='POST'>
+    <form action="{{ action('ItemController@index') }}" method='GET'>
          {{{ csrf_field() }}}
                     <div class="panel-body">
 
@@ -64,7 +64,7 @@
                         {{-- <div class="form-group"> --}}
 
                             @foreach($manufacturers as $manufacturer)
-                        <form action="{{-- {{ action('ItemController@setManufacturer') }} --}}">
+                        {{-- <form action=" {{ action('ItemController@setManufacturer') }}"> --}}
                             <div class="form-group"></div>
 
                             <div class="checkbox">
@@ -129,9 +129,9 @@
                             <h5 class="price coloredText">{{ $item->price }}</h5> --}}
                         </div>
                             <a class="info btn btn-info btn-md" type="button" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}" style="cursor:pointer; font-family: thunder; border-color: transparent;">Item Details</a>
-                            
 
-                            <a class="info btn btn-info btn-md" href="{{ route('item.addToCart', ['id' => $item->id])}}" style="cursor:pointer; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add To Order</a>
+
+                            <a class="info btn btn-info btn-md" href="{{ action('OrderController@addToCart', ['id' => $item->id])}}" style="cursor:pointer; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add To Order</a>
                             </div>
                             </div>
                             </div>
@@ -163,7 +163,7 @@
                                                    <h5 class="price">${{ $item->price }}</h5>
                                                     <p class="text-center">
                                                         {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
-                                                        <a href="{{ route('item.addToCart', ['id' => $item->id])}}" class="info btn btn-info btn-md" style="cursor:pointer; background-color: #ca6924; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add to Order</a>
+                                                        <a href="{{ action('OrderController@addToCart', ['id' => $item->id])}}" class="info btn btn-info btn-md" style="cursor:pointer; background-color: #ca6924; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add to Order</a>
                                                     </p>
                                                 </form>
                                             </div>

@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Item;
+use App\Order;
+use App\Manufacturer;
+use DB;
+use Session;
 
 class OrderController extends Controller
 {
@@ -29,8 +34,41 @@ class OrderController extends Controller
         return view('createOrderBuy');
     }
 
+    public function addToCart(Request $request, $id)
+    {
+        // $item = Item::find($id);
+        $order_id = 1;
+        $item_id = 10;
 
+        $order = Order::firstOrNew(['id' => $order_id]);
+        $order->items()->attach($item_id);
+        $order->save();
+        // dd($order->items());
 
+        return redirect()->action('ItemController@index');
+
+        // $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        // $cart = new Cart($oldCart);
+        // $cart->add($item, $item->$id);
+        //
+        // $request->session()->put('cart', $cart);
+        // // return $this->getCart();
+        // return redirect()->action('ItemController@index');
+    }
+
+    public function getCart() {
+        if (!Session::has('cart')) {
+            return view('/checkout');
+        }
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        // dd($cart);
+        $id_list = [3, 7, 8, 9, 10, 11, 12];
+        $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        $id_list = [4, 5, 6, 13];
+        $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        return view('checkout', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory, 'cartItems' => $cart->items, 'totalPrice' => $cart->totalPrice]);
+    }
 
     /**
      * Display a listing of the resource.

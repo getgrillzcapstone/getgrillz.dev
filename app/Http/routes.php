@@ -35,17 +35,11 @@ Route::get('/thankyou', function () {
     return view('thankYou');
 });
 
-Route::get('/checkout', 'ItemController@getAddToCart');
+Route::get('/checkout', 'OrderController@getCart');
+// Route::get('/cart', 'OrderController@getCart');
 
-Route::get('/add-to-cart/{id}', [
-    'uses' => 'ItemController@getAddToCart',
-    'as' => 'item.addToCart'
-]);
+Route::get('/add-to-cart/{id}', 'OrderController@addToCart');
 
-Route::get('/cart', [
-    'uses' => 'ItemController@getCart',
-    'as' => 'item.cart'
-]);
 
 Route::resource('items', 'ItemController');
 
