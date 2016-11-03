@@ -28,7 +28,7 @@ class ItemController extends Controller
         session(['fueltype' => $fueltype]);
         session(['size' => $size]);
 
-        $items = DB::table('items')->where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
+        $items = Item::where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
         $manufacturers = Manufacturer::all();
 
         // dd($items);
@@ -46,6 +46,8 @@ class ItemController extends Controller
         $mans = request()->input('man');
         $fueltype = request()->input('fuel');
         $size = request()->input('size');
+
+        // $items = DB::table('items');
 
         $items = DB::table('items');
 
