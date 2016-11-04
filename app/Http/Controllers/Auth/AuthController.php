@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Support\Facades\Session;
 use Validator;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -28,11 +30,11 @@ class AuthController extends Controller
      *
      * @return void
      */
-    // public function __construct()
-    // {
-    //     $this->middleware('guest', ['except' => 'getLogout']);
-    //     $this->redirectPath = action('AuthController@index');
-    // }
+    public function __construct()
+    {
+        $this->middleware('guest', ['except' => 'getLogout']);
+        // $this->redirectPath = action('AuthController@index');
+    }
 
     /**
      * Get a validator for an incoming registration request.
@@ -42,6 +44,12 @@ class AuthController extends Controller
      */
 
     protected $redirectPath = '/';
+
+    public function getLogout(){
+        Auth::logout();
+        Session::flush();
+        return redirect()->to($this->redirectPath);
+    }
 
     protected function validator(array $data)
     {

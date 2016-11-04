@@ -198,16 +198,16 @@
                         <tr>
                             <th class="text-center"><h4>Remove From Cart</h4></th>
                             <th class="text-center"><h4>Item Name</h4></th>
-                            <th class="text-center"><h4>Quanity</h4></th>
+                            {{-- <th class="text-center"><h4>Quanity</h4></th> --}}
                             <th class="text-center"><h4>Price Per Item</h4></th>
                         </tr>
                     </thead>
                     <tbody style="text-align: center;">
                             @foreach($orderItems as $orderItem)
                             <tr>
-                                <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                                <td><input type="checkbox" name="{{$orderItem->id}}" class="grillSuppliesCheckbox"/></td>
                                 <td>{{$orderItem->model}}</td>
-                                <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                                {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
                                 <td>{{$orderItem->price}}</td>
                             </tr>
                             @endforeach

@@ -20,8 +20,9 @@ class OrderController extends Controller
 
     public function rent()
     {
-        session()->flush();
+        // session()->flush();
         session(['order_type' => 'rent']);
+        // dd(session(['file']));
         // dd(session()->all());
         return view('createOrderRent');
     }
@@ -31,7 +32,7 @@ class OrderController extends Controller
     public function buy()
     {
 
-        session()->flush();
+        // session()->flush();
         session(['order_type' => 'buy']);
         // dd(session()->all());
         return view('createOrderBuy');
@@ -45,10 +46,13 @@ class OrderController extends Controller
         $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
 
         $order = Order::firstOrNew(['id' => $order_id]);
-        $order->items()->attach($id);
         $order->save();
+        $order->items()->attach($id);
+
         $order_id = $order->id;
         session(['order_id' => $order_id]);
+        // dd(session('order'));
+        // dd(session(['order_id' => $order_id]));
 
         $id_list = [3, 7, 8, 9, 10, 11, 12];
         $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();

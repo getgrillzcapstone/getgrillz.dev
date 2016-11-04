@@ -36,7 +36,6 @@ Route::get('/thankyou', function () {
 });
 
 Route::get('/confirm-order', 'OrderController@getCart');
-// Route::get('/cart', 'OrderController@getCart');
 
 Route::get('/add-to-cart/{id}', 'OrderController@addToCart');
 
