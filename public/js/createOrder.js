@@ -15,7 +15,9 @@ $(document).ready(function(){
     });
 
     $("#justBrowsingButton").click(function(){
-            $('.whatTypeOfGrillDiv').slideToggle()
+            if (!$('.whatTypeOfGrillDiv').is(":visible")) {
+                $('.whatTypeOfGrillDiv').slideToggle()
+            }
             $('html, body').animate({
                 scrollTop: $("#whatTypeOfGrillRow").offset().top
             }, 1000);

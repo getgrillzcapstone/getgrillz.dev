@@ -6,6 +6,93 @@
 
 @section('content')
     <div class="container-fluid">
+        <div class="row areYouForgettingSomethingDiv" id="whatTypeOfGrillRow">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 areYouForgettingSomethingHeader">
+                <h1>Are You Forgetting Something?</h1>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center areYouForgettingSomething">
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                </span>
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default charcoalButton" id="grillSuppliesButton" value="2">
+                    <h4>Grill Supplies</h4>
+                </button>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                </span>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                </span>
+                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default propaneButton" id="partySuppliesButton" value="1">
+                    <h4>Party Supplies</h4>
+                </button>
+                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                </span>
+            </div>
+        </div>
+        <div class="row grillSuppliesDiv">
+            <h1>Grill Supplies</h1>
+            <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
+                <thead>
+                    <tr>
+                        <th><h4>Add To Cart</h4></th>
+                        <th class="text-center"><h4>Item Name</h4></th>
+                        {{-- <th class="text-center"><h4>Quanity</h4></th> --}}
+                        <th class="text-center"><h4>Price Per Item</h4></th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                    @foreach($grillInventory as $grillItem)
+                    <tr>
+                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td>{{$grillItem->model}}</td>
+                        {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
+                        {{-- <td><input type="text" name="name2" class=""/></td> --}}
+                        <td>{{$grillItem->price}}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv"> --}}
+                {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
+                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton" id="">
+                    <h4 class="imNotSureButtonText">Add To Cart</h4>
+                </button>
+                {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
+            {{-- </div> --}}
+        </div>
+        <div class="row partySuppliesDiv">
+            <h1>Party Supplies</h1>
+            <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
+                <thead>
+                    <tr>
+                        <th><h4>Add To Cart</h4></th>
+                        <th class="text-center"><h4>Item Name</h4></th>
+                        {{-- <th class=""><h4>Quanity</h4></th> --}}
+                        <th class="text-center"><h4>Price Per Item</h4></th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                    {{-- <form id="extraItemsForm" action="{{ action('OrderController@addToCartExtraItems') }}" method='GET'> --}}
+                         {{-- {{{ csrf_field() }}} --}}
+                            @foreach($partyInventory as $partyItem)
+                            <tr>
+                                <td><input type="checkbox" id="{{$partyItem->id}}" name="partyItem" value="{{$partyItem->model}}" class="grillSuppliesCheckbox"/></td>
+                                <td>{{$partyItem->model}}</td>
+                                {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout" placeholder="hello"/></td> --}}
+                                <td>{{$partyItem->price}}</td>
+                                <td>
+                                </td>
+                            </tr>
+                            @endforeach
+                    </tbody>
+                </table>
+                {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv"> --}}
+                    {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
+                    <button type="submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton" id="">
+                        <h4 class="imNotSureButtonText">Add To Cart</h4>
+                    </button>
+                    {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
+                {{-- </div> --}}
+                {{-- </form> --}}
+        </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h1 class="text-center">Grills, Grills and Grills</h1>
@@ -189,9 +276,12 @@
 
                 @endforeach
             </div>
-        </div>
-        <div class="row">
+        {{-- <div class="row">
             <br>
-        </div>
+        </div> --}}
     </div>
 @stop
+
+@section('javascriptFileForCheckout')
+    <script src="/js/checkout.js"></script>
+@endsection

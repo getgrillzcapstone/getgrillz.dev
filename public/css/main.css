@@ -591,11 +591,13 @@ a:active {
         text-align: center;
         color: #FFF5EE;
         background-color: #1C1E1E;
+        /*padding: 0;*/
     }
 
     .areYouForgettingSomething {
         height: 30vh;
         background-color: #1C1E1E;
+        /*padding: 0;*/
     }
 
     .charcoalButton {
@@ -640,21 +642,19 @@ a:active {
     /*////////////////////////////////////////////FOR GRILL SUPPLIES*/
         .grillSuppliesDiv {
             background-color: #D7C9AA;
-            height: 65vh;
             display: none;
         }
 
         .partySuppliesDiv {
             background-color: #7B2D26;
             color: #FFF5EE;
-            height: 65vh;
             display: none;
         }
 
-        .yourOrderDiv {
+        /*.yourOrderDiv {
             height: 100%;
             margin-bottom: 5vh;
-        }
+        }*/
 
         .noTableBorder {
             border-style: none;
@@ -662,11 +662,13 @@ a:active {
 
         .quantityCheckout {
             width: 50px;
+            border-color: black;
         }
 
         .addToOrderButton {
             background-color: #CA6924;
             color: #FFF5EE;
+            margin-bottom: 5vh;
         }
 
         @media only screen and (min-width: 768px) {
