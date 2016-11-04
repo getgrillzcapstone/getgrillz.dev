@@ -6,27 +6,29 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="row areYouForgettingSomethingDiv" id="whatTypeOfGrillRow">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 areYouForgettingSomethingHeader">
-                <h1>Are You Forgetting Something?</h1>
+        @if (session()->has('order_id'))
+            <div class="row areYouForgettingSomethingDiv" id="whatTypeOfGrillRow">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 areYouForgettingSomethingHeader">
+                    <h1>Are You Forgetting Something?</h1>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center areYouForgettingSomething">
+                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                    </span>
+                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default charcoalButton" id="grillSuppliesButton" value="2">
+                        <h4>Grill Supplies</h4>
+                    </button>
+                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                    </span>
+                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                    </span>
+                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default propaneButton" id="partySuppliesButton" value="1">
+                        <h4>Party Supplies</h4>
+                    </button>
+                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
+                    </span>
+                </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center areYouForgettingSomething">
-                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
-                </span>
-                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default charcoalButton" id="grillSuppliesButton" value="2">
-                    <h4>Grill Supplies</h4>
-                </button>
-                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
-                </span>
-                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
-                </span>
-                <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default propaneButton" id="partySuppliesButton" value="1">
-                    <h4>Party Supplies</h4>
-                </button>
-                <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
-                </span>
-            </div>
-        </div>
+        @endif
         <div class="row grillSuppliesDiv">
             <h1>Grill Supplies</h1>
             <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
@@ -42,18 +44,18 @@
                     @foreach($grillInventory as $grillItem)
                     <tr>
                         <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>{{$grillItem->model}}</td>
+                        <td><p>{{$grillItem->model}}</p></td>
                         {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
                         {{-- <td><input type="text" name="name2" class=""/></td> --}}
-                        <td>{{$grillItem->price}}</td>
+                        <td><p>{{$grillItem->price}}</p></td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
             {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv"> --}}
                 {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
-                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton" id="">
-                    <h4 class="imNotSureButtonText">Add To Cart</h4>
+                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton">
+                    <h4 class="imNotSureButtonText">Add To Order</h4>
                 </button>
                 {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
             {{-- </div> --}}
@@ -63,7 +65,7 @@
             <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
                 <thead>
                     <tr>
-                        <th><h4>Add To Cart</h4></th>
+                        <th class="text-center"><h4>Add To Cart</h4></th>
                         <th class="text-center"><h4>Item Name</h4></th>
                         {{-- <th class=""><h4>Quanity</h4></th> --}}
                         <th class="text-center"><h4>Price Per Item</h4></th>
@@ -75,9 +77,9 @@
                             @foreach($partyInventory as $partyItem)
                             <tr>
                                 <td><input type="checkbox" id="{{$partyItem->id}}" name="partyItem" value="{{$partyItem->model}}" class="grillSuppliesCheckbox"/></td>
-                                <td>{{$partyItem->model}}</td>
+                                <td><p>{{$partyItem->model}}</p></td>
                                 {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout" placeholder="hello"/></td> --}}
-                                <td>{{$partyItem->price}}</td>
+                                <td><p>{{$partyItem->price}}</p></td>
                                 <td>
                                 </td>
                             </tr>
@@ -86,8 +88,8 @@
                 </table>
                 {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv"> --}}
                     {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
-                    <button type="submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton" id="">
-                        <h4 class="imNotSureButtonText">Add To Cart</h4>
+                    <button type="submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton">
+                        <h4 class="imNotSureButtonText">Add To Order</h4>
                     </button>
                     {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
                 {{-- </div> --}}
@@ -224,7 +226,7 @@
                             <a class="info btn btn-info btn-md" type="button" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}" style="cursor:pointer; font-family: thunder; border-color: transparent;">Item Details</a>
 
 
-                            <a class="info btn btn-info btn-md" href="{{ action('OrderController@addToCart', ['id' => $item->id])}}" style="cursor:pointer; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add To Order</a>
+                            <a class="info btn btn-info btn-md" href="{{ action('OrderController@addToCart', ['id' => $item->id])}}" style="cursor:pointer; font-family: thunder; border-color: transparent;">Add To Order</a>
                             </div>
                             </div>
                             </div>
@@ -255,7 +257,7 @@
                                                    <h4 class="price">${{ $item->price }}</h4>
                                                     <p class="text-center">
                                                         {{-- <button type="submit" class="<b></b>tn btn-default"><a href="/checkout">Add to Order</a></button> --}}
-                                                        <a href="{{ action('OrderController@addToCart', ['id' => $item->id])}}" class="info btn btn-info btn-md" style="cursor:pointer; background-color: #ca6924; font-family: thunder; border-color: transparent;" data-id="{{$item->id}}">Add to Order</a>
+                                                        <a href="{{ action('OrderController@addToCart', ['id' => $item->id])}}" class="info btn btn-info btn-md" style="cursor:pointer; background-color: #ca6924; font-family: thunder; border-color: transparent;">Add to Order</a>
                                                     </p>
                                                 </form>
                                             </div>

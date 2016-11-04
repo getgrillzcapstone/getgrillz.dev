@@ -587,6 +587,10 @@ a:active {
     }
 
 /*/////////////////////////////////////////////////FOR CHECKOUT PAGE*/
+    .areYouForgettingSomethingDiv {
+        /*display: none;*/
+    }
+
     .areYouForgettingSomethingHeader {
         text-align: center;
         color: #FFF5EE;
@@ -651,10 +655,9 @@ a:active {
             display: none;
         }
 
-        /*.yourOrderDiv {
-            height: 100%;
+        .yourOrderDiv {
             margin-bottom: 5vh;
-        }*/
+        }
 
         .noTableBorder {
             border-style: none;
