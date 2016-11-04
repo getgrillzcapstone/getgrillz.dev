@@ -12,12 +12,12 @@
                 </a>
             </span>
             <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 iconSpan">
-                <a href="https://www.instagram.com/explore/tags/nexgrill/" class="btn btn-social">
+                <a href="https://www.instagram.com/explore/tags/nexgrill/" class="btn btn-social" target="_blank">
                     <img src="/getgrillz_images/instagramIcon.png"><h4 class="footerLinks">Instagram</h4>
                 </a>
             </span>
             <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3 iconSpan">
-                <a href="https://www.pinterest.com/explore/charcoal-grill/" class="btn btn-social">
+                <a href="https://www.pinterest.com/explore/charcoal-grill/" class="btn btn-social" target="_blank">
                     <img src="/getgrillz_images/pintrestIcon.png"><h4 class="footerLinks">Pintrest</h4>
                 </a>
             </span>
