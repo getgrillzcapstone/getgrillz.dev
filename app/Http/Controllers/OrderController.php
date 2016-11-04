@@ -8,6 +8,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Item;
 use App\Order;
+use App\ItemCategory;
+use App\OrderItem;
+use App\User;
 use App\Manufacturer;
 use DB;
 use Session;
@@ -36,6 +39,7 @@ class OrderController extends Controller
 
     public function addToCart(Request $request, $id)
     {
+        // dd($id);
         // $item = Item::find($id);
         // dd(session());
         $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
@@ -45,9 +49,20 @@ class OrderController extends Controller
         $order->save();
         $order_id = $order->id;
         session(['order_id' => $order_id]);
+
+        $id_list = [3, 7, 8, 9, 10, 11, 12];
+        $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        $id_list = [4, 5, 6, 13];
+        $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+
+        // dd(session(['order_id' => $order_id]));
         // dd($order->items());
 
-        return redirect()->action('ItemController@index');
+        // dd($request);
+        // return redirect()->action('ItemController@index', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
+        return redirect('/items')->with(['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
+
+        // return view('items', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
 
         // $oldCart = Session::has('cart') ? Session::get('cart') : null;
         // $cart = new Cart($oldCart);
@@ -58,23 +73,37 @@ class OrderController extends Controller
         // return redirect()->action('ItemController@index');
     }
 
+    // public function addToCartExtraItems(Request $request, $id)
+    // {
+    //     // $item = Item::find($id);
+    //     // dd(session());
+    //     $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
+    //
+    //     $order = Order::firstOrNew(['id' => $order_id]);
+    //     $order->items()->attach($id);
+    //     $order->save();
+    //     $order_id = $order->id;
+    //     session(['order_id' => $order_id]);
+    //     // dd(session(['order_id' => $order_id]));
+    //     // dd($order->items());
+    //     // dd($request['request']);
+    //
+    //     return redirect()->action('OrderController@getCart');
+    //     // return view('checkout');
+    // }
+
     public function getCart() {
         $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
         $order = Order::find($order_id);
-
         // dd($order->items);
         $id_list = [3, 7, 8, 9, 10, 11, 12];
         $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
         $id_list = [4, 5, 6, 13];
         $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
-        return view('checkout', ['orderItems' => $order->items, 'grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
-        // dd(session('order_id'));
-        // if (!Session::has('cart')) {
-        //     return view('/checkout');
-        // }
-        // $oldCart = Session::get('cart');
-        // $cart = new Cart($oldCart);
-        // // dd($cart);
+        if ($order == null) {
+            return view('confirmOrder', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
+        }
+        return view('confirmOrder', ['orderItems' => $order->items, 'grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
     }
 
     /**

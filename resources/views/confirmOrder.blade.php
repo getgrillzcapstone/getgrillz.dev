@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 takeMeBackDiv">
-                <a href="/checkout" class="takeMeBackAnchor">
+                <a href="/items" class="takeMeBackAnchor">
                 <div class="btn btn-default takeMeBackButton">
                     <h4 class="takeMeBackButtonText">Take Me Back To My Order</h4>
                 </div>
@@ -192,43 +192,32 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 yourOrderDiv" id="yourOrderDiv">
                 <h1>Do We Have Everything Correct?</h1>
-                <table id="example" class="display" cellspacing="0" width="100%">
+                @if(Session::has('order_id'))
+                <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
                     <thead>
-                        <tr class="tableHeader">
-                            <th class="headerPadding"></th>
-                            <th class="headerPadding">Your Selected Items</th>
-                            <th class="quantityField headerPadding">Quanity</th>
-                            <th class="headerPadding">Price</th>
+                        <tr>
+                            <th class="text-center"><h4>Remove From Cart</h4></th>
+                            <th class="text-center"><h4>Item Name</h4></th>
+                            <th class="text-center"><h4>Quanity</h4></th>
+                            <th class="text-center"><h4>Price Per Item</h4></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
-                            <td>Filler</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>$Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
-                            <td>Filler</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>$Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
-                            <td>Filler</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>$Filler</td>
-                        </tr>
-                        <tr>
-                            <td class="yourOrderCheckboxes"><input type="checkbox" name="name1" class=""/></td>
-                            <td>Filler</td>
-                            <td class="quantityField"><input type="text" name="quantity"/></td>
-                            <td>$Filler</td>
-                        </tr>
+                    <tbody style="text-align: center;">
+                            @foreach($orderItems as $orderItem)
+                            <tr>
+                                <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                                <td>{{$orderItem->model}}</td>
+                                <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                                <td>{{$orderItem->price}}</td>
+                            </tr>
+                            @endforeach
                     </tbody>
+                            @else
+                                <div class="row">
+                                    <h4 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">You Have No Items In Your Cart</h4>
+                                </div>
+                            @endif
                 </table>
-                <h2 class="orderTotal">Total: $432.98</h2>
                 {{-- <div class="yourOrderButtonContainer">
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div class="btn btn-default updateCartButton" id="updateCartButton">
