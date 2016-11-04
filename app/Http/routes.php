@@ -23,9 +23,9 @@ Route::get('/faq-contact', function () {
 
 Route::get('/create-order-buy', 'OrderController@buy');
 
-Route::get('/confirm-order', function () {
-    return view('confirmOrder');
-});
+// Route::get('/confirm-order', function () {
+//     return view('confirmOrder');
+// });
 
 Route::get('/your-orders', function () {
     return view('yourOrders');
@@ -35,10 +35,12 @@ Route::get('/thankyou', function () {
     return view('thankYou');
 });
 
-Route::get('/checkout', 'OrderController@getCart');
+Route::get('/confirm-order', 'OrderController@getCart');
 // Route::get('/cart', 'OrderController@getCart');
 
 Route::get('/add-to-cart/{id}', 'OrderController@addToCart');
+
+// Route::get('/add-extra-to-cart/{id}', 'OrderController@addToCartExtraItems');
 
 
 Route::resource('items', 'ItemController');

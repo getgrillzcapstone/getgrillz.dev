@@ -54,48 +54,62 @@
             </div>
         </div>
 
-        <div class="row partySuppliesDiv">
-            <h1>Party Supplies</h1>
-            <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
-                <thead>
-                    <tr>
-                        <th class="text-center"><h4>Add To Cart</h4></th>
-                        <th class="text-center"><h4>Item Name</h4></th>
-                        <th class="text-center"><h4>Quanity</h4></th>
-                        <th class="text-center"><h4>Price Per Item</h4></th>
-                    </tr>
-                </thead>
-                <tbody style="text-align: center;">
-                    @foreach($partyInventory as $partyItem)
-                    <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                        <td>{{$partyItem->model}}</td>
-                        <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                        <td>{{$partyItem->price}}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
-                <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
-                <button class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn btn-default addToOrderButton" id="">
-                    <h4 class="imNotSureButtonText">Add To Cart</h4>
-                </button>
-                <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+        {{-- <form id="partyItemForm" action="{{ action('OrderController@addToCart') }}" method='GET'> --}}
+             {{-- {{{ csrf_field() }}} --}}
+            <div class="row partySuppliesDiv">
+                <h1>Party Supplies</h1>
+                <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
+                    <thead>
+                        <tr>
+                            <th class="text-center"><h4>Add To Cart</h4></th>
+                            <th class="text-center"><h4>Item Name</h4></th>
+                            <th class="text-center"><h4>Quanity</h4></th>
+                            <th class="text-center"><h4>Price Per Item</h4></th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <form id="extraItemsForm" action="{{ action('OrderController@addToCartExtraItems') }}" method='GET'>
+                             {{{ csrf_field() }}}
+                                @foreach($partyInventory as $partyItem)
+                                <tr>
+                                    <td><input type="checkbox" id="{{$partyItem->id}}" name="partyItem" value="{{$partyItem->model}}" class="grillSuppliesCheckbox"/></td>
+                                    <td>{{$partyItem->model}}</td>
+                                    <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
+                                    <td>{{$partyItem->price}}</td>
+                                    <td>
+                                        {{-- <a href="{{ action('OrderController@addToCartExtraItems', ['id' => $partyItem->id]) }}">
+                                        <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn btn-default addToOrderButton">
+                                            <h4 class="imNotSureButtonText">Add To Cart</h4>
+                                        </button>
+                                        </a> --}}
+                                    </td>
+                                </tr>
+                                @endforeach
+                        </tbody>
+                    </table>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
+                        <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+                        <button type="submit" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 btn btn-default addToOrderButton" id="">
+                            <h4 class="imNotSureButtonText">Add To Cart</h4>
+                        </button>
+                        <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span>
+                    </div>
+                    </form>
             </div>
-        </div>
+        {{-- </form> --}}
 
         <div class="row yourOrderDiv">
             <h1>Here's Your Order So Far...</h1>
+            @if(Session::has('order_id'))
             <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
                 <thead>
                     <tr>
                         <th class="text-center"><h4>Remove From Cart</h4></th>
                         <th class="text-center"><h4>Item Name</h4></th>
                         <th class="text-center"><h4>Quanity</h4></th>
+                        <th class="text-center"><h4>Price Per Item</h4></th>
                     </tr>
                 </thead>
-                @if(Session::has('order_id'))
                 <tbody style="text-align: center;">
                         @foreach($orderItems as $orderItem)
                         <tr>

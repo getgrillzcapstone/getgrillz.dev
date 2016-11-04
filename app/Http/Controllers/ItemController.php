@@ -79,7 +79,13 @@ class ItemController extends Controller
         // dd($items);
         $items = $items->get();
         $manufacturers = Manufacturer::all();
-        return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
+
+        $id_list = [3, 7, 8, 9, 10, 11, 12];
+        $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        $id_list = [4, 5, 6, 13];
+        $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+
+        return view('items', ['items' => $items, 'manufacturers' => $manufacturers,'grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
         // return view('items', ['items' => $items->get(), 'manufacturers' => $manufacturers]);
 
     }
