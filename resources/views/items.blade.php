@@ -104,7 +104,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <a href="{{action('OrderController@getCart')}}">
-                <button class="btn btn-default">
+                <button class="info btn btn-info btn-md" style="cursor:pointer; font-family: thunder; border-color: transparent;">
                     <h4>Go To Checkout</h4>
                 </button>
                 </a>
@@ -208,11 +208,9 @@
             @foreach($items as $item)
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 
-                    {{-- <!-- product--> --}}
+                    {{--  --}}
                     <div class="product itemsContainer">
-                        {{-- <div class="itemImage"> --}}
-                            {{-- <img src="{{$item->image}}" class="img-responsive"> --}}
-                            {{-- <div class="overlay"> --}}
+                       
                                 <!-- Trigger the modal with a button -->
 
 
@@ -221,9 +219,7 @@
                               <img class="img-responsive" src="{{$item->image}}" alt="">
                             <div class="overlay">
                             <div class="text">
-                           {{--  <p class="manufacturer coloredText">Manufacture</p>
-                            <h4 class="coloredText">{{ $item->model }}</h4>
-                            <h5 class="price coloredText">{{ $item->price }}</h5> --}}
+                           
                         </div>
                             <a class="info btn btn-info btn-md" type="button" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}" style="cursor:pointer; font-family: thunder; border-color: transparent;">Item Details</a>
 
