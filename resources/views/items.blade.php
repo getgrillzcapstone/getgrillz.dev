@@ -15,12 +15,22 @@
         </div>
 
         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <a href="{{action('OrderController@getCart')}}">
+                <button class="btn btn-default">
+                    <h4>Go To Checkout</h4>
+                </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 dropDownSort">
                 <div class="form-inline">
                     <div class="pull-right">
-                        <select name="sort-by" class="form-control">
-                            <option>Sort by: Price Low to High</option>
-                            <option>Sort by: Price High to Low</option>
+                        <select name="sortByPrice" class="form-control" form="itemsFilterForm" id="sortByPriceSelect" onchange="this.form.submit()">
+                            <option value="asc" >Sort by: Price Low to High</option>
+                            <option value="desc" >Sort by: Price High to Low</option>
                         </select>
                     </div>
                 </div>
@@ -34,7 +44,7 @@
                     <div class="panel-heading customPanelHeading">
                         <h4 class="panel-title">Grill Types</h4>
                     </div>
-    <form action="{{ action('ItemController@index') }}" method='GET'>
+    <form id="itemsFilterForm" action="{{ action('ItemController@index') }}" method='GET'>
          {{{ csrf_field() }}}
                     <div class="panel-body">
 
