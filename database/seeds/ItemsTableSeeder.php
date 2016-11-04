@@ -28,7 +28,7 @@ class ItemsTableSeeder extends Seeder
     $item2->manufacturer_id = 1;
     $item2->model = 'Spirit 210';
     $item2->size = 'Small';
-    $item2->description = 'One great grill with infinite cooking possibilities. This versatile Weber Spirit E-210 GBS (Gourmet BBQ System) gas grill is sold complete with porcelain-enameled cast-iron grates and a large porcelain-enameled cast-iron griddle. With the grate system in place, a generous surface area allows for classic grilling or your favorite foods. But when you want to push the boundaries of what it means to grill, remove the 12 in. center grate and drop in your griddle. Now anything you can prepare in a skillet on a stovetop, you can cook in the griddle on your grill - with authentic grilled flavor.';
+    $item2->description = 'One great grill with infinite cooking possibilities. This versatile Weber Spirit E-210 GBS (Gourmet BBQ System) gas grill is sold complete with porcelain-enameled cast-iron grates and a large porcelain-enameled cast-iron griddle. With the grate system in place, a generous surface area allows for classic grilling or your favorite foods.';
     $item2->price = 399.99;
     $item2->image = '/propane_grill_images/weberspirit210.jpg';
     $item2->save();
@@ -38,7 +38,7 @@ class ItemsTableSeeder extends Seeder
     $item3->manufacturer_id = 1;
     $item3->model = 'Summitt S-420';
     $item3->size = 'Large';
-    $item3->description = "The 4 main burners on the Summit S-420 4-Burner Gas Grill provide 48,800 BTUs of grilling heat and performance. The grill's 538 sq. in. primary cooking area and 112 sq. in. warming-rack combine to provide 650 sq. in. of total cooking space. The manual-ignition grill features a flush-mounted side burner that can be used to prepare tasty side dishes. Mounted on wheels, the grill can be easily moved around your porch or patio.";
+    $item3->description = "The 4 main burners on the Summit S-420 4-Burner Gas Grill provide 48,800 BTUs of grilling heat and performance. The grill's 538 sq. in. primary cooking area and 112 sq. in. warming-rack combine to provide 650 sq. in. of total cooking space. The manual-ignition grill features a flush-mounted side burner that can be used to prepare tasty side dishes.";
     $item3->price = 1499.00;
     $item3->image = '/propane_grill_images/webersummitt420.jpg';
     $item3->save();
@@ -80,7 +80,7 @@ class ItemsTableSeeder extends Seeder
     $item7->manufacturer_id = 10;
     $item7->model = 'LS2418-4';
     $item7->size = 'Medium';
-    $item7->description = "The Smoke Hollow 4-Burner LP Gas Grill offers 539 sq. in. of total cooking area, the perfect size for any backyard grilling event. The independently controlled 4-burner system delivers 30,000 BTU's of cooking heat in the main cooking surface, and also includes a 10,000 BTU independently controlled side burner. Porcelain coated cast iron cooking grids and heat tents give the grill a durable and long lasting cooking surface. The chrome plated warming rack gives the user an additional heated holding area. It also features the right side of the grill includes a large side table for additional work space.";
+    $item7->description = "The Smoke Hollow 4-Burner LP Gas Grill offers 539 sq. in. of total cooking area, the perfect size for any backyard grilling event. The independently controlled 4-burner system delivers 30,000 BTU's of cooking heat, and also includes a 10,000 BTU independently controlled side burner. Porcelain coated cast iron cooking grids and heat tents give the grill a durable and long lasting cooking surface.";
     $item7->price = 167.25;
     $item7->image = '/propane_grill_images/smokehollow4burner.jpg';
     $item7->save();
@@ -92,7 +92,7 @@ class ItemsTableSeeder extends Seeder
     $item8->manufacturer_id = 4;
     $item8->model = '720-0864';
     $item8->size = 'Small';
-    $item8->description = "The Nexgrill 2-Burner Propane Gas Grill has a small footprint and foldable side shelves that make it perfect for the griller with limited outdoor space. It is built with corrosion-resistant materials and boasts a 426 sq. in. cooking area with 28,000 BTUs of fire-roasting energy. The firebox is equipped with two porcelain cast-iron cooking grids including an upper-level warming rack that offers space to heat buns or keep foods toasty. Electronic ignition allows it to fire up instantly and the built-in thermometer enables precise temperature regulation.";
+    $item8->description = "The Nexgrill 2-Burner Propane Gas Grill has a small footprint and foldable side shelves that make it perfect for the griller with limited space. It is built with corrosion-resistant materials and boasts a 426 sq. in. cooking area with 28,000 BTUs of fire-roasting energy. The firebox is equipped with two porcelain cast-iron cooking grids including an upper-level warming rack.";
     $item8->price = 159.75;
     $item8->image = '/propane_grill_images/nexgrill2burner.jpg';
     $item8->save();
@@ -112,7 +112,7 @@ class ItemsTableSeeder extends Seeder
     $item10->manufacturer_id = 4;
     $item10->model = '720-0896';
     $item10->size = 'Large';
-    $item10->description = "The Nexgrill Deluxe 5-Burner Gas Grill offers 768 sq. in. of total cooking space with a searing zone built into the primary grilling area and a 12,000 BTU side burner. It is equipped with porcelain-coated cast iron cooking grates that retain heat exceptionally well and features an upper-level porcelain-coated warming rack that keeps foods toasty. Perched above the burners are angled flame tamers that deflect heat, prevent flare-ups and vaporize drippings into flavor infusions that permeate foods with a distinctive smoky taste. This Even-Heat System distributes consistent and uniform heat across the entire grill surface so there aren't any hot spots. Electronic ignition allows burners to fire up instantly and the built-in thermometer enables precise temperature regulation.";
+    $item10->description = "The Nexgrill Deluxe 5-Burner Gas Grill offers 768 sq. in. of total cooking space with a searing zone built into the primary grilling area and a 12,000 BTU side burner. It is equipped with porcelain-coated cast iron cooking grates that retain heat exceptionally well and features an upper-level porcelain-coated warming rack that keeps foods toasty.";
     $item10->price = 299.00;
     $item10->image = '/propane_grill_images/nexgrill5burner.jpg';
     $item10->save();
@@ -124,7 +124,7 @@ class ItemsTableSeeder extends Seeder
     $item11->manufacturer_id = 3;
     $item11->model = 'Prestige PRO 665';
     $item11->size = 'Large';
-    $item11->description = 'The new Prestige PRO Series PRO665RSIB Gas Grill comes with 8 burners in total, and can grill up to 42 hamburgers at once. That’s not those wimpy, freezer burned, store bought ones, but large and juicy, hand made, 4-inch patties. But you’re grilling on a PRO Series grill. You’re not going to be making burgers, unless you’re hosting the most amazing block party ever. You’re going to be grilling gourmet meals on the 9.5 - millimeter, stainless steel Wave cooking grids. While you’re busy grilling up the perfect steak, or slow grilling the perfect roast, you can cook amazing side dishes on the ceramic infrared side burner. Not just for quickly searing the perfect steak, the ceramic brick heats to 1,800°F in just over 30 seconds and can be used to make sauces, boil water, and even sauté.';
+    $item11->description = 'The new Prestige PRO Series PRO665RSIB Gas Grill comes with 8 burners in total, and can grill up to 42 hamburgers at once. That’s not those wimpy, freezer burned, store bought ones, but large and juicy, hand made, 4-inch patties. But you’re grilling on a PRO Series grill. You’re not going to be making burgers, unless you’re hosting the most amazing block party ever.';
     $item11->price = 3299.00;
     $item11->image = '/propane_grill_images/napoleon8burner.jpg';
     $item11->save();
@@ -448,7 +448,7 @@ class ItemsTableSeeder extends Seeder
     $item41->manufacturer_id = 13;
     $item41->model = 'Drum';
     $item41->size = 'Small';
-    $item41->description = 'The STOK Drum allows you to do more with charcoal using the Interchangeable STOK Insert System. The Drum is the first of its kind in the industry with unique innovations that will change the way you grill, allowing you to change the grill grate to any STOK Insert such as a pizza stone, smoker, veggie tray and much more. Also included is a ceramic pizza stone as well as an insert removal tool. Not just a new grill, but a new way to grill. STOK - Ignite your imagination.';
+    $item41->description = 'The STOK Drum allows you to do more with charcoal using the Interchangeable STOK Insert System. The Drum is the first of its kind in the industry with unique innovations that will change the way you grill, allowing you to change the grill grate to any STOK Insert such as a pizza stone, smoker, veggie tray and much more. Also included is a ceramic pizza stone as well as an insert removal tool.';
     $item41->price = 129.99;
     $item41->image = '/charcoal_grill_images/stok_charcoal.jpg';
     $item41->save();
@@ -501,7 +501,7 @@ class ItemsTableSeeder extends Seeder
     $item46->manufacturer_id = 1;
     $item46->model = 'Performer Deluxe 22"';
     $item46->size = 'Large';
-    $item46->description = "Get the same high-performance kettle grill that is synonymous with the Weber name, now outfitted with a heavy duty steel cart, push-button ignition system, side table, charcoal bin and LCD timer. The Weber Performer Deluxe 22 in. charcoal grill in black also boasts the Tuck-Away lid holder that acts as a pair of extra hands to cradle the lid while you tend to the main course. The cooking platform is a 363 sq. in. Gourmet BBQ System hinged cooking grate with a removable center section that accommodates separately-sold Weber cooking components. After you have feasted on a finger-licking meal, simply pivot the three damper blades in the kettle basin to funnel charcoal dust into the removable ash catcher underneath.";
+    $item46->description = "Get the same high-performance kettle grill that is synonymous with the Weber name, now outfitted with a heavy duty steel cart, push-button ignition system, side table, charcoal bin and LCD timer. The Weber Performer Deluxe 22 in. charcoal grill in black also boasts the Tuck-Away lid holder that acts as a pair of extra hands to cradle the lid while you tend to the main course.";
     $item46->price = 398.90;
     $item46->image = '/charcoal_grill_images/weber_small_table.jpg';
     $item46->save();

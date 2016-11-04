@@ -22,9 +22,6 @@
 
 .hovereffect img {
   display: block;
-  max-height: 275px;
-  max-width: 275px;
-  /* position: relative; */
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }

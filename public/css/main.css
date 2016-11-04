@@ -2012,9 +2012,10 @@ a:active {
     }
 
     .itemImage {
-        max-width: 275px;
-        max-height: 275px;
-        border-style: solid;
+        max-width: 350px;
+        max-height: 350px;
+        /* border-style: solid; */
+        margin-bottom: 4%; 
     }
 
     .itemsContainer {
