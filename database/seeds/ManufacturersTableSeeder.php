@@ -63,7 +63,7 @@ class ManufacturersTableSeeder extends Seeder
 
     $manufacturer11 = new App\Manufacturer();
     $manufacturer11->name = 'Rivergrille';
-    $manufacturer11->image = '/getgrillz_images/rivergrille-logo.jpg';
+    $manufacturer11->image = '/getgrillz_images/rivergrille_logo.jpg';
     $manufacturer11->save();
 
     $manufacturer12 = new App\Manufacturer();

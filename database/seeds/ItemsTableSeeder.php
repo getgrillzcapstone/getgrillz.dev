@@ -389,23 +389,34 @@ class ItemsTableSeeder extends Seeder
     $item35->save();
 
 // Green Egg Charcoal
+    $item36 = new App\Item();
+    $item36->item_category_id = 2;
+    $item36->manufacturer_id = 5;
+    $item36->model = '13-Inch Small Freestanding Ceramic Kamado Grill';
+    $item36->size = 'Small';
+    $item36->description = "Big Flavor in a compact package! The Small EGG is an easy fit for smaller patios and balconies, and is able to prepare four burgers or chicken breasts at a time. The small Egg is often used as a companion for the XXlarge, XLarge, Large or Medium EGG to allow the preparation of several courses at once, and is perfect for restaurants seeking the performance of an EGG in a size to fit a commercial kitchen.";
+    $item36->price = 579.99;
+    $item36->image = '/charcoal_grill_images/greenegg_small.jpg';
+    $item36->save();
+
+
     $item37 = new App\Item();
     $item37->item_category_id = 2;
     $item37->manufacturer_id = 5;
-    $item37->model = 'Big Egg';
+    $item37->model = '15-Inch Medium Freestanding Ceramic Kamado Grill';
     $item37->size = 'Medium';
-    $item37->description = 'Medium size Greenegg';
-    $item37->price = 675.43;
+    $item37->description = 'Happiness in a smaller package, the Medium EGG is perfectly sized for smaller families and couples, and accommodates all the most popular EGGcessories like the convEGGtor and Pizza & Baking Stone. Get all the famous Big Green Egg versatility and efficiency in a smaller package with plenty of cooking area to accommodate a backyard cookout of four steaks or two whole chickens.';
+    $item37->price = 689.99;
     $item37->image = '/charcoal_grill_images/greenegg_medium.jpg';
     $item37->save();
 
     $item38 = new App\Item();
     $item38->item_category_id = 2;
     $item38->manufacturer_id = 5;
-    $item38->model = 'Greenegg';
+    $item38->model = '24-Inch Large Ceramic Kamado Grill';
     $item38->size = 'Large';
-    $item38->description = 'Large size Greenegg';
-    $item38->price = 943.54;
+    $item38->description = 'Big Green Egg provides a cooking area that can easily accommodate meals for large families and cookouts with all your friends and you can efficiently prepare several meals over the coals at once. Ready to serve up twelve racks of ribs, twenty-four burgers or a couple of holiday turkeys with all the trimmings? No problem!';
+    $item38->price = 1199.99;
     $item38->image = '/charcoal_grill_images/greenegg_large.jpg';
     $item38->save();
 
@@ -447,7 +458,7 @@ class ItemsTableSeeder extends Seeder
     $item42->item_category_id = 2;
     $item42->manufacturer_id = 12;
     $item42->model = 'Maverick';
-    $item42->size = '';
+    $item42->size = 'Large';
     $item42->description = 'The Kingsford Maverick 37.5" barrel grill has a 40 burger capacity. The grill is built of heavy duty construction, with durable cast iron cooking grates. It comes with a side and front shelves and bottom storage rack. Also wheels for easy transport.';
     $item42->price = 199.00;
     $item42->image = '/charcoal_grill_images/kingsford_charcoal.jpg';
@@ -615,9 +626,6 @@ class ItemsTableSeeder extends Seeder
     $item56->price = 19.99;
     $item56->image = '/partysupplies_images/grassTurf.jpg';
     $item56->save();
-
-
-
 
 
 }
