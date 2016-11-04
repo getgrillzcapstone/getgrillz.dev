@@ -40,12 +40,13 @@ class ItemController extends Controller
     {
 
         // dd(request()->input('fuel'));
-        // dd(request()->all());
 
         $mans = request()->input('man');
         $fueltype = request()->input('fuel');
         $size = request()->input('size');
+        $sortByPrice = request()->input('sortByPrice');
 
+        // dd(request()->all());
 
         is_array($fueltype) ? $fueltype : settype($fueltype, 'array');
         is_array($size) ? $size : settype($size, 'array');
@@ -69,6 +70,10 @@ class ItemController extends Controller
 
         if(!empty($fueltype)){
             $items->whereIn('item_category_id', $fueltype);
+        }
+
+        if(!empty($sortByPrice)) {
+            $items->orderBy('price', $sortByPrice);
         }
 
         // dd($items);

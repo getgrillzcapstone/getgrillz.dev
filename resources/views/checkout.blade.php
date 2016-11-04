@@ -95,14 +95,14 @@
                         <th class="text-center"><h4>Quanity</h4></th>
                     </tr>
                 </thead>
-                @if(Session::has('cart'))
+                @if(Session::has('order_id'))
                 <tbody style="text-align: center;">
-                        @foreach($cartItems as $cartItem)
+                        @foreach($orderItems as $orderItem)
                         <tr>
                             <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
-                            <td>{{$cartItem['item']['description']}}</td>
+                            <td>{{$orderItem->model}}</td>
                             <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td>
-                            <td>{{$cartItem['price']}}</td>
+                            <td>{{$orderItem->price}}</td>
                         </tr>
                         @endforeach
                 </tbody>

@@ -23,6 +23,8 @@ class Order extends Model
      */
     protected $table = 'orders';
 
+    protected $fillable = ['id'];
+
     /**
      * The attributes that are mass assignable.
      *
