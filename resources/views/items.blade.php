@@ -106,7 +106,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <a href="{{action('OrderController@getCart')}}">
-                <button class="info btn btn-info btn-md" style="cursor:pointer; font-family: thunder; border-color: transparent;">
+                <button class="info btn btn-info btn-md" style="cursor:pointer; font-family: thunder; background-color: #ca6924; border-color: transparent;">
                     <h4>Go To Checkout</h4>
                 </button>
                 </a>
