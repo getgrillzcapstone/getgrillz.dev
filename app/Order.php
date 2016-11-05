@@ -50,4 +50,15 @@ class Order extends Model
         return $this->belongsToMany('App\Item', 'order_items', 'order_id', 'item_id');
     }
 
+    public function total()
+    {
+        $items = $this->items;
+        $total_price = 0;
+        foreach ($items as $item) {
+            $total_price += $item->price;
+        }
+        $this->total_price = $total_price;
+        return $total_price;
+    }
+
 }

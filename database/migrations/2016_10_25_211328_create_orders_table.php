@@ -15,6 +15,7 @@ class CreateOrdersTable extends Migration
        Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->references('id')->on('users');
+            $table->decimal('total_price', 6,2);
             $table->date('reservation_start');
             $table->date('reservation_end');
             $table->timestamps();

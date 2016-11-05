@@ -17,7 +17,7 @@
 
 @section('content')
     <div class="container-fluid">
-        @if (session()->has('order_id'))
+        @if (session()->has('order_id') && session()->get('order_items_count') > 0)
             <div class="row areYouForgettingSomethingDiv" id="whatTypeOfGrillRow">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 areYouForgettingSomethingHeader">
                     <h1>Are You Forgetting Something?</h1>
@@ -52,9 +52,10 @@
                     </tr>
                 </thead>
                 <tbody style="text-align: center;">
+                    <form action="{{ action('OrderController@addToCart')}}" method="GET">
                     @foreach($grillInventory as $grillItem)
                     <tr>
-                        <td><input type="checkbox" name="name1" class="grillSuppliesCheckbox"/></td>
+                        <td><input type="checkbox" name="extraItem[]" value="{{$grillItem->id}}" class="grillSuppliesCheckbox"/></td>
                         <td><p>{{$grillItem->model}}</p></td>
                         {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
                         {{-- <td><input type="text" name="name2" class=""/></td> --}}
@@ -65,9 +66,10 @@
             </table>
             {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv"> --}}
                 {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
-                <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton">
-                    <h4 class="imNotSureButtonText">Add To Order</h4>
-                </button>
+                        <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton" type="submit">
+                            <h4 class="imNotSureButtonText">Add To Order</h4>
+                        </button>
+                    </form>
                 {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
             {{-- </div> --}}
         </div>
@@ -83,11 +85,10 @@
                     </tr>
                 </thead>
                 <tbody style="text-align: center;">
-                    {{-- <form id="extraItemsForm" action="{{ action('OrderController@addToCartExtraItems') }}" method='GET'> --}}
-                         {{-- {{{ csrf_field() }}} --}}
+                         <form action="{{ action('OrderController@addToCart')}}" method="GET">
                             @foreach($partyInventory as $partyItem)
                             <tr>
-                                <td><input type="checkbox" id="{{$partyItem->id}}" name="partyItem" value="{{$partyItem->model}}" class="grillSuppliesCheckbox"/></td>
+                                <td><input type="checkbox" name="extraItem[]" value="{{$partyItem->id}}" class="grillSuppliesCheckbox"/></td>
                                 <td><p>{{$partyItem->model}}</p></td>
                                 {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout" placeholder="hello"/></td> --}}
                                 <td><p>{{$partyItem->price}}</p></td>
@@ -97,23 +98,24 @@
                             @endforeach
                     </tbody>
                 </table>
-                {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv"> --}}
-                    {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
-                    <button type="submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton">
-                        <h4 class="imNotSureButtonText">Add To Order</h4>
-                    </button>
-                    {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
-                {{-- </div> --}}
-                {{-- </form> --}}
+                            <button type="submit" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton">
+                                <h4 class="imNotSureButtonText">Add To Order</h4>
+                            </button>
+                        </form>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h1 class="text-center">Grills, Grills and Grills</h1>
                 <p class="text-muted text-center" style="font-family: thunder; color: #333333;">Hover Over Grills To View Item Details Or To Add Item To Order</p>
                 <br>
+                @if (session()->has('addToCartMessage'))
+                    <span class="help-block alert alert-success"><h3 class="text-center">{{session()->get('addToCartMessage')}}</h3></span>
+                @endif
+                @if (session()->has('clearCartMessage'))
+                    <span class="help-block alert alert-success"><h3 class="text-center">{{session()->get('clearCartMessage')}}</h3></span>
+                @endif
             </div>
         </div>
-
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <a href="{{action('OrderController@getCart')}}">
