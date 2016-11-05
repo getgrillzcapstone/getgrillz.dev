@@ -85,6 +85,12 @@ class ItemController extends Controller
         $id_list = [4, 5, 6, 13];
         $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
 
+        if (session('order_type') == 'rent') {
+            foreach ($items as $item) {
+                $item->price = $item->rentPrice();
+            }
+        }
+
         return view('items', ['items' => $items, 'manufacturers' => $manufacturers,'grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
         // return view('items', ['items' => $items->get(), 'manufacturers' => $manufacturers]);
 

@@ -64,11 +64,6 @@ class OrderController extends Controller
     public function getCart() {
         $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
         $order = Order::firstOrNew(['id' => $order_id]);
-        $order->total();
-        $order->save();
-        $order_id = $order->id;
-        session(['order_id' => $order_id]);
-        // dd($order);
         $id_list = [3, 7, 8, 9, 10, 11, 12];
         $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
         $id_list = [4, 5, 6, 13];
@@ -76,7 +71,21 @@ class OrderController extends Controller
         if ($order == null) {
             return view('confirmOrder', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
         }
-        return view('confirmOrder', ['orderItems' => $order->items, 'grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory, 'order' => $order]);
+
+        $items = $order->items;
+
+        if (session('order_type') == 'rent') {
+            foreach ($items as $item) {
+                $item->price = $item->rentPrice();
+            }
+        }
+        
+        $order->total();
+        $order->save();
+        $order_id = $order->id;
+        session(['order_id' => $order_id]);
+
+        return view('confirmOrder', ['orderItems' => $items, 'grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory, 'order' => $order]);
     }
 
     public function clearCart(Request $request) {
