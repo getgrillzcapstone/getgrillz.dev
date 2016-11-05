@@ -37,9 +37,10 @@
                 @if(!Auth::check())
                 <li class="navBarListItems"><h3 id="login" data-toggle="modal" data-target="#loginModal">Login</h3>
                 </li>
+                <li class="navBarListItems"><span class="glyphicon glyphicon-shopping-cart"></span></li>
 
                 @else
-
+                {{-- <li class="navBarListItems"><span class="glyphicon glyphicon-shopping-cart"></span></li> --}}
                 <li class="navBarListItems"><h3><a href="/your-orders" class="coloredAnchorTag noTextDecoration">Your Orders</a></h3>
                 </li>
 

@@ -37,20 +37,13 @@ Route::get('/thankyou', function () {
 
 Route::get('/confirm-order', 'OrderController@getCart');
 
-Route::get('/add-to-cart/{id}', 'OrderController@addToCart');
+Route::get('/add-to-cart/{id?}', 'OrderController@addToCart');
 
 Route::get('/clear-cart', 'OrderController@clearCart');
-
-// Route::get('/add-extra-to-cart/{id}', 'OrderController@addToCartExtraItems');
-
 
 Route::resource('items', 'ItemController');
 
 Route::post('manufacturer', 'ItemController@manSort');
-
-
-// Route::resource('checkout', 'CheckoutController');
-
 
 // Route::resource('orders', 'OrderController');
 //

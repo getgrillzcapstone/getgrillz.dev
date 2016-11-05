@@ -38,57 +38,37 @@ class OrderController extends Controller
         return view('createOrderBuy');
     }
 
-    public function addToCart(Request $request, $id)
+    public function addToCart(Request $request, $id = -1)
     {
-        // dd($id);
-        // $item = Item::find($id);
-        // dd(session());
         $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
-
         $order = Order::firstOrNew(['id' => $order_id]);
         $order->save();
+        $id = $id !== -1 ? $id : $request->input('extraItem');
         $order->items()->attach($id);
-
         $order_id = $order->id;
         session(['order_id' => $order_id]);
-        // dd(session('order'));
-        // dd(session(['order_id' => $order_id]));
-
+        $orderItemsCount = $order->items->count();
+        session(['order_items_count' => $orderItemsCount]);
         $id_list = [3, 7, 8, 9, 10, 11, 12];
         $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
         $id_list = [4, 5, 6, 13];
         $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
-
-        // dd(session(['order_id' => $order_id]));
-        // dd($order->items());
-
-        // dd($request);
+        if ($orderItemsCount === 1) {
+            $request->session()->flash('addToCartMessage', "Item Has Been Added! You Have $orderItemsCount Item In Your Cart");
+        } else {
+            $request->session()->flash('addToCartMessage', "Item Has Been Added! You Have $orderItemsCount Items In Your Cart");
+        }
         return redirect('/items')->with(['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
     }
 
-    // public function addToCartExtraItems(Request $request, $id)
-    // {
-    //     // $item = Item::find($id);
-    //     // dd(session());
-    //     $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
-    //
-    //     $order = Order::firstOrNew(['id' => $order_id]);
-    //     $order->items()->attach($id);
-    //     $order->save();
-    //     $order_id = $order->id;
-    //     session(['order_id' => $order_id]);
-    //     // dd(session(['order_id' => $order_id]));
-    //     // dd($order->items());
-    //     // dd($request['request']);
-    //
-    //     return redirect()->action('OrderController@getCart');
-    //     // return view('checkout');
-    // }
-
     public function getCart() {
         $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
-        $order = Order::find($order_id);
-        // dd($order->items);
+        $order = Order::firstOrNew(['id' => $order_id]);
+        $order->total();
+        $order->save();
+        $order_id = $order->id;
+        session(['order_id' => $order_id]);
+        // dd($order);
         $id_list = [3, 7, 8, 9, 10, 11, 12];
         $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
         $id_list = [4, 5, 6, 13];
@@ -96,15 +76,17 @@ class OrderController extends Controller
         if ($order == null) {
             return view('confirmOrder', ['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
         }
-        return view('confirmOrder', ['orderItems' => $order->items, 'grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
+        return view('confirmOrder', ['orderItems' => $order->items, 'grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory, 'order' => $order]);
     }
 
     public function clearCart(Request $request) {
         $request->session()->forget('order_id');
+        $request->session()->forget('order_items_count');
         $id_list = [3, 7, 8, 9, 10, 11, 12];
         $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
         $id_list = [4, 5, 6, 13];
         $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        $request->session()->flash('clearCartMessage', "Your Cart Is Now Empty!");
         return redirect('/items')->with(['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
     }
 
