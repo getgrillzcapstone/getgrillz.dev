@@ -40,6 +40,10 @@ class OrderController extends Controller
 
     public function addToCart(Request $request, $id = -1)
     {
+        $mans = request()->input('man');
+        $fueltype = request()->input('fuel');
+        $size = request()->input('size');
+        $sortByPrice = request()->input('sortByPrice');
         $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
         $order = Order::firstOrNew(['id' => $order_id]);
         $order->save();
@@ -49,16 +53,17 @@ class OrderController extends Controller
         session(['order_id' => $order_id]);
         $orderItemsCount = $order->items->count();
         session(['order_items_count' => $orderItemsCount]);
-        $id_list = [3, 7, 8, 9, 10, 11, 12];
-        $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
-        $id_list = [4, 5, 6, 13];
-        $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        // $id_list = [3, 7, 8, 9, 10, 11, 12];
+        // $GrillInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
+        // $id_list = [4, 5, 6, 13];
+        // $PartyInventory = DB::table('items')->whereIn('item_category_id', $id_list)->get();
         if ($orderItemsCount === 1) {
             $request->session()->flash('addToCartMessage', "Item Has Been Added! You Have $orderItemsCount Item In Your Cart");
         } else {
             $request->session()->flash('addToCartMessage', "Item Has Been Added! You Have $orderItemsCount Items In Your Cart");
         }
-        return redirect('/items')->with(['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
+        // return redirect('ItemController@index')->with(['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
+        return redirect(action('ItemController@index'));
     }
 
     public function getCart() {
@@ -79,7 +84,7 @@ class OrderController extends Controller
                 $item->price = $item->rentPrice();
             }
         }
-        
+
         $order->total();
         $order->save();
         $order_id = $order->id;
@@ -99,79 +104,15 @@ class OrderController extends Controller
         return redirect('/items')->with(['grillInventory' => $GrillInventory, 'partyInventory' => $PartyInventory]);
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function removeItem(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $id = $request->input('item_id');
+        $order_id = session()->has('order_id') ? session()->get('order_id') : -1;
+        $order = Order::find($order_id);
+        $order->items()->detach($id);
+        $order->save();
+        $orderItemsCount = $order->items->count();
+        session(['order_items_count' => $orderItemsCount]);
+        return redirect()->action('OrderController@getCart');
     }
 }

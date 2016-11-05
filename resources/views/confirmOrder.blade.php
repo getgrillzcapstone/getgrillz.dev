@@ -203,31 +203,34 @@
                         </tr>
                     </thead>
                     <tbody style="text-align: center;">
-                            @foreach($orderItems as $orderItem)
-                            <tr>
-                                <td><input type="checkbox" name="{{$orderItem->id}}" class="grillSuppliesCheckbox"/></td>
-                                <td>{{$orderItem->model}}</td>
-                                {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
-                                <td>${{$orderItem->price}}</td>
-                            </tr>
-                            @endforeach
-                    </tbody>
-                            @else
-                                <div class="row">
-                                    <h4 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">You Have No Items In Your Cart</h4>
-                                </div>
-                            @endif
-                </table>
-                @if(Session::has('order_id'))
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="pull-right">Total Price: ${{$order->total_price}}</h3>
-                    </div>
-                @endif
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
-                    <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
-                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default pickADateButton" id="confirmOrderupdateCartButton">
-                            <h4 class="pickADateText">Update Cart</h4>
-                    </button>
+                    <form action="{{action('OrderController@removeItem')}}" method="GET">
+                    {{csrf_field()}}
+                                @foreach($orderItems as $orderItem)
+                                <tr>
+                                    <td><input type="checkbox" value="{{$orderItem->id}}" name="item_id[]" class="grillSuppliesCheckbox"/></td>
+                                    <td>{{$orderItem->model}}</td>
+                                    {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
+                                    <td>${{$orderItem->price}}</td>
+                                </tr>
+                                @endforeach
+                        </tbody>
+                                @else
+                                    <div class="row">
+                                        <h4 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">You Have No Items In Your Cart</h4>
+                                    </div>
+                                @endif
+                    </table>
+                    @if(Session::has('order_id'))
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h3 class="pull-right">Total Price: ${{$order->total_price}}</h3>
+                        </div>
+                    @endif
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
+                        <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
+                        <button type="submit" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default pickADateButton" id="confirmOrderupdateCartButton">
+                                <h4 class="pickADateText">Update Cart</h4>
+                        </button>
+                    </form>
                     <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
                     <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
                     <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default justBrowsingButton" id="confirmOrderConfirmButton" data-toggle="modal" data-target="#paymentModal">
