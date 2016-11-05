@@ -47,4 +47,16 @@ class Item extends Model implements AuthenticatableContract,
     {
         return $this->belongsToMany('App\Order', 'order_items', 'item_id', 'order_id');
     }
+
+    public function item_category()
+    {
+        return $this->hasOne('App\ItemCategory','id','item_category_id');
+    }
+
+    public function rentPrice()
+    {
+        $rent_price = (($this->price / $this->item_category->divisor) + $this->item_category->base_cost);
+        $rent_price = round($rent_price, 2);
+        return $rent_price;
+    }
 }

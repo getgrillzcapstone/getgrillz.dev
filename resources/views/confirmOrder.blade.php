@@ -208,7 +208,7 @@
                                 <td><input type="checkbox" name="{{$orderItem->id}}" class="grillSuppliesCheckbox"/></td>
                                 <td>{{$orderItem->model}}</td>
                                 {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
-                                <td>{{$orderItem->price}}</td>
+                                <td>${{$orderItem->price}}</td>
                             </tr>
                             @endforeach
                     </tbody>
@@ -220,7 +220,7 @@
                 </table>
                 @if(Session::has('order_id'))
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h3 class="pull-right">Total Price: {{$order->total_price}}</h3>
+                        <h3 class="pull-right">Total Price: ${{$order->total_price}}</h3>
                     </div>
                 @endif
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">

@@ -59,7 +59,7 @@
                         <td><p>{{$grillItem->model}}</p></td>
                         {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
                         {{-- <td><input type="text" name="name2" class=""/></td> --}}
-                        <td><p>{{$grillItem->price}}</p></td>
+                        <td><p>${{$grillItem->price}}</p></td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -91,7 +91,7 @@
                                 <td><input type="checkbox" name="extraItem[]" value="{{$partyItem->id}}" class="grillSuppliesCheckbox"/></td>
                                 <td><p>{{$partyItem->model}}</p></td>
                                 {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout" placeholder="hello"/></td> --}}
-                                <td><p>{{$partyItem->price}}</p></td>
+                                <td><p>${{$partyItem->price}}</p></td>
                                 <td>
                                 </td>
                             </tr>
