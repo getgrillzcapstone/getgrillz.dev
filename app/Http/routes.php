@@ -39,6 +39,8 @@ Route::get('/confirm-order', 'OrderController@getCart');
 
 Route::get('/add-to-cart/{id}', 'OrderController@addToCart');
 
+Route::get('/clear-cart', 'OrderController@clearCart');
+
 // Route::get('/add-extra-to-cart/{id}', 'OrderController@addToCartExtraItems');
 
 

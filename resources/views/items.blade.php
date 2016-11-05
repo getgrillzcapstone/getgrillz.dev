@@ -4,6 +4,17 @@
     <link href="/css/items.css" rel="stylesheet" type="text/css" />
 @stop
 
+@section('itemsBackgroundImg')
+    <style>
+        body {
+            background-image: url('/getgrillz_images/purty-wood.png');
+            /*background-image: url('/getgrillz_images/wood-pattern.png');*/
+            background-size: auto;
+            /*background-color: ;*/
+        }
+    </style>
+@stop
+
 @section('content')
     <div class="container-fluid">
         @if (session()->has('order_id'))
@@ -110,6 +121,11 @@
                     <h4>Go To Checkout</h4>
                 </button>
                 </a>
+                <a href="{{action('OrderController@clearCart')}}">
+                <button class="info btn btn-info btn-md" style="cursor:pointer; font-family: thunder; border-color: transparent;">
+                    <h4>Clear Cart</h4>
+                </button>
+                </a>
             </div>
         </div>
 
@@ -212,16 +228,16 @@
 
                     {{--  --}}
                     <div class="product itemsContainer">
-                       
+
                                 <!-- Trigger the modal with a button -->
 
 
                             {{-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12"> --}}
                             <div class="itemImage hovereffect">
-                              <img class="img-responsive" src="{{$item->image}}" alt="">
+                              <img style="border: 2px solid black"class="img-responsive itemBorder" src="{{$item->image}}" alt="">
                             <div class="overlay">
                             <div class="text">
-                           
+
                         </div>
                             <a class="info btn btn-info btn-md" type="button" data-toggle="modal" data-target="#product-quick-view-modal-{{$item->id}}" style="cursor:pointer; font-family: thunder; border-color: transparent;">Item Details</a>
 
