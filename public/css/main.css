@@ -45,6 +45,7 @@ h5{
 
 p {
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
 }
 
 a:active {
@@ -2018,7 +2019,7 @@ a:active {
         max-width: 350px;
         max-height: 350px;
         /* border-style: solid; */
-        margin-bottom: 4%; 
+        margin-bottom: 4%;
     }
 
     .itemsContainer {
