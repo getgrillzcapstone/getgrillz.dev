@@ -109,7 +109,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h1 class="text-center">Grills, Grills and Grills</h1>
-                <p class="text-muted text-center coloredText">Propane, charcoal, big, medium, small. Choices for everyone.</p>
+                <p class="text-muted text-center" style="font-family: thunder; color: #333333;">Hover Over Grills To View Item Details Or To Add Item To Order</p>
                 <br>
             </div>
         </div>
@@ -122,7 +122,7 @@
                 </button>
                 </a>
                 <a href="{{action('OrderController@clearCart')}}">
-                <button class="info btn btn-info btn-md" style="cursor:pointer; font-family: thunder; border-color: transparent;">
+                <button class="info btn btn-info btn-md" style="cursor:pointer; font-family: thunder; background-color: #ca6924; border-color: transparent;">
                     <h4>Clear Cart</h4>
                 </button>
                 </a>
