@@ -36,4 +36,9 @@ class ItemCategory extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function item()
+    {
+        return $this->hasMany('App\Item','item_category_id','id');
+    }
 }
