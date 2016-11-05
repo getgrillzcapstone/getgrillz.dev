@@ -218,18 +218,11 @@
                                 </div>
                             @endif
                 </table>
-                {{-- <div class="yourOrderButtonContainer">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="btn btn-default updateCartButton" id="updateCartButton">
-                            <h4 class="updateCartButtonText">Update Cart</h4>
-                        </div>
+                @if(Session::has('order_id'))
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3 class="pull-right">Total Price: {{$order->total_price}}</h3>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <div class="btn btn-default checkoutButton" id="checkoutConfirmButton" data-toggle="modal" data-target="#myModal">
-                            <h4 class="checkoutButtonText">This Looks Good!</h4>
-                        </div>
-                    </div>
-                </div> --}}
+                @endif
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
                     <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
                     <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default pickADateButton" id="confirmOrderupdateCartButton">
