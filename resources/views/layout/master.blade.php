@@ -6,6 +6,7 @@
     <title>GetGrillz</title>
     @include('layout.partials.header')
     @yield('itemsCss')
+    @yield('itemsBackgroundImg')
     @yield('footerStyling')
 
 </head>

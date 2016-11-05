@@ -1,5 +1,6 @@
-
-
+.itemBorder {
+    bored: 2px solid black;
+}
 
 .hovereffect {
   width: 100%;
@@ -78,6 +79,3 @@
   -ms-transform: scale(1);
   transform: scale(1);
 }
-
-
-
