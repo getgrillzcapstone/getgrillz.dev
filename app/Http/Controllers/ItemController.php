@@ -77,7 +77,7 @@ class ItemController extends Controller
         }
 
         // dd($items);
-        $items = $items->get();
+        $items = $items->paginate(9);
         $manufacturers = Manufacturer::all();
 
         $id_list = [3, 7, 8, 9, 10, 11, 12];
