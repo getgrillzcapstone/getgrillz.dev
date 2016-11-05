@@ -10,7 +10,6 @@
             background-image: url('/getgrillz_images/purty-wood.png');
             /*background-image: url('/getgrillz_images/wood-pattern.png');*/
             background-size: auto;
-            /*background-color: ;*/
         }
     </style>
 @stop
@@ -47,7 +46,6 @@
                     <tr>
                         <th><h4>Add To Cart</h4></th>
                         <th class="text-center"><h4>Item Name</h4></th>
-                        {{-- <th class="text-center"><h4>Quanity</h4></th> --}}
                         <th class="text-center"><h4>Price Per Item</h4></th>
                     </tr>
                 </thead>
@@ -57,21 +55,15 @@
                     <tr>
                         <td><input type="checkbox" name="extraItem[]" value="{{$grillItem->id}}" class="grillSuppliesCheckbox"/></td>
                         <td><p>{{$grillItem->model}}</p></td>
-                        {{-- <td class="quantityField"><input type="text" name="quantity" class="quantityCheckout"/></td> --}}
-                        {{-- <td><input type="text" name="name2" class=""/></td> --}}
                         <td><p>${{$grillItem->price}}</p></td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-            {{-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv"> --}}
-                {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
                         <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default addToOrderButton" type="submit">
                             <h4 class="imNotSureButtonText">Add To Order</h4>
                         </button>
                     </form>
-                {{-- <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></span> --}}
-            {{-- </div> --}}
         </div>
         <div class="row partySuppliesDiv">
             <h1>Party Supplies</h1>
@@ -128,6 +120,11 @@
                     <h4>Clear Cart</h4>
                 </button>
                 </a>
+                <a href="{{action('ItemController@clearSelections')}}">
+                <button class="info btn btn-info btn-md" style="cursor:pointer; font-family: thunder; background-color: #ca6924; border-color: transparent;">
+                    <h4>Clear Sorting Options</h4>
+                </button>
+                </a>
             </div>
         </div>
 
@@ -136,8 +133,9 @@
                 <div class="form-inline">
                     <div class="pull-right">
                         <select name="sortByPrice" class="form-control" form="itemsFilterForm" id="sortByPriceSelect" onchange="this.form.submit()">
-                            <option value="asc" >Sort by: Price Low to High</option>
-                            <option value="desc" >Sort by: Price High to Low</option>
+                            <option value="asc" >Sort by: Price</option>
+                            <option {{session("sortByPrice") == "asc" ? 'selected' : ''}} value="asc" >Sort by: Price Low to High</option>
+                            <option {{session("sortByPrice") == "desc" ? 'selected' : ''}} value="desc" >Sort by: Price High to Low</option>
                         </select>
                     </div>
                 </div>
@@ -151,19 +149,19 @@
                     <div class="panel-heading customPanelHeading">
                         <h4 class="panel-title">Grill Types</h4>
                     </div>
-    <form id="itemsFilterForm" action="{{ action('ItemController@index') }}" method='GET'>
+    <form id="itemsFilterForm" action="{{ action('ItemController@saveSelections') }}" method='GET'>
          {{{ csrf_field() }}}
                     <div class="panel-body">
 
                             <div class="form-group"></div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="fuel[]" id="propane" type="checkbox" value="1">Propane
+                                    <input name="fuel[0]" {{session("fuel.0") == 1 ? 'checked' : ''}} id="propane" type="checkbox" value="1">Propane
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="fuel[]" id="charcoal" type="checkbox" value="2">Charcoal
+                                    <input name="fuel[1]" {{session("fuel.1") == 2 ? 'checked' : ''}} id="charcoal" type="checkbox" value="2">Charcoal
                                 </label>
                             </div>
                             <button type="submit" class="btn btn-default btn-sm pull-right">Apply</button>
@@ -180,14 +178,13 @@
 
                         {{-- <div class="form-group"> --}}
 
-                            @foreach($manufacturers as $manufacturer)
+                            @foreach($manufacturers as $key => $manufacturer)
                         {{-- <form action=" {{ action('ItemController@setManufacturer') }}"> --}}
                             <div class="form-group"></div>
-
                             <div class="checkbox">
 
                                 <label>
-                                    <input name="man[]" type="checkbox" value="{{ $manufacturer->id }}">{{ $manufacturer->name }}
+                                    <input name="man[{{$key}}]" {{session("man.$key") == $manufacturer->id ? 'checked' : ''}} type="checkbox" value="{{ $manufacturer->id }}">{{ $manufacturer->name }}
                                 </label>
 
                             </div>
@@ -207,17 +204,17 @@
                             <div class="form-group"></div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="size[]" id="Small" type="checkbox" value="Small">Small
+                                    <input name="size[0]" {{session("size.0") == "Small" ? 'checked' : ''}} id="Small" type="checkbox" value="Small">Small
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="size[]" id="Medium" type="checkbox" value="Medium">Medium
+                                    <input name="size[1]" {{session("size.1") == "Medium" ? 'checked' : ''}} id="Medium" type="checkbox" value="Medium">Medium
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input name="size[]" id="Large" type="checkbox" value="Large">Large
+                                    <input name="size[2]" {{session("size.2") == "Large" ? 'checked' : ''}} id="Large" type="checkbox" value="Large">Large
                                 </label>
                             </div>
                             <button class="btn btn-default btn-sm pull-right">Apply</button>

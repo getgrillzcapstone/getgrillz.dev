@@ -13,46 +13,17 @@ use Session;
 
 class ItemController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    // public function index()
-    // {
-    //
-    //     // dd(request()->input('fuel'));
-    //
-    //     $fueltype = request()->input('fuel');
-    //     $size = request()->input('size');
-    //     session(['fueltype' => $fueltype]);
-    //     session(['size' => $size]);
-    //
-    //     $items = Item::where('size', 'like', $size)->where('item_category_id', '=', $fueltype)->get();
-    //     $manufacturers = Manufacturer::all();
-    //
-    //     // dd($items);
-    //     return view('items', ['items' => $items, 'manufacturers' => $manufacturers]);
-    //
-    // }
-
     public function index()
     {
-
-        // dd(request()->input('fuel'));
-
-        $mans = request()->input('man');
-        $fueltype = request()->input('fuel');
-        $size = request()->input('size');
-        $sortByPrice = request()->input('sortByPrice');
-
-        // dd(request()->all());
+        $mans = session('man');
+        $fueltype = session('fuel');
+        $size = session('size');
+        $sortByPrice = session('sortByPrice');
 
         is_array($fueltype) ? $fueltype : settype($fueltype, 'array');
         is_array($size) ? $size : settype($size, 'array');
         $fueltype = $fueltype == null ? ['1', '2'] : $fueltype;
-        if (!empty($size)) {
-            // $size = $size[0] == "%" ? ['Small', 'Medium', 'Large'] : $size;
+        if (!empty($size[0])) {
             $size = $size[0] == "%" ? ['Small', 'Medium', 'Large'] : $size;
         }
 
@@ -96,69 +67,20 @@ class ItemController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function clearSelections()
     {
-        //
+        session()->forget(['man', 'fuel', 'size', 'sortByPrice']);
+        return redirect()->action('ItemController@index');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function saveSelections()
     {
-        //
+        $mans = request()->input('man');
+        $fueltype = request()->input('fuel');
+        $size = request()->input('size');
+        $sortByPrice = request()->input('sortByPrice');
+        session(['man' => $mans, 'fuel' => $fueltype, 'size' => $size, 'sortByPrice' => $sortByPrice]);
+        return redirect(action('ItemController@index'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

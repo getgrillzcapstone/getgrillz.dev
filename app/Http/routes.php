@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () {
+    session()->forget(['man', 'fuel', 'size', 'sortByPrice']);
     return view('home');
 });
 
@@ -44,6 +45,12 @@ Route::get('/clear-cart', 'OrderController@clearCart');
 Route::resource('items', 'ItemController');
 
 Route::post('manufacturer', 'ItemController@manSort');
+
+Route::get('clearSelections', 'ItemController@clearSelections');
+
+Route::get('removeItem', 'OrderController@removeItem');
+
+Route::get('saveSelections', 'ItemController@saveSelections');
 
 // Route::resource('orders', 'OrderController');
 //

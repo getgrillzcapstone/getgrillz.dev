@@ -56,7 +56,8 @@ class Item extends Model implements AuthenticatableContract,
     public function rentPrice()
     {
         $rent_price = (($this->price / $this->item_category->divisor) + $this->item_category->base_cost);
-        $rent_price = round($rent_price, 2);
+        // $rent_price = round($rent_price, 2);
+        $rent_price = number_format((float)$rent_price, 2, '.', '');
         return $rent_price;
     }
 }
