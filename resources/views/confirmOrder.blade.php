@@ -63,7 +63,7 @@
                         // Set our map options
                         var mapOptions = {
                         // Set the zoom level
-                        zoom: 10,
+                        zoom: 11,
 
                         // This sets the center of the map at our location
                         center: {
@@ -261,13 +261,13 @@
                 					<div class="bank-card__inner">
                 						<label class="bank-card__label bank-card__label_fullwidth">
                 							<span class="bank-card__hint">Name On Card</span>
-                							<input type="text" class="bank-card__field" placeholder="Name On Card" pattern="[A-Za-z, ]{2,}" name="holder-card" required>
+                							<input type="text" class="bank-card__field" placeholder="Name On Card" pattern="[A-Za-z, ]{2,}" name="holder-card" value="Joe Grillz" required>
                 						</label>
                 					</div>
                 					<div class="bank-card__inner">
                 						<label class="bank-card__label bank-card__label_fullwidth">
                 							<span class="bank-card__hint">Number On Card</span>
-                							<input type="text" class="bank-card__field" placeholder="Number On Card" pattern="[0-9]{16}" name="number-card" required>
+                							<input type="text" class="bank-card__field" placeholder="Number On Card" pattern="[0-9]{16}" name="number-card" value="1111-2222-3333-4444" required>
                 						</label>
                 					</div>
                 					<div class="bank-card__inner">
@@ -276,12 +276,12 @@
                 					<div class="bank-card__inner">
                 						<label class="bank-card__label">
                 							<span class="bank-card__hint">Month</span>
-                							<input type="text" class="bank-card__field" placeholder="MM" maxlength="2" pattern="[0-9]{2}" name="mm-card" required>
+                							<input type="text" class="bank-card__field" placeholder="MM" maxlength="2" pattern="[0-9]{2}" name="mm-card" value="11" required>
                 						</label>
                 						<span class="bank-card__separator">/</span>
                 						<label class="bank-card__label">
                 							<span class="bank-card__hint">Year</span>
-                							<input type="text" class="bank-card__field" placeholder="YY" maxlength="2" pattern="[0-9]{2}" name="year-card" required>
+                							<input type="text" class="bank-card__field" placeholder="YY" maxlength="2" pattern="[0-9]{2}" name="year-card" value="17" required>
                 						</label>
                 					</div>
                 				</div>
@@ -289,7 +289,7 @@
                 					<div class="bank-card__inner">
                 						<label class="bank-card__label">
                 							<span class="bank-card__hint">CVC</span>
-                							<input type="text" class="bank-card__field" placeholder="CVC" maxlength="3" pattern="[0-9]{3}" name="cvc-card" required>
+                							<input type="text" class="bank-card__field" placeholder="CVC" maxlength="3" pattern="[0-9]{3}" name="cvc-card" value="123" required>
                 						</label>
                 					</div>
                 				</div>
