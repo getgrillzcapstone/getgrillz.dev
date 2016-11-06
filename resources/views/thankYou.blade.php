@@ -167,7 +167,7 @@
 				<div class="bun bottom transp accordion closed">
 				</div>
 			</div>
-	<p id="signature">Made with &#9825; by <a href="http://www.josesentis.com" target="_blank">Jose Sentis</a></p>
+	{{-- <p id="signature">Made with &#9825; by <a href="http://www.josesentis.com" target="_blank">Jose Sentis</a></p> --}}
     <!-- Modal -->
     <div id="thankyouModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
