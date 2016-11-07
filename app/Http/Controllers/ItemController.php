@@ -23,8 +23,8 @@ class ItemController extends Controller
         is_array($fueltype) ? $fueltype : settype($fueltype, 'array');
         is_array($size) ? $size : settype($size, 'array');
         $fueltype = $fueltype == null ? ['1', '2'] : $fueltype;
-        if (!empty($size[0])) {
-            $size = $size[0] == "%" ? ['Small', 'Medium', 'Large'] : $size;
+        if (!empty($size)) {
+            $size = $size[0] == "" && $size[1] == "" && $size[2] == "" ? ['Small', 'Medium', 'Large'] : $size;
         }
 
         $items = Item::where('id','LIKE','%');
