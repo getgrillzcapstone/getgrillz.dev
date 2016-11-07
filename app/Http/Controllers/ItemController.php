@@ -24,7 +24,7 @@ class ItemController extends Controller
         is_array($size) ? $size : settype($size, 'array');
         $fueltype = $fueltype == null ? ['1', '2'] : $fueltype;
         if (!empty($size)) {
-            $size = $size[0] == "" && $size[1] == "" && $size[2] == "" ? ['Small', 'Medium', 'Large'] : $size;
+            $size = ($size[0] == "" && $size[1] == "" && $size[2] == "") ? ['Small', 'Medium', 'Large'] : $size;
         }
 
         $items = Item::where('id','LIKE','%');
@@ -79,6 +79,7 @@ class ItemController extends Controller
         $mans = request()->input('man');
         $fueltype = request()->input('fuel');
         $size = request()->input('size');
+        // dd($size);
         $sortByPrice = request()->input('sortByPrice');
         session(['man' => $mans, 'fuel' => $fueltype, 'size' => $size, 'sortByPrice' => $sortByPrice]);
         return redirect(action('ItemController@index'));
