@@ -82,19 +82,19 @@
 
             <div class="row whatTypeOfGrillDiv" id="whatTypeOfGrillRow">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 whatTypeOfGrillHeader">
-                    <h1>What Type Of Grill Are You Looking For?</h1>
+                    <h1>The Grate Debate</h1>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center whatTypeOfGrill">
                     <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
                     </span>
-                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default charcoalButton" id="charcoalButton" value="2">
+                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default charcoalButton" id="charcoalButton" value="2" data-toggle="tooltip" title="I'm a Charcoal Connoisseur!">
                         <h4>Charcoal</h4>
                     </button>
                     <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
                     </span>
                     <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">
                     </span>
-                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default propaneButton" id="propaneButton" value="1" data-toggle="tooltip" title="Taste the meat, not the heat!">
+                    <button class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default propaneButton" id="propaneButton" value="1" data-toggle="tooltip" title="I'm a Propane Purist!">
                         <h4>Propane</h4>
                     </button>
                     <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1">

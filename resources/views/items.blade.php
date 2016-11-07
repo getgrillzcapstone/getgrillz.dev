@@ -2,6 +2,7 @@
 
 @section('itemsCss')
     <link href="/css/items.css" rel="stylesheet" type="text/css" />
+    <link href="css/square/grey.css" rel="stylesheet">
 @stop
 
 @section('itemsBackgroundImg')
@@ -15,6 +16,9 @@
 @stop
 
 @section('content')
+
+
+
     <div class="container-fluid">
         @if (session()->has('order_id') && session()->get('order_items_count') > 0)
             <div class="row areYouForgettingSomethingDiv" id="whatTypeOfGrillRow">
@@ -153,17 +157,24 @@
          {{{ csrf_field() }}}
                     <div class="panel-body">
 
+                            
+
                             <div class="form-group"></div>
+                           
                             <div class="checkbox">
-                                <label>
+
+                                     <label>
                                     <input name="fuel[0]" {{session("fuel.0") == 1 ? 'checked' : ''}} id="propane" type="checkbox" value="1">Propane
-                                </label>
+                                    </label>
                             </div>
+                            
+                            
                             <div class="checkbox">
                                 <label>
                                     <input name="fuel[1]" {{session("fuel.1") == 2 ? 'checked' : ''}} id="charcoal" type="checkbox" value="2">Charcoal
                                 </label>
                             </div>
+                            
                             <button type="submit" class="btn btn-default btn-sm pull-right">Apply</button>
 
                     </div>
@@ -219,6 +230,7 @@
                             </div>
                             <button class="btn btn-default btn-sm pull-right">Apply</button>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -295,8 +307,11 @@
             </div>
         </div>
     </div>
+
+   
 @stop
 
 @section('javascriptFileForCheckout')
+
     <script src="/js/checkout.js"></script>
 @endsection

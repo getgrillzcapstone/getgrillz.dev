@@ -273,8 +273,8 @@ class ItemsTableSeeder extends Seeder
     $item25->manufacturer_id = 2;
     $item25->model = 'Bistro';
     $item25->size = 'Small';
-    $item25->description = 'Small size Bistro';
-    $item25->price = 78.90;
+    $item25->description = "The Patio Bistro® gas grill is a great option if you do not have the space for a larger charcoal or gas fuel option. It features the TRU-Infrared system for even and juicy grilling with low flare-ups and porcelain-coated cooking grates.";
+    $item25->price = 159.90;
     $item25->image = '/propane_grill_images/charbroil-bistro.jpg';
     $item25->save();
 
@@ -283,7 +283,7 @@ class ItemsTableSeeder extends Seeder
     $item26->manufacturer_id = 2;
     $item26->model = 'Two Burner';
     $item26->size = 'Small';
-    $item26->description = 'Small size Two Burner';
+    $item26->description = 'The Performance Series™ 2-burner grill is perfect for those looking for a smaller gas grill that’s big on features. Start it up with the push of a button. Our infrared technology heats up faster, hotter and more evenly, for less grill flare ups and juicier food.';
     $item26->price = 120.92;
     $item26->image = '/propane_grill_images/charbroil2burner.jpg';
     $item26->save();
@@ -293,8 +293,8 @@ class ItemsTableSeeder extends Seeder
     $item27->manufacturer_id = 2;
     $item27->model = 'Three Burner';
     $item27->size = 'Medium';
-    $item27->description = 'Medium size Three Burner';
-    $item27->price = 342.78;
+    $item27->description = 'The Traditional 3-Burner gas grill is great for the medium-sized cookout. It features porcelain-coated grates and stainless steel burners. Start the grill with a push of the button and cook your side dishes on the side burner. ';
+    $item27->price = 272.78;
     $item27->image = '/propane_grill_images/charbroil3burner.jpg';
     $item27->save();
 
@@ -302,7 +302,7 @@ class ItemsTableSeeder extends Seeder
     $item28 = new App\Item();
     $item28->item_category_id = 1;
     $item28->manufacturer_id = 2;
-    $item28->model = 'Four Burner';
+    $item28->model = 'The Commercial Series™ 4-burner grill features a sleek stainless steel design and the TRU-Infrared system for no flare ups and even heat. No more guessing how much propane you have left with the tank gauge. ';
     $item28->size = 'Medium';
     $item28->description = 'Medium size Genesis 310';
     $item28->price = 352.76;
@@ -315,8 +315,8 @@ class ItemsTableSeeder extends Seeder
     $item29->manufacturer_id = 2;
     $item29->model = 'Six Burner';
     $item29->size = 'Large';
-    $item29->description = 'Large size Six Burner';
-    $item29->price = 798.63;
+    $item29->description = 'The Advantage Series™ 6-burner gas grill from Char-Broil is perfect for larger-sized cookouts. It features top-ported burners for even heat, an electronic ignition for easy starts and a warming rack.';
+    $item29->price = 598.63;
     $item29->image = '/propane_grill_images/charbroil6burner.jpg';
     $item29->save();
 

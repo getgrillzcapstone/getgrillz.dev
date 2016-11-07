@@ -2033,12 +2033,19 @@ a:active {
     }
 
     .panel-default > .panel-heading {
-      color: #FFF5EE;
-      background-color: #7B2D26;
-      border-color: #000;
+        color: #FFF5EE;
+        background-color: #7B2D26;
+        border-color: #000;
     }
 
 
     .panel-default {
         border-color: #000;
+    }
+
+
+
+    .ui-tooltip{
+        font-size:16pt;
+        font-family:thunder;
     }
