@@ -197,15 +197,15 @@ class ItemsTableSeeder extends Seeder
     $item18->manufacturer_id = 8;
     $item18->model = 'Two Burner';
     $item18->size = 'Small';
-    $item18->description = 'Small size Two Burner';
-    $item18->price = 271.01;
+    $item18->description = "This KitchenAid 2-Burner Propane Gas Grill has a small footprint and foldable side shelves that make it perfect for the griller with limited outdoor space. It is built with premium corrosion-resistant materials and boasts a 457 sq. in. cooking area with 26,000 BTUs of fire-roasting energy. ";
+    $item18->price = 271.15;
     $item18->image = '/propane_grill_images/kitchenaid2burner.jpg';
     $item18->save();
 
     $item19 = new App\Item();
     $item19->item_category_id = 1;
     $item19->manufacturer_id = 8;
-    $item19->model = 'Three Burner';
+    $item19->model = "This KitchenAid 3-Burner Propane Gas Grill boasts 533 sq. in. of cooking space with four main burners and one side burner supplying 60,000 BTUs of flame-roasting energy. The main grill deck is equipped with three stainless steel cooking grates featuring 7 mm crossbars under which lies the Even-Heat Cooking System that distributes uniform heat throughout the firebox.";
     $item19->size = 'Medium';
     $item19->description = 'Medium size Three Burner';
     $item19->price = 178.58;
@@ -217,8 +217,8 @@ class ItemsTableSeeder extends Seeder
     $item20->manufacturer_id = 8;
     $item20->model = 'Six Burner';
     $item20->size = 'Large';
-    $item20->description = 'Large size Siz Burner';
-    $item20->price = 1020.42;
+    $item20->description = "This durable KitchenAid Gas Grill is built with premium corrosion resistant materials. With 1,057 sq. in. total cooking surface over stainless steel wrapped main cooking grids, this grill offers plenty of grilling space. Even-Heat System with stainless steel burners angled flame tamers and enhanced grates work together to distribute consistent heat across the entire grill surface and reduce flare-ups.";
+    $item20->price = 1169.42;
     $item20->image = '/propane_grill_images/kitchenaid6burner.jpg';
     $item20->save();
 
@@ -326,8 +326,8 @@ class ItemsTableSeeder extends Seeder
     $item30->manufacturer_id = 1;
     $item30->model = 'Bistro';
     $item30->size = 'Small';
-    $item30->description = 'Small size Bistro';
-    $item30->price = 142.56;
+    $item30->description = "Restyled for 2014, the Weber Q 120 is now the Weber Q 1200. The grill has the same great performance and sleek styling, but adds new aesthetics that are both functional and fun, including large grip handle and control knobs, ergonomic side handles, sturdy front and rear cradles, larger-sized fold-out tables with greater rigidity plus the familiar Weber Q logo branded lid.";
+    $item30->price = 198.00;
     $item30->image = '/propane_grill_images/weber-bistro.jpg';
     $item30->save();
 
@@ -340,8 +340,8 @@ class ItemsTableSeeder extends Seeder
     $item31->manufacturer_id = 1;
     $item31->model = 'Weber Kettle';
     $item31->size = 'Medium';
-    $item31->description = 'Medium size Weber Kettle';
-    $item31->price = 345.02;
+    $item31->description = "The Original Weber Kettle has been a charcoal-grilling staple for decades. It is designed to maximize airflow and heat retention, which allows outdoor chefs to cook foods to perfection. This premium 22 in. Charcoal Grill in black offers a 363 sq. in. cooking platform on which to absorb the unsurpassed flavor infusion that only a briquette fire can provide. ";
+    $item31->price = 275.55;
     $item31->image = '/charcoal_grill_images/weber_medium_kettle.jpg';
     $item31->save();
 
@@ -350,8 +350,8 @@ class ItemsTableSeeder extends Seeder
     $item32->manufacturer_id = 1;
     $item32->model = 'Weber Kettle';
     $item32->size = 'Large';
-    $item32->description = 'Large size Weber Kettle';
-    $item32->price = 879.56;
+    $item32->description = 'The Large Weber Kettle has been a charcoal-grilling staple for decades. It is designed to maximize airflow and heat retention, which allows outdoor chefs to cook foods to perfection. This premium 36 in. Charcoal Grill in black offers a 563 sq. in. cooking platform on which to absorb the unsurpassed flavor infusion that only a briquette fire can provide. ';
+    $item32->price = 379.56;
     $item32->image = '/charcoal_grill_images/weber_kettle2.jpg';
     $item32->save();
 
@@ -372,8 +372,8 @@ class ItemsTableSeeder extends Seeder
     $item34->manufacturer_id = 4;
     $item34->model = 'Nexgrill';
     $item34->size = 'Small';
-    $item34->description = 'Small size Nexgrill';
-    $item34->price = 156.43;
+    $item34->description = "This Cart-Style Charcoal Grill from Nexgrill is an affordable outdoor cooking machine packed with essential grilling features. It stands up to repeated use for tasty meals time and again, serving up delectable dishes that only a charcoal fire can produce. ";
+    $item34->price = 119.40;
     $item34->image = '/charcoal_grill_images/nexgrill_charcoal.jpg';
     $item34->save();
 
@@ -381,10 +381,10 @@ class ItemsTableSeeder extends Seeder
     $item35 = new App\Item();
     $item35->item_category_id = 2;
     $item35->manufacturer_id = 8;
-    $item35->model = 'Pro Series 500';
+    $item35->model = '810-0021';
     $item35->size = 'Medium';
-    $item35->description = 'Medium size KitchenAid';
-    $item35->price = 331.38;
+    $item35->description = "The KitchenAid Cart-Style Charcoal Grill in Black offers 804.3 sq. in. of cooking space spread across its upper-level warming rack and main-platform grilling deck. Features include heavy-duty cast iron cooking grates that are matte finish porcelain-coated so pre-seasoning is not required.";
+    $item35->price = 229.18;
     $item35->image = '/charcoal_grill_images/kitchenaid_charcoal.jpg';
     $item35->save();
 
@@ -392,7 +392,7 @@ class ItemsTableSeeder extends Seeder
     $item36 = new App\Item();
     $item36->item_category_id = 2;
     $item36->manufacturer_id = 5;
-    $item36->model = '13-Inch Small Freestanding Ceramic Kamado Grill';
+    $item36->model = '13-Inch Freestanding Ceramic Kamado';
     $item36->size = 'Small';
     $item36->description = "Big Flavor in a compact package! The Small EGG is an easy fit for smaller patios and balconies, and is able to prepare four burgers or chicken breasts at a time. The small Egg is often used as a companion for the XXlarge, XLarge, Large or Medium EGG to allow the preparation of several courses at once, and is perfect for restaurants seeking the performance of an EGG in a size to fit a commercial kitchen.";
     $item36->price = 579.99;
@@ -413,7 +413,7 @@ class ItemsTableSeeder extends Seeder
     $item38 = new App\Item();
     $item38->item_category_id = 2;
     $item38->manufacturer_id = 5;
-    $item38->model = '24-Inch Large Ceramic Kamado Grill';
+    $item38->model = '24-Inch Large Ceramic Kamado';
     $item38->size = 'Large';
     $item38->description = 'Big Green Egg provides a cooking area that can easily accommodate meals for large families and cookouts with all your friends and you can efficiently prepare several meals over the coals at once. Ready to serve up twelve racks of ribs, twenty-four burgers or a couple of holiday turkeys with all the trimmings? No problem!';
     $item38->price = 1199.99;
@@ -426,8 +426,8 @@ class ItemsTableSeeder extends Seeder
     $item39->manufacturer_id = 6;
     $item39->model = 'Dyna-Glo';
     $item39->size = 'Medium';
-    $item39->description = 'Medium size Dyna-Glo';
-    $item39->price = 627.73;
+    $item39->description = 'Cooking with charcoal is now stylish and functional with the Dyna-Glo Heavy-Duty Stainless Charcoal Grill. Each cooking grate is made with porcelain-enameled cast iron for maximum heat transfer and searing. Easily customize the cooking temperature by using the adjustment crank to raise and lower the charcoal tray, and reloading or stoking the charcoal is made simple by opening the cast iron and steel access door on the front of the grill.';
+    $item39->price = 247.49;
     $item39->image = '/charcoal_grill_images/dyna-glo_charcoal.jpg';
     $item39->save();
 
@@ -435,7 +435,7 @@ class ItemsTableSeeder extends Seeder
     $item40 = new App\Item();
     $item40->item_category_id = 2;
     $item40->manufacturer_id = 11;
-    $item40->model = "Farmer's Charcoal Grill and Off-Set Smoker";
+    $item40->model = "Farmer's Charcoal Grill and Smoker";
     $item40->size = 'Large';
     $item40->description = "Farmers Charcoal Grill is an excellent addition to everyone's backyard cooking arsenal. It has an oversized side box for loading up with wood chips to provide that great smoke taste flavor or you can just use it for extra cooking space. This grill's size and performance will satisfy your grilling/smoking needs.";
     $item40->price = 479.99;
@@ -446,7 +446,7 @@ class ItemsTableSeeder extends Seeder
     $item41 = new App\Item();
     $item41->item_category_id = 2;
     $item41->manufacturer_id = 13;
-    $item41->model = 'Drum';
+    $item41->model = 'Stok Drum';
     $item41->size = 'Small';
     $item41->description = 'The STOK Drum allows you to do more with charcoal using the Interchangeable STOK Insert System. The Drum is the first of its kind in the industry with unique innovations that will change the way you grill, allowing you to change the grill grate to any STOK Insert such as a pizza stone, smoker, veggie tray and much more. Also included is a ceramic pizza stone as well as an insert removal tool.';
     $item41->price = 129.99;
@@ -468,20 +468,20 @@ class ItemsTableSeeder extends Seeder
     $item43 = new App\Item();
     $item43->item_category_id = 2;
     $item43->manufacturer_id = 7;
-    $item43->model = 'Chargriller';
+    $item43->model = '1515';
     $item43->size = 'Small';
-    $item43->description = 'Small size Chargriller';
-    $item43->price = 341.93;
+    $item43->description = "The flavor and aroma of a charcoal grill makes cooking with the Char-Griller Patio Pro Charcoal Grill a great pleasure. It has a cast iron cooking grate and 250 sq. in. of cooking space. You'll love the slide-out drawer for coal and ash access, and dual air vents that give you temperature control.";
+    $item43->price = 67.93;
     $item43->image = '/charcoal_grill_images/chargriller_small.jpg';
     $item43->save();
 
     $item44 = new App\Item();
     $item44->item_category_id = 2;
     $item44->manufacturer_id = 7;
-    $item44->model = 'Chargriller';
+    $item44->model = '2828';
     $item44->size = 'Medium';
-    $item44->description = 'Medium size Chargriller';
-    $item44->price = 678.45;
+    $item44->description = "The Char-Griller Pro Deluxe 2828 Charcoal Grill gives you 580 sq. in. of primary cooking space and a 250 sq. in. warming rack. The cast iron cooking surface has four lift-able sections for easy access to coals. The charcoal grates are adjustable and the ash pan dumps easily. ";
+    $item44->price = 142.45;
     $item44->image = '/charcoal_grill_images/chargriller_medium.jpg';
     $item44->save();
 
@@ -490,8 +490,8 @@ class ItemsTableSeeder extends Seeder
     $item45->manufacturer_id = 7;
     $item45->model = 'Chargriller';
     $item45->size = 'Large';
-    $item45->description = 'Large size Chargriller';
-    $item45->price = 862.48;
+    $item45->description = "The great features and high quality of the Smokin' Champ make it a better option than many grills that cost twice as much. Its versatility is appreciated by barbecue pros and backyard enthusiasts. It features a large grilling area of 1238 sq. in. with cast iron grates that heat evenly and lock in the flavor of your food. ";
+    $item45->price = 325.58;
     $item45->image = '/charcoal_grill_images/chargriller_large.jpg';
     $item45->save();
 
