@@ -5,10 +5,12 @@
 
 
         {{-- Sample Test Form --}}
-            <form action="{{ action('ItemController@index') }}" method="GET" id="itemsform">
-                {{{ csrf_field() }}}
-                <input type="hidden" id="qta_field_fuel" name="fuel[]" value="">
-                <input type="hidden" id="qta_field_size" name="size[]" value="">
+            <form action="{{ action('ItemController@saveSelections') }}" method="GET" id="itemsform">
+                <input type="hidden" id="qta_field_fuel_0" name="fuel[0]" value="">
+                <input type="hidden" id="qta_field_fuel_1" name="fuel[1]" value="">
+                <input type="hidden" id="qta_field_size_0" name="size[0]" value="">
+                <input type="hidden" id="qta_field_size_1" name="size[1]" value="">
+                <input type="hidden" id="qta_field_size_2" name="size[2]" value="">
                 {{-- <button type="submit" class="btn btn-primary">Select</button> --}}
             </form>
         {{-- End Sample Test Form --}}
@@ -64,28 +66,28 @@
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <a>
-                        <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton smallSizeButton" id="smallSizeButton" value="Small">
+                        <button form="itemsform" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton smallSizeButton" id="smallSizeButton" value="Small">
                             <h4 class="sizeButtonText smallSizeButtonText">Small</h4>
                         </button>
                     </a>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <a>
-                        <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton mediumSizeButton" id="mediumSizeButton" value="Medium">
+                        <button form="itemsform" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton mediumSizeButton" id="mediumSizeButton" value="Medium">
                             <h4 class="sizeButtonText mediumSizeButtonText">Medium</h4>
                         </button>
                     </a>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <a>
-                        <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton largeSizeButton" id="largeSizeButton" value="Large">
+                        <button form="itemsform" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default sizeButton largeSizeButton" id="largeSizeButton" value="Large">
                             <h4 class="sizeButtonText largeSizeButtonText">Large</h4>
                         </button>
                     </a>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <a>
-                        <button class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default imNotSureButton" id="imNotSureButton" value="%">
+                        <button form="itemsform" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 btn btn-default imNotSureButton" id="imNotSureButton" value="%">
                             <h4 class="imNotSureButtonText">I'm Not Sure</h4>
                         </button>
                     </a>
