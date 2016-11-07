@@ -33,14 +33,14 @@
 
         <div class="row faqRow">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-                <h1 class="faqHeader">Our Frequently Asked Questions</h1>
+                <h1 class="faqHeader">Frequently Asked Questions</h1>
             </div>
         </div>
         <div class="row faqRow">
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqQuestion">
-                <h3 id="faqQuestion1"><span>+</span> How To Contact Us</h3>
+                <h3 id="faqQuestion1"><span>+</span> How Do I Contact GetGrillz?</h3>
             </div>
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
@@ -49,7 +49,7 @@
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqAnswer" id="faqAnswer1">
-                <p>GetGrilz likes to take care of our customers like we take care of our products.
+                <p>GetGrillz likes to take care of our customers like we take care of our products.
                     However, our products don't ask questions, but you do, so our question for you:
                     how can we help?
                     <br>
@@ -57,7 +57,7 @@
                     <br>
                     - Email: getGrillz@help.com
                     <br>
-                    - Phone: (210)-726-4277
+                    - Phone: (210)-234-5678
                 </p>
             </div>
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
@@ -67,7 +67,7 @@
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqQuestion">
-                <h3 id="faqQuestion2"><span id="plus2">+</span> What Are We?</h3>
+                <h3 id="faqQuestion2"><span id="plus2">+</span> What is GetGrillz?</h3>
             </div>
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
@@ -118,8 +118,8 @@
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 faqAnswer" id="faqAnswer4">
-                <p>Choose from our wide selection of high quality grills to either buy or rent for a
-                    day, a weekend or how ever long you need! GetGrillz offers ultra affordable rates,
+                <p>Choose from our wide selection of high quality grills to buy or rent for a
+                    day, a weekend or any length of time you need! GetGrillz offers affordable rates,
                     so anyone can rent or buy a grill and have a great time!
                 </p>
             </div>

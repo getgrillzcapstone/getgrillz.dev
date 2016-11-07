@@ -42,10 +42,10 @@
         </div>
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 selectAddressDiv">
-                <h4 class="selectDeliver">Select A Location Via Drop Pin</h4>
+                <h4 class="selectDeliver">Select A Delivery Location Via Drop Pin</h4>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 enterAddressDiv">
-                <h4 class="enterDeliver">Or Enter An Address</h4>
+                <h4 class="enterDeliver">Or Enter An Exact Address</h4>
             </div>
         </div>
         <div class="row">
@@ -196,10 +196,10 @@
                 <table class="col-xs-12 col-sm-12 col-md-12 col-lg-12 table-responsive noTableBorder">
                     <thead>
                         <tr>
-                            <th class="text-center"><h4>Remove From Cart</h4></th>
+                            <th class="text-center"><h4>Remove Item From Order</h4></th>
                             <th class="text-center"><h4>Item Name</h4></th>
                             {{-- <th class="text-center"><h4>Quanity</h4></th> --}}
-                            <th class="text-center"><h4>Price Per Item</h4></th>
+                            <th class="text-center"><h4>Item Price</h4></th>
                         </tr>
                     </thead>
                     <tbody style="text-align: center;">
@@ -216,7 +216,7 @@
                         </tbody>
                                 @else
                                     <div class="row">
-                                        <h4 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">You Have No Items In Your Cart</h4>
+                                        <h4 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">You Have Not Added Any Items To Your Order</h4>
                                     </div>
                                 @endif
                     </table>
@@ -228,7 +228,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 addToOrderButtonDiv">
                         <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
                         <button type="submit" class="col-xs-12 col-sm-12 col-md-4 col-lg-4 btn btn-default pickADateButton" id="confirmOrderupdateCartButton">
-                                <h4 class="pickADateText">Update Cart</h4>
+                                <h4 class="pickADateText">Update Order</h4>
                         </button>
                     </form>
                     <span class="col-xs-0 col-sm-0 col-md-1 col-lg-1"></span>
@@ -266,12 +266,12 @@
                 					</div>
                 					<div class="bank-card__inner">
                 						<label class="bank-card__label bank-card__label_fullwidth">
-                							<span class="bank-card__hint">Number On Card</span>
+                							<span class="bank-card__hint">Card Number</span>
                 							<input type="text" class="bank-card__field" placeholder="Number On Card" pattern="[0-9]{16}" name="number-card" value="1111-2222-3333-4444" required>
                 						</label>
                 					</div>
                 					<div class="bank-card__inner">
-                						<span class="bank-card__caption">valid thru</span>
+                						<span class="bank-card__caption">Expiration Date</span>
                 					</div>
                 					<div class="bank-card__inner">
                 						<label class="bank-card__label">
@@ -294,7 +294,7 @@
                 					</div>
                 				</div>
                 			</div>
-                			<button class="demo__button" data-dismiss="modal" id="confirmPayment">Confirm</button>
+                			<button class="demo__button" data-dismiss="modal" id="confirmPayment">Submit Order</button>
                 		</form>
                 	</div>
               </div>

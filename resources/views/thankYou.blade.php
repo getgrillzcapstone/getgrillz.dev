@@ -176,8 +176,8 @@
         <div class="modal-content">
           <div class="modal-header">
             {{-- <button type="button" class="close" data-dismiss="modal">&times;</button> --}}
-            <h2 class="modal-title text-center">Pleasure Doing Business With You!</h2>
-            <h4 class="modal-title text-center">An Email Has Been Sent To You For Confirmation</h4>
+            <h2 class="modal-title text-center">Thank you for your business!</h2>
+            <h4 class="modal-title text-center">There is an EXTRA RARE order confirmation email in your inbox!</h4>
           </div>
           <div class="modal-body modal-body-colored text-center">
               <h2>Now GetGrilling!</h2>
