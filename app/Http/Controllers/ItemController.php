@@ -75,6 +75,7 @@ class ItemController extends Controller
 
     public function saveSelections()
     {
+        // dd(request()->all());
         $mans = request()->input('man');
         $fueltype = request()->input('fuel');
         $size = request()->input('size');
