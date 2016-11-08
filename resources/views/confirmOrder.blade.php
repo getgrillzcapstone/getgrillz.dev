@@ -42,14 +42,14 @@
         </div>
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 selectAddressDiv">
-                <h4 class="selectDeliver">Select A Delivery Location Via Drop Pin</h4>
+                <h4 class="selectDeliver">Select A Location Via Drop Pin</h4>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 enterAddressDiv">
                 <h4 class="enterDeliver">Or Enter An Exact Address</h4>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 mapDiv">
+            <div class="col-xs-6 col-sm-6 col-md-12 col-lg-6 mapDiv">
                 <!-- div to hold map -->
                 <div class="map" id="map"></div>
                 <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
@@ -163,6 +163,9 @@
                         });
                     })();
                 </script>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 enterAddressMobile">
+                <h4 class="enterDeliver">Or Enter An Exact Address</h4>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 addressFieldsDiv">
                 <div class="form-group">

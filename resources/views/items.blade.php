@@ -147,7 +147,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 categoriesDiv">
+            <div class="col-xs-5 col-sm-3 col-md-3 col-lg-3 categoriesDiv">
                 <!-- menus and filters-->
                 <div class="panel panel-default sidebar-menu">
                     <div class="panel-heading customPanelHeading">
@@ -157,24 +157,24 @@
          {{{ csrf_field() }}}
                     <div class="panel-body">
 
-                            
+
 
                             <div class="form-group"></div>
-                           
+
                             <div class="checkbox">
 
                                      <label>
                                     <input name="fuel[0]" {{session("fuel.0") == 1 ? 'checked' : ''}} id="propane" type="checkbox" value="1">Propane
                                     </label>
                             </div>
-                            
-                            
+
+
                             <div class="checkbox">
                                 <label>
                                     <input name="fuel[1]" {{session("fuel.1") == 2 ? 'checked' : ''}} id="charcoal" type="checkbox" value="2">Charcoal
                                 </label>
                             </div>
-                            
+
                             <button type="submit" class="btn btn-default btn-sm pull-right">Apply</button>
 
                     </div>
@@ -235,7 +235,7 @@
                 </div>
             </div>
             @foreach($items as $item)
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="col-xs-7 col-sm-3 col-md-3 col-lg-3 pull-right">
 
                     {{--  --}}
                     <div class="product itemsContainer">
@@ -308,7 +308,7 @@
         </div>
     </div>
 
-   
+
 @stop
 
 @section('javascriptFileForCheckout')
